@@ -275,13 +275,20 @@
     letter-spacing: 0.08em;
     text-transform: uppercase;
 }
-.badge-blue    { background: rgba(0, 61, 122, 0.1);   color: #003D7A; }
-.badge-cyan    { background: rgba(0, 168, 232, 0.15); color: #0077A8; }
-.badge-gold    { background: #D4A017;                 color: white; }
-.badge-red     { background: #C41E3A;                 color: white; }
-.badge-green   { background: rgba(39, 174, 96, 0.15); color: #1E8449; }
-.badge-gray    { background: rgba(139, 149, 165, 0.15); color: #64748B; }
-.badge-orange  { background: rgba(230, 126, 34, 0.15); color: #B46015; }
+/* Badges : tous en mode SOLID (bg couleur + texte blanc) pour uniformité */
+.badge-blue    { background: #003D7A; color: white; }
+.badge-cyan    { background: #00A8E8; color: white; }
+.badge-gold    { background: #D4A017; color: white; }
+.badge-red     { background: #C41E3A; color: white; }
+.badge-green   { background: #27AE60; color: white; }
+.badge-gray    { background: #8B95A5; color: white; }
+.badge-orange  { background: #E67E22; color: white; }
+/* Variantes soft (bg transparent + texte coloré) si besoin de ton discret */
+.badge-blue-soft   { background: rgba(0, 61, 122, 0.12);  color: #003D7A; }
+.badge-cyan-soft   { background: rgba(0, 168, 232, 0.18); color: #0077A8; }
+.badge-green-soft  { background: rgba(39, 174, 96, 0.15); color: #1E8449; }
+.badge-gray-soft   { background: rgba(139, 149, 165, 0.18); color: #64748B; }
+.badge-orange-soft { background: rgba(230, 126, 34, 0.15); color: #B46015; }
 
 /* ================ Body ================ */
 body { background-color: #FAFCFF; }
