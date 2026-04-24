@@ -256,89 +256,99 @@
             </div>
         </section>
 
-        <!-- MISSIONS — 4 piliers en glass cards cohérentes avec Stats/Projets/Valeurs -->
-        <section id="missions" class="py-24 relative overflow-hidden">
-            <!-- Blobs atmosphériques très discrets -->
-            <div class="absolute top-20 right-0 w-[500px] h-[500px] bg-gouv-cyan/5 rounded-full blur-[120px] pointer-events-none"></div>
-            <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-gouv-gold/5 rounded-full blur-[100px] pointer-events-none"></div>
+        <!-- MISSIONS — Dark variant (break rythme visuel dans le scroll) -->
+        <section id="missions" class="missions-dark">
+            <!-- Accent bar tricolore RDC (seam light->dark) -->
+            <div class="missions-dark-accent"></div>
 
-            <div class="max-w-[1200px] mx-auto px-4 md:px-8 relative z-10">
+            <!-- Blobs atmosphériques sur le dark -->
+            <div class="absolute top-32 right-0 w-[600px] h-[600px] bg-gouv-cyan/10 rounded-full blur-[140px] pointer-events-none"></div>
+            <div class="absolute bottom-10 left-0 w-[500px] h-[500px] bg-gouv-gold/8 rounded-full blur-[120px] pointer-events-none"></div>
 
-                <!-- Header (même pattern que les autres sections) -->
+            <!-- Grain texture -->
+            <div class="missions-dark-grain"></div>
+
+            <!-- Fade edges (soft transition vers sections claires) -->
+            <div class="missions-dark-fade-top"></div>
+            <div class="missions-dark-fade-bottom"></div>
+
+            <div class="relative z-10 py-28 md:py-32 max-w-[1200px] mx-auto px-4 md:px-8">
+
+                <!-- Header (même pattern, ajusté dark) -->
                 <div class="text-center mb-16 reveal max-w-2xl mx-auto">
                     <span class="text-[11px] font-bold tracking-[0.3em] text-gouv-gold uppercase mb-4 block">Notre Mission</span>
-                    <h2 class="text-4xl md:text-5xl font-bold text-gouv-blue font-serif mb-5">Les 4 piliers du numérique en RDC</h2>
-                    <p class="text-[15px] text-text-muted font-light leading-relaxed">
+                    <h2 class="text-4xl md:text-5xl font-bold font-serif mb-5" style="color: #F5F7FA;">Les 4 piliers du numérique en RDC</h2>
+                    <p class="text-[15px] font-light leading-relaxed" style="color: rgba(255,255,255,0.72);">
                         Une stratégie cohérente, portée par nos neuf directions, pour faire du numérique le levier du développement national.
                     </p>
                 </div>
 
-                <!-- Grid 2×2 de glass cards -->
+                <!-- Grid 2×2 dark glass cards -->
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
                     <!-- Pilier 01 — Infrastructures -->
-                    <article class="glass-ultra rounded-3xl p-8 hover-lift-premium reveal relative border-t-[4px] border-t-gouv-cyan group">
-                        <span class="absolute top-6 right-6 text-2xl font-serif italic font-bold text-gouv-gold opacity-40 group-hover:opacity-70 transition-opacity">01</span>
-                        <div class="w-12 h-12 rounded-xl bg-gouv-cyan/10 flex items-center justify-center mb-4 group-hover:bg-gouv-cyan/15 transition-colors">
+                    <article class="dark-card rounded-3xl p-8 reveal relative group" data-pilier="01">
+                        <span class="absolute top-6 right-6 text-2xl font-serif italic font-bold opacity-55 group-hover:opacity-85 transition-opacity" style="color: #E8BC3A;">01</span>
+                        <div class="w-12 h-12 rounded-xl bg-gouv-cyan/15 ring-1 ring-gouv-cyan/30 flex items-center justify-center mb-4 group-hover:bg-gouv-cyan/25 group-hover:ring-gouv-cyan/50 transition-all">
                             <i data-lucide="wifi" class="w-[22px] h-[22px] text-gouv-cyan"></i>
                         </div>
                         <div class="text-[11px] font-bold tracking-[0.25em] text-gouv-cyan uppercase mb-3">Pilier · Connectivité</div>
-                        <h3 class="text-2xl font-bold font-serif text-gouv-blue mb-3 group-hover:text-gouv-cyan transition-colors">Infrastructures Numériques</h3>
-                        <p class="text-[15px] text-text-muted font-light leading-relaxed mb-5">
+                        <h3 class="text-2xl font-bold font-serif mb-3 transition-colors group-hover:text-gouv-cyan" style="color: #F5F7FA;">Infrastructures Numériques</h3>
+                        <p class="text-[15px] font-light leading-relaxed mb-5" style="color: rgba(255,255,255,0.68);">
                             Déployer la fibre optique et les réseaux de données à travers toute la RDC pour une couverture territoriale complète et une connectivité durable.
                         </p>
-                        <a href="directions.html#din" class="text-gouv-cyan font-medium text-sm hover:text-gouv-blue transition-colors flex items-center gap-2 group/cta">
+                        <a href="directions.html#din" class="text-gouv-cyan font-medium text-sm hover:text-[#66CCF5] transition-colors flex items-center gap-2 group/cta">
                             Direction DIN
                             <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover/cta:translate-x-1 transition-transform"></i>
                         </a>
                     </article>
 
                     <!-- Pilier 02 — Cybersécurité -->
-                    <article class="glass-ultra rounded-3xl p-8 hover-lift-premium reveal delay-100 relative border-t-[4px] border-t-gouv-red group">
-                        <span class="absolute top-6 right-6 text-2xl font-serif italic font-bold text-gouv-gold opacity-40 group-hover:opacity-70 transition-opacity">02</span>
-                        <div class="w-12 h-12 rounded-xl bg-gouv-red/10 flex items-center justify-center mb-4 group-hover:bg-gouv-red/15 transition-colors">
+                    <article class="dark-card rounded-3xl p-8 reveal delay-100 relative group" data-pilier="02">
+                        <span class="absolute top-6 right-6 text-2xl font-serif italic font-bold opacity-55 group-hover:opacity-85 transition-opacity" style="color: #E8BC3A;">02</span>
+                        <div class="w-12 h-12 rounded-xl bg-gouv-red/15 ring-1 ring-gouv-red/30 flex items-center justify-center mb-4 group-hover:bg-gouv-red/25 group-hover:ring-gouv-red/50 transition-all">
                             <i data-lucide="shield-check" class="w-[22px] h-[22px] text-gouv-red"></i>
                         </div>
                         <div class="text-[11px] font-bold tracking-[0.25em] text-gouv-red uppercase mb-3">Pilier · Souveraineté</div>
-                        <h3 class="text-2xl font-bold font-serif text-gouv-blue mb-3 group-hover:text-gouv-red transition-colors">Cybersécurité & Protection</h3>
-                        <p class="text-[15px] text-text-muted font-light leading-relaxed mb-5">
+                        <h3 class="text-2xl font-bold font-serif mb-3 transition-colors group-hover:text-gouv-red" style="color: #F5F7FA;">Cybersécurité & Protection</h3>
+                        <p class="text-[15px] font-light leading-relaxed mb-5" style="color: rgba(255,255,255,0.68);">
                             Assurer la protection des données nationales, renforcer la résilience des systèmes et garantir la souveraineté numérique de la RDC.
                         </p>
-                        <a href="directions.html#dssi" class="text-gouv-cyan font-medium text-sm hover:text-gouv-blue transition-colors flex items-center gap-2 group/cta">
+                        <a href="directions.html#dssi" class="text-gouv-cyan font-medium text-sm hover:text-[#66CCF5] transition-colors flex items-center gap-2 group/cta">
                             Direction DSSI
                             <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover/cta:translate-x-1 transition-transform"></i>
                         </a>
                     </article>
 
                     <!-- Pilier 03 — Formation -->
-                    <article class="glass-ultra rounded-3xl p-8 hover-lift-premium reveal delay-200 relative border-t-[4px] border-t-gouv-gold group">
-                        <span class="absolute top-6 right-6 text-2xl font-serif italic font-bold text-gouv-gold opacity-40 group-hover:opacity-70 transition-opacity">03</span>
-                        <div class="w-12 h-12 rounded-xl bg-gouv-gold/10 flex items-center justify-center mb-4 group-hover:bg-gouv-gold/15 transition-colors">
+                    <article class="dark-card rounded-3xl p-8 reveal delay-200 relative group" data-pilier="03">
+                        <span class="absolute top-6 right-6 text-2xl font-serif italic font-bold opacity-55 group-hover:opacity-85 transition-opacity" style="color: #E8BC3A;">03</span>
+                        <div class="w-12 h-12 rounded-xl bg-gouv-gold/15 ring-1 ring-gouv-gold/30 flex items-center justify-center mb-4 group-hover:bg-gouv-gold/25 group-hover:ring-gouv-gold/50 transition-all">
                             <i data-lucide="graduation-cap" class="w-[22px] h-[22px] text-gouv-gold"></i>
                         </div>
                         <div class="text-[11px] font-bold tracking-[0.25em] text-gouv-gold uppercase mb-3">Pilier · Talents</div>
-                        <h3 class="text-2xl font-bold font-serif text-gouv-blue mb-3 group-hover:text-gouv-gold transition-colors">Formation aux Métiers du Numérique</h3>
-                        <p class="text-[15px] text-text-muted font-light leading-relaxed mb-5">
+                        <h3 class="text-2xl font-bold font-serif mb-3 transition-colors group-hover:text-gouv-gold" style="color: #F5F7FA;">Formation aux Métiers du Numérique</h3>
+                        <p class="text-[15px] font-light leading-relaxed mb-5" style="color: rgba(255,255,255,0.68);">
                             Développer les compétences nationales et cultiver une culture numérique inclusive pour tous les citoyens congolais.
                         </p>
-                        <a href="services.html#formations" class="text-gouv-cyan font-medium text-sm hover:text-gouv-blue transition-colors flex items-center gap-2 group/cta">
+                        <a href="services.html#formations" class="text-gouv-cyan font-medium text-sm hover:text-[#66CCF5] transition-colors flex items-center gap-2 group/cta">
                             Nos formations
                             <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover/cta:translate-x-1 transition-transform"></i>
                         </a>
                     </article>
 
                     <!-- Pilier 04 — Transformation Économique -->
-                    <article class="glass-ultra rounded-3xl p-8 hover-lift-premium reveal delay-300 relative border-t-[4px] border-t-gouv-blue group">
-                        <span class="absolute top-6 right-6 text-2xl font-serif italic font-bold text-gouv-gold opacity-40 group-hover:opacity-70 transition-opacity">04</span>
-                        <div class="w-12 h-12 rounded-xl bg-gouv-blue/10 flex items-center justify-center mb-4 group-hover:bg-gouv-blue/15 transition-colors">
-                            <i data-lucide="trending-up" class="w-[22px] h-[22px] text-gouv-blue"></i>
+                    <article class="dark-card rounded-3xl p-8 reveal delay-300 relative group" data-pilier="04">
+                        <span class="absolute top-6 right-6 text-2xl font-serif italic font-bold opacity-55 group-hover:opacity-85 transition-opacity" style="color: #E8BC3A;">04</span>
+                        <div class="w-12 h-12 rounded-xl bg-gouv-cyan/15 ring-1 ring-gouv-cyan/30 flex items-center justify-center mb-4 group-hover:bg-gouv-cyan/25 group-hover:ring-gouv-cyan/50 transition-all">
+                            <i data-lucide="trending-up" class="w-[22px] h-[22px] text-gouv-cyan"></i>
                         </div>
-                        <div class="text-[11px] font-bold tracking-[0.25em] text-gouv-blue uppercase mb-3">Pilier · Économie</div>
-                        <h3 class="text-2xl font-bold font-serif text-gouv-blue mb-3 group-hover:text-gouv-cyan transition-colors">Transformation Économique</h3>
-                        <p class="text-[15px] text-text-muted font-light leading-relaxed mb-5">
+                        <div class="text-[11px] font-bold tracking-[0.25em] text-gouv-cyan uppercase mb-3">Pilier · Économie</div>
+                        <h3 class="text-2xl font-bold font-serif mb-3 transition-colors group-hover:text-gouv-cyan" style="color: #F5F7FA;">Transformation Économique</h3>
+                        <p class="text-[15px] font-light leading-relaxed mb-5" style="color: rgba(255,255,255,0.68);">
                             Accompagner la transition vers l'économie numérique, valoriser les données et développer un écosystème digital dynamique et compétitif.
                         </p>
-                        <a href="directions.html#dsin" class="text-gouv-cyan font-medium text-sm hover:text-gouv-blue transition-colors flex items-center gap-2 group/cta">
+                        <a href="directions.html#dsin" class="text-gouv-cyan font-medium text-sm hover:text-[#66CCF5] transition-colors flex items-center gap-2 group/cta">
                             Direction DSIN
                             <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover/cta:translate-x-1 transition-transform"></i>
                         </a>
