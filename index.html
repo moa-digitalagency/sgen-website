@@ -256,130 +256,174 @@
             </div>
         </section>
 
-        <!-- MISSIONS — refonte premium épurée -->
-        <section id="missions" class="py-24 md:py-32 relative overflow-hidden">
-            <div class="max-w-[1200px] mx-auto px-4 md:px-8 relative z-10">
+        <!-- MISSIONS — redesign éditorial radical -->
+        <section id="missions" class="py-28 md:py-40 relative overflow-hidden">
 
-                <!-- Section header minimal -->
-                <div class="text-center mb-20 md:mb-28 reveal max-w-3xl mx-auto">
-                    <div class="inline-flex items-center gap-3 mb-8">
-                        <div class="h-px w-10 bg-gouv-gold/60"></div>
-                        <span class="text-[11px] font-bold tracking-[0.3em] text-gouv-gold uppercase">Notre Mission · 4 Piliers</span>
-                        <div class="h-px w-10 bg-gouv-gold/60"></div>
+            <!-- Background grid subtle -->
+            <div class="absolute inset-0 pointer-events-none opacity-[0.03]" style="background-image: linear-gradient(to right, #003D7A 1px, transparent 1px), linear-gradient(to bottom, #003D7A 1px, transparent 1px); background-size: 80px 80px;"></div>
+
+            <!-- Accent vertical line décoratif -->
+            <div class="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-gouv-gold/20 to-transparent hidden lg:block"></div>
+
+            <div class="max-w-[1100px] mx-auto px-4 md:px-8 relative z-10">
+
+                <!-- Editorial header : label + giant serif headline -->
+                <header class="mb-20 md:mb-32">
+                    <div class="reveal flex items-center gap-4 mb-10">
+                        <span class="h-px w-16 bg-gouv-gold"></span>
+                        <span class="text-[11px] font-bold tracking-[0.35em] text-gouv-gold uppercase">Notre Mission</span>
                     </div>
-                    <h2 class="text-4xl md:text-[56px] font-bold text-gouv-blue font-serif leading-[1.05]">
-                        Les piliers du numérique <br class="hidden md:block"/>
-                        <span class="italic font-normal text-gouv-cyan">en République Démocratique du Congo</span>
+
+                    <h2 class="reveal delay-100 text-[40px] md:text-[80px] lg:text-[96px] font-bold text-gouv-blue font-serif leading-[0.98] tracking-tight mb-12 max-w-5xl">
+                        Transformer la RDC<br>
+                        par <span class="italic font-normal text-gouv-cyan">quatre piliers</span><br>
+                        numériques.
                     </h2>
+
+                    <div class="reveal delay-200 max-w-xl ml-auto md:text-right">
+                        <p class="text-base md:text-lg text-text-muted font-light leading-[1.8] border-t border-gouv-blue/10 pt-6">
+                            Une stratégie cohérente, portée par nos neuf directions, pour faire du numérique le levier du développement national — intégration, gouvernance, croissance, souveraineté.
+                        </p>
+                    </div>
+                </header>
+
+                <!-- Editorial rows : grid éditorial minimaliste -->
+                <div class="border-t border-gouv-blue/15">
+
+                    <!-- Pilier 01 -->
+                    <article class="group reveal relative grid grid-cols-12 gap-4 md:gap-8 items-baseline py-10 md:py-16 border-b border-gouv-blue/15 transition-colors duration-500 hover:bg-gouv-cyan/[0.02]">
+                        <!-- Numéro géant -->
+                        <div class="col-span-3 md:col-span-2">
+                            <span class="font-serif italic font-bold text-gouv-cyan/90 text-[56px] md:text-[104px] leading-none tracking-tight block">01</span>
+                        </div>
+
+                        <!-- Content principal -->
+                        <div class="col-span-9 md:col-span-7">
+                            <div class="flex items-center gap-2.5 mb-4">
+                                <i data-lucide="wifi" class="w-3.5 h-3.5 text-gouv-cyan"></i>
+                                <span class="text-[10px] font-bold tracking-[0.35em] text-gouv-cyan uppercase">Connectivité</span>
+                            </div>
+                            <h3 class="text-2xl md:text-4xl font-bold text-gouv-blue font-serif leading-[1.1] mb-5 transition-colors duration-500 group-hover:text-gouv-cyan">
+                                Infrastructures Numériques
+                            </h3>
+                            <p class="text-base md:text-lg text-text-muted font-light leading-[1.75] max-w-2xl">
+                                Déployer la fibre optique et les réseaux de données à travers toute la RDC pour une couverture territoriale complète et une connectivité durable.
+                            </p>
+                        </div>
+
+                        <!-- CTA à droite -->
+                        <div class="col-span-12 md:col-span-3 md:text-right md:pl-4 mt-6 md:mt-0">
+                            <a href="directions.html#din" class="inline-flex items-center gap-2 text-[13px] font-bold tracking-wider text-gouv-blue uppercase hover:text-gouv-cyan transition-colors group/link">
+                                <span class="border-b border-gouv-blue/20 group-hover/link:border-gouv-cyan pb-1 transition-colors">Direction DIN</span>
+                                <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5"></i>
+                            </a>
+                        </div>
+
+                        <!-- Marge gauche accent animé -->
+                        <div class="absolute left-0 top-0 w-0 h-full bg-gouv-cyan transition-all duration-500 group-hover:w-1"></div>
+                    </article>
+
+                    <!-- Pilier 02 -->
+                    <article class="group reveal relative grid grid-cols-12 gap-4 md:gap-8 items-baseline py-10 md:py-16 border-b border-gouv-blue/15 transition-colors duration-500 hover:bg-gouv-red/[0.02]">
+                        <div class="col-span-3 md:col-span-2">
+                            <span class="font-serif italic font-bold text-gouv-red/90 text-[56px] md:text-[104px] leading-none tracking-tight block">02</span>
+                        </div>
+
+                        <div class="col-span-9 md:col-span-7">
+                            <div class="flex items-center gap-2.5 mb-4">
+                                <i data-lucide="shield-check" class="w-3.5 h-3.5 text-gouv-red"></i>
+                                <span class="text-[10px] font-bold tracking-[0.35em] text-gouv-red uppercase">Souveraineté</span>
+                            </div>
+                            <h3 class="text-2xl md:text-4xl font-bold text-gouv-blue font-serif leading-[1.1] mb-5 transition-colors duration-500 group-hover:text-gouv-red">
+                                Cybersécurité & Protection
+                            </h3>
+                            <p class="text-base md:text-lg text-text-muted font-light leading-[1.75] max-w-2xl">
+                                Assurer la protection des données nationales, renforcer la résilience des systèmes et garantir la souveraineté numérique de la RDC.
+                            </p>
+                        </div>
+
+                        <div class="col-span-12 md:col-span-3 md:text-right md:pl-4 mt-6 md:mt-0">
+                            <a href="directions.html#dssi" class="inline-flex items-center gap-2 text-[13px] font-bold tracking-wider text-gouv-blue uppercase hover:text-gouv-red transition-colors group/link">
+                                <span class="border-b border-gouv-blue/20 group-hover/link:border-gouv-red pb-1 transition-colors">Direction DSSI</span>
+                                <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5"></i>
+                            </a>
+                        </div>
+
+                        <div class="absolute left-0 top-0 w-0 h-full bg-gouv-red transition-all duration-500 group-hover:w-1"></div>
+                    </article>
+
+                    <!-- Pilier 03 -->
+                    <article class="group reveal relative grid grid-cols-12 gap-4 md:gap-8 items-baseline py-10 md:py-16 border-b border-gouv-blue/15 transition-colors duration-500 hover:bg-gouv-gold/[0.03]">
+                        <div class="col-span-3 md:col-span-2">
+                            <span class="font-serif italic font-bold text-gouv-gold/90 text-[56px] md:text-[104px] leading-none tracking-tight block">03</span>
+                        </div>
+
+                        <div class="col-span-9 md:col-span-7">
+                            <div class="flex items-center gap-2.5 mb-4">
+                                <i data-lucide="graduation-cap" class="w-3.5 h-3.5 text-gouv-gold"></i>
+                                <span class="text-[10px] font-bold tracking-[0.35em] text-gouv-gold uppercase">Talents</span>
+                            </div>
+                            <h3 class="text-2xl md:text-4xl font-bold text-gouv-blue font-serif leading-[1.1] mb-5 transition-colors duration-500 group-hover:text-gouv-gold">
+                                Formation aux Métiers du Numérique
+                            </h3>
+                            <p class="text-base md:text-lg text-text-muted font-light leading-[1.75] max-w-2xl">
+                                Développer les compétences nationales et cultiver une culture numérique inclusive pour tous les citoyens congolais.
+                            </p>
+                        </div>
+
+                        <div class="col-span-12 md:col-span-3 md:text-right md:pl-4 mt-6 md:mt-0">
+                            <a href="services.html#formations" class="inline-flex items-center gap-2 text-[13px] font-bold tracking-wider text-gouv-blue uppercase hover:text-gouv-gold transition-colors group/link">
+                                <span class="border-b border-gouv-blue/20 group-hover/link:border-gouv-gold pb-1 transition-colors">Nos formations</span>
+                                <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5"></i>
+                            </a>
+                        </div>
+
+                        <div class="absolute left-0 top-0 w-0 h-full bg-gouv-gold transition-all duration-500 group-hover:w-1"></div>
+                    </article>
+
+                    <!-- Pilier 04 -->
+                    <article class="group reveal relative grid grid-cols-12 gap-4 md:gap-8 items-baseline py-10 md:py-16 transition-colors duration-500 hover:bg-gouv-blue/[0.03]">
+                        <div class="col-span-3 md:col-span-2">
+                            <span class="font-serif italic font-bold text-gouv-blue/90 text-[56px] md:text-[104px] leading-none tracking-tight block">04</span>
+                        </div>
+
+                        <div class="col-span-9 md:col-span-7">
+                            <div class="flex items-center gap-2.5 mb-4">
+                                <i data-lucide="trending-up" class="w-3.5 h-3.5 text-gouv-blue"></i>
+                                <span class="text-[10px] font-bold tracking-[0.35em] text-gouv-blue uppercase">Économie</span>
+                            </div>
+                            <h3 class="text-2xl md:text-4xl font-bold text-gouv-blue font-serif leading-[1.1] mb-5 transition-colors duration-500 group-hover:text-gouv-cyan">
+                                Transformation Économique
+                            </h3>
+                            <p class="text-base md:text-lg text-text-muted font-light leading-[1.75] max-w-2xl">
+                                Accompagner la transition vers l'économie numérique, valoriser les données et développer un écosystème digital dynamique et compétitif.
+                            </p>
+                        </div>
+
+                        <div class="col-span-12 md:col-span-3 md:text-right md:pl-4 mt-6 md:mt-0">
+                            <a href="directions.html#dsin" class="inline-flex items-center gap-2 text-[13px] font-bold tracking-wider text-gouv-blue uppercase hover:text-gouv-cyan transition-colors group/link">
+                                <span class="border-b border-gouv-blue/20 group-hover/link:border-gouv-cyan pb-1 transition-colors">Direction DSIN</span>
+                                <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5"></i>
+                            </a>
+                        </div>
+
+                        <div class="absolute left-0 top-0 w-0 h-full bg-gouv-blue transition-all duration-500 group-hover:w-1"></div>
+                    </article>
                 </div>
 
-                <!-- Pilier 01 — Infrastructures -->
-                <article class="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 items-center mb-24 md:mb-32 reveal">
-                    <div class="md:col-span-6 order-2 md:order-1 group">
-                        <div class="relative overflow-hidden rounded-3xl aspect-[5/4] shadow-[0_20px_60px_-20px_rgba(0,61,122,0.25)]">
-                            <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80" alt="Infrastructures Numériques" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1200ms] ease-out">
-                            <div class="absolute inset-0 bg-gradient-to-t from-gouv-blue/30 via-transparent to-transparent"></div>
-                            <span class="absolute top-6 left-8 text-white font-serif font-bold text-[56px] italic leading-none drop-shadow-lg">01</span>
-                        </div>
-                    </div>
-                    <div class="md:col-span-6 md:pl-2 order-1 md:order-2">
-                        <div class="flex items-center gap-4 mb-6">
-                            <div class="w-12 h-12 rounded-full bg-gouv-cyan/5 flex items-center justify-center border border-gouv-cyan/25">
-                                <i data-lucide="wifi" class="w-5 h-5 text-gouv-cyan"></i>
-                            </div>
-                            <span class="text-[11px] font-bold tracking-[0.3em] text-gouv-cyan uppercase">Pilier 01 · Connectivité</span>
-                        </div>
-                        <h3 class="text-3xl md:text-[40px] font-bold text-gouv-blue mb-6 font-serif leading-[1.15]">Infrastructures Numériques</h3>
-                        <p class="text-lg text-text-muted leading-[1.75] mb-10 font-light">
-                            Déployer la fibre optique et les réseaux de données à travers toute la RDC pour une couverture territoriale complète et une connectivité durable.
+                <!-- Footer de section : CTA global + signature -->
+                <div class="reveal mt-20 md:mt-28 flex flex-col md:flex-row items-start md:items-end justify-between gap-8 pt-10 border-t border-gouv-blue/15">
+                    <div class="max-w-md">
+                        <span class="text-[11px] font-bold tracking-[0.3em] text-gouv-gold uppercase mb-3 block">Aller plus loin</span>
+                        <p class="text-lg text-gouv-blue font-serif italic">
+                            « Faire du numérique le levier du développement national. »
                         </p>
-                        <a href="directions.html#din" class="group inline-flex items-center gap-2 text-gouv-blue font-semibold border-b border-gouv-cyan/30 pb-1.5 hover:border-gouv-cyan transition-all">
-                            <span>Découvrir la direction DIN</span>
-                            <i data-lucide="arrow-up-right" class="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
-                        </a>
                     </div>
-                </article>
-
-                <!-- Pilier 02 — Cybersécurité (alt) -->
-                <article class="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 items-center mb-24 md:mb-32 reveal">
-                    <div class="md:col-span-6 md:pr-2 order-1">
-                        <div class="flex items-center gap-4 mb-6">
-                            <div class="w-12 h-12 rounded-full bg-gouv-red/5 flex items-center justify-center border border-gouv-red/25">
-                                <i data-lucide="shield-check" class="w-5 h-5 text-gouv-red"></i>
-                            </div>
-                            <span class="text-[11px] font-bold tracking-[0.3em] text-gouv-red uppercase">Pilier 02 · Souveraineté</span>
-                        </div>
-                        <h3 class="text-3xl md:text-[40px] font-bold text-gouv-blue mb-6 font-serif leading-[1.15]">Cybersécurité & Protection</h3>
-                        <p class="text-lg text-text-muted leading-[1.75] mb-10 font-light">
-                            Assurer la protection des données nationales, renforcer la résilience des systèmes et garantir la souveraineté numérique de la RDC.
-                        </p>
-                        <a href="directions.html#dssi" class="group inline-flex items-center gap-2 text-gouv-blue font-semibold border-b border-gouv-red/30 pb-1.5 hover:border-gouv-red transition-all">
-                            <span>Découvrir la direction DSSI</span>
-                            <i data-lucide="arrow-up-right" class="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
-                        </a>
-                    </div>
-                    <div class="md:col-span-6 order-2 group">
-                        <div class="relative overflow-hidden rounded-3xl aspect-[5/4] shadow-[0_20px_60px_-20px_rgba(196,30,58,0.25)]">
-                            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80" alt="Cybersécurité" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1200ms] ease-out">
-                            <div class="absolute inset-0 bg-gradient-to-t from-gouv-red/30 via-transparent to-transparent"></div>
-                            <span class="absolute top-6 right-8 text-white font-serif font-bold text-[56px] italic leading-none drop-shadow-lg">02</span>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Pilier 03 — Formation -->
-                <article class="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 items-center mb-24 md:mb-32 reveal">
-                    <div class="md:col-span-6 order-2 md:order-1 group">
-                        <div class="relative overflow-hidden rounded-3xl aspect-[5/4] shadow-[0_20px_60px_-20px_rgba(212,160,23,0.25)]">
-                            <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80" alt="Formation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1200ms] ease-out">
-                            <div class="absolute inset-0 bg-gradient-to-t from-gouv-gold/30 via-transparent to-transparent"></div>
-                            <span class="absolute top-6 left-8 text-white font-serif font-bold text-[56px] italic leading-none drop-shadow-lg">03</span>
-                        </div>
-                    </div>
-                    <div class="md:col-span-6 md:pl-2 order-1 md:order-2">
-                        <div class="flex items-center gap-4 mb-6">
-                            <div class="w-12 h-12 rounded-full bg-gouv-gold/5 flex items-center justify-center border border-gouv-gold/30">
-                                <i data-lucide="graduation-cap" class="w-5 h-5 text-gouv-gold"></i>
-                            </div>
-                            <span class="text-[11px] font-bold tracking-[0.3em] text-gouv-gold uppercase">Pilier 03 · Talents</span>
-                        </div>
-                        <h3 class="text-3xl md:text-[40px] font-bold text-gouv-blue mb-6 font-serif leading-[1.15]">Formation aux Métiers du Numérique</h3>
-                        <p class="text-lg text-text-muted leading-[1.75] mb-10 font-light">
-                            Développer les compétences nationales et cultiver une culture numérique inclusive pour tous les citoyens congolais.
-                        </p>
-                        <a href="services.html#formations" class="group inline-flex items-center gap-2 text-gouv-blue font-semibold border-b border-gouv-gold/40 pb-1.5 hover:border-gouv-gold transition-all">
-                            <span>Explorer les formations</span>
-                            <i data-lucide="arrow-up-right" class="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
-                        </a>
-                    </div>
-                </article>
-
-                <!-- Pilier 04 — Transformation Économique (alt) -->
-                <article class="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 items-center reveal">
-                    <div class="md:col-span-6 md:pr-2 order-1">
-                        <div class="flex items-center gap-4 mb-6">
-                            <div class="w-12 h-12 rounded-full bg-gouv-blue/5 flex items-center justify-center border border-gouv-blue/25">
-                                <i data-lucide="trending-up" class="w-5 h-5 text-gouv-blue"></i>
-                            </div>
-                            <span class="text-[11px] font-bold tracking-[0.3em] text-gouv-blue uppercase">Pilier 04 · Économie</span>
-                        </div>
-                        <h3 class="text-3xl md:text-[40px] font-bold text-gouv-blue mb-6 font-serif leading-[1.15]">Transformation Économique</h3>
-                        <p class="text-lg text-text-muted leading-[1.75] mb-10 font-light">
-                            Accompagner la transition vers l'économie numérique, valoriser les données et développer un écosystème digital dynamique et compétitif.
-                        </p>
-                        <a href="directions.html#dsin" class="group inline-flex items-center gap-2 text-gouv-blue font-semibold border-b border-gouv-blue/30 pb-1.5 hover:border-gouv-blue transition-all">
-                            <span>Découvrir la direction DSIN</span>
-                            <i data-lucide="arrow-up-right" class="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
-                        </a>
-                    </div>
-                    <div class="md:col-span-6 order-2 group">
-                        <div class="relative overflow-hidden rounded-3xl aspect-[5/4] shadow-[0_20px_60px_-20px_rgba(0,61,122,0.25)]">
-                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80" alt="Transformation Économique" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1200ms] ease-out">
-                            <div class="absolute inset-0 bg-gradient-to-t from-gouv-blue/30 via-transparent to-transparent"></div>
-                            <span class="absolute top-6 right-8 text-white font-serif font-bold text-[56px] italic leading-none drop-shadow-lg">04</span>
-                        </div>
-                    </div>
-                </article>
+                    <a href="about.html" class="inline-flex items-center gap-3 bg-gouv-blue text-white px-7 py-3.5 rounded-full font-semibold text-sm hover:bg-gouv-cyan transition-colors shrink-0">
+                        Notre vision complète
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
 
             </div>
         </section>
