@@ -154,155 +154,61 @@
 }
 
 /* ==========================================================
-   CHARTER — Section Valeurs en 4 articles éditoriaux
+   PAVÉS INSTITUTIONNELS — Section Engagements (DSFR/GOV.UK-style)
    ========================================================== */
 
-.charter {
-    background: #FAFCFF;
-}
-
-/* Texture grain papier très discrète */
-.charter-grain {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    opacity: 0.025;
-    mix-blend-mode: multiply;
-    background-image: url("data:image/svg+xml;utf8,%3Csvg viewBox='0 0 300 300' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0.24 0 0 0 0 0.48 0 0 0 0.8 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-}
-
-/* Fil gold horizontal traversant la section */
-.charter-thread {
-    position: absolute;
-    top: 58%;
-    left: 0;
-    right: 0;
-    height: 1px;
-    pointer-events: none;
-    background: linear-gradient(90deg,
-        transparent 0%,
-        rgba(212, 160, 23, 0.22) 15%,
-        rgba(212, 160, 23, 0.35) 50%,
-        rgba(212, 160, 23, 0.22) 85%,
-        transparent 100%);
-    z-index: 1;
-}
-
-/* Article */
-.charter-article {
+.pave {
     position: relative;
-    padding: 2rem 1.75rem 2.25rem;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-    transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
-    border-right: 1px solid rgba(0, 61, 122, 0.08);
-}
-.charter-article:last-child {
-    border-right: none;
-}
-@media (max-width: 639px) {
-    .charter-article {
-        border-right: none;
-        border-bottom: 1px solid rgba(0, 61, 122, 0.08);
-        padding-top: 2.5rem;
-    }
-    .charter-article:last-child {
-        border-bottom: none;
-    }
-}
-@media (min-width: 640px) and (max-width: 1023px) {
-    .charter-article:nth-child(2) {
-        border-right: none;
-    }
-    .charter-article:nth-child(1),
-    .charter-article:nth-child(2) {
-        border-bottom: 1px solid rgba(0, 61, 122, 0.08);
-        padding-bottom: 2.5rem;
-    }
-    .charter-article:nth-child(3),
-    .charter-article:nth-child(4) {
-        padding-top: 2.5rem;
-    }
+    padding: 2rem 1.75rem 2rem 2rem;
+    background: #FFFFFF;
+    border: 1px solid #E5E9EF;
+    border-left: 3px solid transparent;
+    transition: border-color 0.25s ease, border-left-width 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
 }
 
-/* Chiffre romain gold */
-.charter-numeral {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-weight: 700;
-    font-size: 1.75rem;
-    line-height: 1;
-    color: #D4A017;
-    opacity: 0.55;
-    margin-bottom: 0.5rem;
-    transition: opacity 0.3s;
-}
-.charter-article:hover .charter-numeral {
-    opacity: 1;
-}
+.pave[data-accent="cyan"] { border-left-color: #00A8E8; }
+.pave[data-accent="gold"] { border-left-color: #D4A017; }
+.pave[data-accent="red"]  { border-left-color: #C41E3A; }
+.pave[data-accent="blue"] { border-left-color: #003D7A; }
 
-/* Trait vertical fin gold sous le chiffre */
-.charter-stem {
-    width: 1px;
-    height: 28px;
-    background: linear-gradient(180deg, rgba(212, 160, 23, 0.5), rgba(212, 160, 23, 0));
-    margin-bottom: 1.25rem;
-}
-
-/* Icône discrète (stroke only, pas de cercle) */
-.charter-icon {
-    color: #003D7A;
-    margin-bottom: 1.5rem;
-    transition: color 0.4s, transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
-}
-.charter-article[data-accent="cyan"]:hover .charter-icon { color: #00A8E8; }
-.charter-article[data-accent="gold"]:hover .charter-icon { color: #D4A017; }
-.charter-article[data-accent="red"]:hover  .charter-icon { color: #C41E3A; }
-.charter-article[data-accent="blue"]:hover .charter-icon { color: #00A8E8; }
-.charter-article:hover .charter-icon {
+.pave:hover {
+    border-left-width: 5px;
+    box-shadow: 0 4px 16px rgba(0, 61, 122, 0.06);
     transform: translateY(-2px);
 }
 
-/* Nom du principe */
-.charter-name {
-    font-family: 'Cormorant Garamond', serif;
+/* Numéro 01-04 */
+.pave-number {
+    font-family: 'Inter', sans-serif;
     font-weight: 700;
-    font-size: 1.625rem;
-    line-height: 1.1;
-    color: #003D7A;
-    margin-bottom: 0.75rem;
-    transition: color 0.4s;
-}
-.charter-article[data-accent="cyan"]:hover .charter-name { color: #00A8E8; }
-.charter-article[data-accent="gold"]:hover .charter-name { color: #B38710; }
-.charter-article[data-accent="red"]:hover  .charter-name { color: #C41E3A; }
-.charter-article[data-accent="blue"]:hover .charter-name { color: #00A8E8; }
-
-/* Trait fin coloré sous le nom (24px -> 40px au hover) */
-.charter-rule {
-    width: 24px;
-    height: 2px;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    color: #8B95A5;
     margin-bottom: 1rem;
-    transition: width 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
-.charter-article[data-accent="cyan"] .charter-rule { background: #00A8E8; }
-.charter-article[data-accent="gold"] .charter-rule { background: #D4A017; }
-.charter-article[data-accent="red"]  .charter-rule { background: #C41E3A; }
-.charter-article[data-accent="blue"] .charter-rule { background: #003D7A; }
-.charter-article:hover .charter-rule {
-    width: 40px;
+.pave[data-accent="cyan"] .pave-number { color: #0077A8; }
+.pave[data-accent="gold"] .pave-number { color: #B38710; }
+.pave[data-accent="red"]  .pave-number { color: #A01830; }
+.pave[data-accent="blue"] .pave-number { color: #003D7A; }
+
+/* Titre — SANS-SERIF uppercase bold (style institutionnel/acte officiel) */
+.pave-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 1.05rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #003D7A;
+    line-height: 1.2;
+    margin-bottom: 0.875rem;
 }
 
-/* Phrase-engagement italique */
-.charter-statement {
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-weight: 500;
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #64748B;
-    letter-spacing: 0.01em;
+/* Description — sans-serif, lisibilité administrative */
+.pave-desc {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #4A5568;
 }
 
