@@ -20,8 +20,9 @@ tailwind.config = {
                 }
             },
             fontFamily: {
-                sans: ['Inter', 'sans-serif'],
-                serif: ['Cormorant Garamond', 'serif']
+                sans: ['Cooper Hewitt', 'system-ui', 'sans-serif'],
+                serif: ['Cooper Hewitt', 'system-ui', 'sans-serif'],
+                script: ['Great Vibes', 'cursive']
             },
             animation: {
                 'blob': 'blob 10s infinite alternate',

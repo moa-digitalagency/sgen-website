@@ -1,0 +1,119 @@
+/* ============================================
+   SGEN — Fonts auto-hébergés
+   Cooper Hewitt (sans-serif principal) + Great Vibes (script décoratif)
+   ============================================ */
+
+/* ===== Cooper Hewitt — 7 graisses + italics ===== */
+@font-face {
+    font-family: 'Cooper Hewitt';
+    src: url('../font/cooper-hewitt/CooperHewitt-Thin.otf') format('opentype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Cooper Hewitt';
+    src: url('../font/cooper-hewitt/CooperHewitt-ThinItalic.otf') format('opentype');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Cooper Hewitt';
+    src: url('../font/cooper-hewitt/CooperHewitt-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Cooper Hewitt';
+    src: url('../font/cooper-hewitt/CooperHewitt-LightItalic.otf') format('opentype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Cooper Hewitt';
+    src: url('../font/cooper-hewitt/CooperHewitt-Book.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Cooper Hewitt';
+    src: url('../font/cooper-hewitt/CooperHewitt-BookItalic.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Cooper Hewitt';
+    src: url('../font/cooper-hewitt/CooperHewitt-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Cooper Hewitt';
+    src: url('../font/cooper-hewitt/CooperHewitt-MediumItalic.otf') format('opentype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Cooper Hewitt';
+    src: url('../font/cooper-hewitt/CooperHewitt-Semibold.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Cooper Hewitt';
+    src: url('../font/cooper-hewitt/CooperHewitt-SemiboldItalic.otf') format('opentype');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Cooper Hewitt';
+    src: url('../font/cooper-hewitt/CooperHewitt-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Cooper Hewitt';
+    src: url('../font/cooper-hewitt/CooperHewitt-BoldItalic.otf') format('opentype');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Cooper Hewitt';
+    src: url('../font/cooper-hewitt/CooperHewitt-Heavy.otf') format('opentype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Cooper Hewitt';
+    src: url('../font/cooper-hewitt/CooperHewitt-HeavyItalic.otf') format('opentype');
+    font-weight: 800;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* ===== Great Vibes — cursive décorative (accents) ===== */
+@font-face {
+    font-family: 'Great Vibes';
+    src: url('../font/Great_Vibes/GreatVibes-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Utility class pour Great Vibes (pour les touches décoratives sélectives) */
+.font-script {
+    font-family: 'Great Vibes', 'Cooper Hewitt', cursive;
+    font-weight: 400;
+}
