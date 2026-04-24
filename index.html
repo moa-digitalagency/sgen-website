@@ -10,7 +10,7 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Tailwind CDN + config (le config doit suivre le CDN) -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -256,173 +256,226 @@
             </div>
         </section>
 
-        <!-- MISSIONS — redesign éditorial radical -->
-        <section id="missions" class="py-28 md:py-40 relative overflow-hidden">
+        <!-- ATLAS DE LA SOUVERAINETÉ NUMÉRIQUE — Bento mosaïque asymétrique -->
+        <section id="missions" class="atlas">
+            <div class="atlas-inner">
 
-            <!-- Background grid subtle -->
-            <div class="absolute inset-0 pointer-events-none opacity-[0.03]" style="background-image: linear-gradient(to right, #003D7A 1px, transparent 1px), linear-gradient(to bottom, #003D7A 1px, transparent 1px); background-size: 80px 80px;"></div>
-
-            <!-- Accent vertical line décoratif -->
-            <div class="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-gouv-gold/20 to-transparent hidden lg:block"></div>
-
-            <div class="max-w-[1100px] mx-auto px-4 md:px-8 relative z-10">
-
-                <!-- Editorial header : label + giant serif headline -->
-                <header class="mb-20 md:mb-32">
-                    <div class="reveal flex items-center gap-4 mb-10">
-                        <span class="h-px w-16 bg-gouv-gold"></span>
-                        <span class="text-[11px] font-bold tracking-[0.35em] text-gouv-gold uppercase">Notre Mission</span>
+                <!-- Header éditorial double-ligne -->
+                <header class="atlas-header reveal">
+                    <div class="atlas-header-word">Quatre<br>Piliers</div>
+                    <div class="atlas-header-mark">
+                        <svg width="24" height="24" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="50" cy="50" r="42"/>
+                            <path d="M50 8 L52 45 L92 50 L52 55 L50 92 L48 55 L8 50 L48 45 Z" fill="currentColor" stroke="none"/>
+                            <circle cx="50" cy="50" r="2.5" fill="#FAFCFF" stroke="none"/>
+                        </svg>
+                        N · S · E · O
                     </div>
-
-                    <h2 class="reveal delay-100 text-[40px] md:text-[80px] lg:text-[96px] font-bold text-gouv-blue font-serif leading-[0.98] tracking-tight mb-12 max-w-5xl">
-                        Transformer la RDC<br>
-                        par <span class="italic font-normal text-gouv-cyan">quatre piliers</span><br>
-                        numériques.
-                    </h2>
-
-                    <div class="reveal delay-200 max-w-xl ml-auto md:text-right">
-                        <p class="text-base md:text-lg text-text-muted font-light leading-[1.8] border-t border-gouv-blue/10 pt-6">
-                            Une stratégie cohérente, portée par nos neuf directions, pour faire du numérique le levier du développement national — intégration, gouvernance, croissance, souveraineté.
-                        </p>
-                    </div>
+                    <div class="atlas-header-word right">Une<br>Vision</div>
                 </header>
+                <div class="atlas-meta reveal delay-100">République Démocratique du Congo &middot; SGEN &middot; Stratégie 2026—2030</div>
 
-                <!-- Editorial rows : grid éditorial minimaliste -->
-                <div class="border-t border-gouv-blue/15">
+                <!-- SPREAD A : Infrastructures + Cybersécurité -->
+                <div class="atlas-spread">
 
-                    <!-- Pilier 01 -->
-                    <article class="group reveal relative grid grid-cols-12 gap-4 md:gap-8 items-baseline py-10 md:py-16 border-b border-gouv-blue/15 transition-colors duration-500 hover:bg-gouv-cyan/[0.02]">
-                        <!-- Numéro géant -->
-                        <div class="col-span-3 md:col-span-2">
-                            <span class="font-serif italic font-bold text-gouv-cyan/90 text-[56px] md:text-[104px] leading-none tracking-tight block">01</span>
-                        </div>
+                    <!-- PLATE 01 — Infrastructures -->
+                    <article class="plate plate-01 reveal" data-plate="01">
+                        <div class="active-badge">NETWORK &middot; 5000+ KM &middot; 26 PROV.</div>
+                        <div class="serial">RDC/SGEN/01.2026</div>
 
-                        <!-- Content principal -->
-                        <div class="col-span-9 md:col-span-7">
-                            <div class="flex items-center gap-2.5 mb-4">
-                                <i data-lucide="wifi" class="w-3.5 h-3.5 text-gouv-cyan"></i>
-                                <span class="text-[10px] font-bold tracking-[0.35em] text-gouv-cyan uppercase">Connectivité</span>
-                            </div>
-                            <h3 class="text-2xl md:text-4xl font-bold text-gouv-blue font-serif leading-[1.1] mb-5 transition-colors duration-500 group-hover:text-gouv-cyan">
-                                Infrastructures Numériques
-                            </h3>
-                            <p class="text-base md:text-lg text-text-muted font-light leading-[1.75] max-w-2xl">
-                                Déployer la fibre optique et les réseaux de données à travers toute la RDC pour une couverture territoriale complète et une connectivité durable.
-                            </p>
-                        </div>
+                        <svg class="map-svg" viewBox="0 0 800 640" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                            <defs>
+                                <radialGradient id="netbg" cx="40%" cy="45%">
+                                    <stop offset="0%" stop-color="#00A8E8" stop-opacity="0.18"/>
+                                    <stop offset="100%" stop-color="#001529" stop-opacity="0"/>
+                                </radialGradient>
+                                <filter id="glow">
+                                    <feGaussianBlur stdDeviation="3"/>
+                                </filter>
+                            </defs>
+                            <rect width="800" height="640" fill="url(#netbg)"/>
 
-                        <!-- CTA à droite -->
-                        <div class="col-span-12 md:col-span-3 md:text-right md:pl-4 mt-6 md:mt-0">
-                            <a href="directions.html#din" class="inline-flex items-center gap-2 text-[13px] font-bold tracking-wider text-gouv-blue uppercase hover:text-gouv-cyan transition-colors group/link">
-                                <span class="border-b border-gouv-blue/20 group-hover/link:border-gouv-cyan pb-1 transition-colors">Direction DIN</span>
-                                <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5"></i>
-                            </a>
-                        </div>
+                            <!-- Connexions réseau (animées) -->
+                            <g stroke="#00A8E8" stroke-width="1.1" fill="none" opacity="0.8">
+                                <path class="network-line" d="M 400 340 L 200 150"/>
+                                <path class="network-line" d="M 400 340 L 620 110"/>
+                                <path class="network-line" d="M 400 340 L 710 300"/>
+                                <path class="network-line" d="M 400 340 L 580 520"/>
+                                <path class="network-line" d="M 400 340 L 300 560"/>
+                                <path class="network-line" d="M 400 340 L 110 420"/>
+                                <path class="network-line" d="M 400 340 L 160 250"/>
+                                <path class="network-line" d="M 200 150 L 360 75"/>
+                                <path class="network-line" d="M 620 110 L 710 300"/>
+                                <path class="network-line" d="M 580 520 L 710 300"/>
+                            </g>
 
-                        <!-- Marge gauche accent animé -->
-                        <div class="absolute left-0 top-0 w-0 h-full bg-gouv-cyan transition-all duration-500 group-hover:w-1"></div>
+                            <!-- Hub central Kinshasa -->
+                            <g class="map-node">
+                                <circle cx="400" cy="340" r="26" fill="none" stroke="#00A8E8" stroke-width="0.8" opacity="0.25"/>
+                                <circle cx="400" cy="340" r="16" fill="none" stroke="#00A8E8" stroke-width="1" opacity="0.5"/>
+                                <circle cx="400" cy="340" r="8" fill="#D4A017"/>
+                                <circle cx="400" cy="340" r="4" fill="#FAFCFF"/>
+                            </g>
+
+                            <!-- Noeuds villes -->
+                            <g fill="#00A8E8" class="map-node">
+                                <circle cx="200" cy="150" r="4"/>
+                                <circle cx="620" cy="110" r="4"/>
+                                <circle cx="710" cy="300" r="4"/>
+                                <circle cx="580" cy="520" r="4"/>
+                                <circle cx="300" cy="560" r="4"/>
+                                <circle cx="110" cy="420" r="4"/>
+                                <circle cx="160" cy="250" r="4"/>
+                                <circle cx="360" cy="75"  r="4"/>
+                            </g>
+
+                            <!-- Labels villes -->
+                            <g font-family="JetBrains Mono, monospace" font-size="10" fill="#00A8E8" opacity="0.7" class="map-node">
+                                <text x="414" y="337">KINSHASA</text>
+                                <text x="210" y="145">KANANGA</text>
+                                <text x="632" y="105">KISANGANI</text>
+                                <text x="650" y="300">GOMA</text>
+                                <text x="488" y="525">LUBUMBASHI</text>
+                                <text x="180" y="250">MBANDAKA</text>
+                            </g>
+                        </svg>
+
+                        <div class="big-num">01</div>
+
+                        <a href="directions.html#din" class="plate-panel">
+                            <div class="plate-label">Pilier 01 &middot; Connectivité</div>
+                            <h3>Infrastructures Numériques</h3>
+                            <p>Déployer la fibre optique et les réseaux de données à travers toute la RDC pour une couverture territoriale complète.</p>
+                            <span class="plate-cta">Direction DIN
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg>
+                            </span>
+                        </a>
                     </article>
 
-                    <!-- Pilier 02 -->
-                    <article class="group reveal relative grid grid-cols-12 gap-4 md:gap-8 items-baseline py-10 md:py-16 border-b border-gouv-blue/15 transition-colors duration-500 hover:bg-gouv-red/[0.02]">
-                        <div class="col-span-3 md:col-span-2">
-                            <span class="font-serif italic font-bold text-gouv-red/90 text-[56px] md:text-[104px] leading-none tracking-tight block">02</span>
+                    <!-- PLATE 02 — Cybersécurité -->
+                    <article class="plate plate-02 reveal" data-plate="02">
+                        <div class="corner tl"></div>
+                        <div class="corner tr"></div>
+                        <div class="corner bl"></div>
+                        <div class="corner br"></div>
+                        <div class="scan"></div>
+                        <div class="serial">RDC/SGEN/02.2026</div>
+
+                        <div class="lock-ring">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="5" y="11" width="14" height="10" rx="2"/>
+                                <path d="M8 11V7a4 4 0 0 1 8 0v4"/>
+                            </svg>
                         </div>
 
-                        <div class="col-span-9 md:col-span-7">
-                            <div class="flex items-center gap-2.5 mb-4">
-                                <i data-lucide="shield-check" class="w-3.5 h-3.5 text-gouv-red"></i>
-                                <span class="text-[10px] font-bold tracking-[0.35em] text-gouv-red uppercase">Souveraineté</span>
-                            </div>
-                            <h3 class="text-2xl md:text-4xl font-bold text-gouv-blue font-serif leading-[1.1] mb-5 transition-colors duration-500 group-hover:text-gouv-red">
-                                Cybersécurité & Protection
-                            </h3>
-                            <p class="text-base md:text-lg text-text-muted font-light leading-[1.75] max-w-2xl">
-                                Assurer la protection des données nationales, renforcer la résilience des systèmes et garantir la souveraineté numérique de la RDC.
-                            </p>
-                        </div>
+                        <span class="big-num">02</span>
 
-                        <div class="col-span-12 md:col-span-3 md:text-right md:pl-4 mt-6 md:mt-0">
-                            <a href="directions.html#dssi" class="inline-flex items-center gap-2 text-[13px] font-bold tracking-wider text-gouv-blue uppercase hover:text-gouv-red transition-colors group/link">
-                                <span class="border-b border-gouv-blue/20 group-hover/link:border-gouv-red pb-1 transition-colors">Direction DSSI</span>
-                                <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5"></i>
+                        <div class="content">
+                            <div class="plate-label">Souveraineté</div>
+                            <h3>Cybersécurité &amp; Protection</h3>
+                            <p>Protéger les données nationales et renforcer la résilience des systèmes critiques face aux menaces numériques.</p>
+                            <a href="directions.html#dssi" class="plate-cta">Direction DSSI
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg>
                             </a>
                         </div>
-
-                        <div class="absolute left-0 top-0 w-0 h-full bg-gouv-red transition-all duration-500 group-hover:w-1"></div>
-                    </article>
-
-                    <!-- Pilier 03 -->
-                    <article class="group reveal relative grid grid-cols-12 gap-4 md:gap-8 items-baseline py-10 md:py-16 border-b border-gouv-blue/15 transition-colors duration-500 hover:bg-gouv-gold/[0.03]">
-                        <div class="col-span-3 md:col-span-2">
-                            <span class="font-serif italic font-bold text-gouv-gold/90 text-[56px] md:text-[104px] leading-none tracking-tight block">03</span>
-                        </div>
-
-                        <div class="col-span-9 md:col-span-7">
-                            <div class="flex items-center gap-2.5 mb-4">
-                                <i data-lucide="graduation-cap" class="w-3.5 h-3.5 text-gouv-gold"></i>
-                                <span class="text-[10px] font-bold tracking-[0.35em] text-gouv-gold uppercase">Talents</span>
-                            </div>
-                            <h3 class="text-2xl md:text-4xl font-bold text-gouv-blue font-serif leading-[1.1] mb-5 transition-colors duration-500 group-hover:text-gouv-gold">
-                                Formation aux Métiers du Numérique
-                            </h3>
-                            <p class="text-base md:text-lg text-text-muted font-light leading-[1.75] max-w-2xl">
-                                Développer les compétences nationales et cultiver une culture numérique inclusive pour tous les citoyens congolais.
-                            </p>
-                        </div>
-
-                        <div class="col-span-12 md:col-span-3 md:text-right md:pl-4 mt-6 md:mt-0">
-                            <a href="services.html#formations" class="inline-flex items-center gap-2 text-[13px] font-bold tracking-wider text-gouv-blue uppercase hover:text-gouv-gold transition-colors group/link">
-                                <span class="border-b border-gouv-blue/20 group-hover/link:border-gouv-gold pb-1 transition-colors">Nos formations</span>
-                                <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5"></i>
-                            </a>
-                        </div>
-
-                        <div class="absolute left-0 top-0 w-0 h-full bg-gouv-gold transition-all duration-500 group-hover:w-1"></div>
-                    </article>
-
-                    <!-- Pilier 04 -->
-                    <article class="group reveal relative grid grid-cols-12 gap-4 md:gap-8 items-baseline py-10 md:py-16 transition-colors duration-500 hover:bg-gouv-blue/[0.03]">
-                        <div class="col-span-3 md:col-span-2">
-                            <span class="font-serif italic font-bold text-gouv-blue/90 text-[56px] md:text-[104px] leading-none tracking-tight block">04</span>
-                        </div>
-
-                        <div class="col-span-9 md:col-span-7">
-                            <div class="flex items-center gap-2.5 mb-4">
-                                <i data-lucide="trending-up" class="w-3.5 h-3.5 text-gouv-blue"></i>
-                                <span class="text-[10px] font-bold tracking-[0.35em] text-gouv-blue uppercase">Économie</span>
-                            </div>
-                            <h3 class="text-2xl md:text-4xl font-bold text-gouv-blue font-serif leading-[1.1] mb-5 transition-colors duration-500 group-hover:text-gouv-cyan">
-                                Transformation Économique
-                            </h3>
-                            <p class="text-base md:text-lg text-text-muted font-light leading-[1.75] max-w-2xl">
-                                Accompagner la transition vers l'économie numérique, valoriser les données et développer un écosystème digital dynamique et compétitif.
-                            </p>
-                        </div>
-
-                        <div class="col-span-12 md:col-span-3 md:text-right md:pl-4 mt-6 md:mt-0">
-                            <a href="directions.html#dsin" class="inline-flex items-center gap-2 text-[13px] font-bold tracking-wider text-gouv-blue uppercase hover:text-gouv-cyan transition-colors group/link">
-                                <span class="border-b border-gouv-blue/20 group-hover/link:border-gouv-cyan pb-1 transition-colors">Direction DSIN</span>
-                                <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 transition-transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5"></i>
-                            </a>
-                        </div>
-
-                        <div class="absolute left-0 top-0 w-0 h-full bg-gouv-blue transition-all duration-500 group-hover:w-1"></div>
                     </article>
                 </div>
 
-                <!-- Footer de section : CTA global + signature -->
-                <div class="reveal mt-20 md:mt-28 flex flex-col md:flex-row items-start md:items-end justify-between gap-8 pt-10 border-t border-gouv-blue/15">
-                    <div class="max-w-md">
-                        <span class="text-[11px] font-bold tracking-[0.3em] text-gouv-gold uppercase mb-3 block">Aller plus loin</span>
-                        <p class="text-lg text-gouv-blue font-serif italic">
-                            « Faire du numérique le levier du développement national. »
-                        </p>
+                <!-- DIVIDER avec rose-des-vents -->
+                <div class="atlas-divider reveal">
+                    <svg class="rose" viewBox="0 0 100 100" fill="currentColor" aria-hidden="true">
+                        <path d="M50 6 L54 46 L94 50 L54 54 L50 94 L46 54 L6 50 L46 46 Z"/>
+                        <path d="M50 22 L56 50 L50 78 L44 50 Z" opacity="0.55" transform="rotate(45 50 50)"/>
+                        <circle cx="50" cy="50" r="3"/>
+                    </svg>
+                    <p class="manifesto">« Faire du numérique le levier du développement national — intégration, gouvernance, croissance, souveraineté. »</p>
+                    <div class="signature">
+                        Planches 01—04<br>
+                        Stratégie 2026—2030
                     </div>
-                    <a href="about.html" class="inline-flex items-center gap-3 bg-gouv-blue text-white px-7 py-3.5 rounded-full font-semibold text-sm hover:bg-gouv-cyan transition-colors shrink-0">
-                        Notre vision complète
-                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                    </a>
+                </div>
+
+                <!-- SPREAD B : Formation + Transformation Économique -->
+                <div class="atlas-spread">
+
+                    <!-- PLATE 03 — Formation -->
+                    <article class="plate plate-03 reveal" data-plate="03">
+                        <div class="serial">RDC/SGEN/03.2026</div>
+                        <span class="big-num">03</span>
+
+                        <div class="plate-label">Talents</div>
+
+                        <p class="quote">Former une génération connectée, critique et créative.</p>
+
+                        <p class="desc">Développer les compétences nationales et cultiver une culture numérique inclusive pour tous les citoyens congolais.</p>
+
+                        <div class="stats-bar">
+                            <div class="stat">
+                                <strong>100k+</strong>
+                                <span>Étudiants visés</span>
+                            </div>
+                            <div class="stat">
+                                <strong>10</strong>
+                                <span>Certifications</span>
+                            </div>
+                        </div>
+
+                        <a href="services.html#formations" class="plate-cta">Nos formations
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg>
+                        </a>
+                    </article>
+
+                    <!-- PLATE 04 — Transformation Économique -->
+                    <article class="plate plate-04 reveal" data-plate="04">
+                        <div class="serial">RDC/SGEN/04.2026</div>
+
+                        <div class="content-left">
+                            <span class="big-num">04</span>
+
+                            <div class="content-body">
+                                <div class="plate-label">Économie</div>
+                                <h3>Transformation Économique</h3>
+                                <p>Accompagner la transition vers l'économie numérique, valoriser les données et développer un écosystème digital dynamique.</p>
+                                <a href="directions.html#dsin" class="plate-cta">Direction DSIN
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M7 7h10v10"/></svg>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="dataviz">
+                            <svg viewBox="0 0 340 240" preserveAspectRatio="xMidYMax meet" aria-hidden="true">
+                                <!-- Axis -->
+                                <line x1="20" y1="210" x2="330" y2="210" stroke="#003D7A" stroke-width="1" opacity="0.18"/>
+                                <line x1="20" y1="210" x2="20" y2="30" stroke="#003D7A" stroke-width="1" opacity="0.18"/>
+
+                                <!-- Bars -->
+                                <rect class="bar" x="40"  y="160" width="24" height="50"/>
+                                <rect class="bar" x="85"  y="135" width="24" height="75"/>
+                                <rect class="bar" x="130" y="115" width="24" height="95"/>
+                                <rect class="bar" x="175" y="85"  width="24" height="125"/>
+                                <rect class="bar" x="220" y="60"  width="24" height="150"/>
+                                <rect class="bar" x="265" y="32"  width="24" height="178"/>
+
+                                <!-- Trend line -->
+                                <path class="trend" d="M 52 185 Q 100 165 130 145 T 200 105 T 280 45"/>
+
+                                <!-- Trend endpoints -->
+                                <circle class="trend-dot" cx="52"  cy="185" r="4"/>
+                                <circle class="trend-dot" cx="280" cy="45"  r="5"/>
+
+                                <!-- Year labels -->
+                                <g font-family="JetBrains Mono, monospace" font-size="9" fill="#003D7A" opacity="0.6">
+                                    <text x="38" y="228">2024</text>
+                                    <text x="260" y="228">2030</text>
+                                </g>
+
+                                <!-- GDP label -->
+                                <g font-family="JetBrains Mono, monospace" font-size="8" fill="#D4A017" font-weight="600">
+                                    <text x="230" y="35">+2—3% PIB</text>
+                                </g>
+                            </svg>
+                        </div>
+                    </article>
                 </div>
 
             </div>
