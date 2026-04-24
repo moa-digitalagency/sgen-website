@@ -84,7 +84,17 @@
 .missions-dark {
     position: relative;
     overflow: hidden;
-    background: linear-gradient(180deg, #001529 0%, #002548 50%, #001529 100%);
+    background-color: #001529;
+    background-image: linear-gradient(180deg, #001529 0%, #002548 50%, #001529 100%);
+    color: #F5F7FA;
+}
+
+/* Titre H2 de la section */
+.missions-dark .dark-title {
+    color: #F5F7FA;
+}
+.missions-dark .dark-subtitle {
+    color: rgba(255, 255, 255, 0.72);
 }
 
 /* Grain SVG overlay ~3% opacity pour texture dossier d'État */
@@ -92,9 +102,9 @@
     position: absolute;
     inset: 0;
     pointer-events: none;
-    opacity: 0.035;
+    opacity: 0.04;
     mix-blend-mode: overlay;
-    background-image: url("data:image/svg+xml;utf8,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.6 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml;utf8,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.7 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
 /* Dark glass cards — inversion exacte du glass-ultra */
@@ -106,72 +116,61 @@
     transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 .dark-card:hover {
-    background: rgba(255, 255, 255, 0.07);
-    border-color: rgba(255, 255, 255, 0.14);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.16);
     transform: translateY(-6px);
+}
+
+/* Titles et paragraphes à l'intérieur des dark-cards */
+.dark-card h3 {
+    color: #F5F7FA;
+}
+.dark-card p.dark-desc {
+    color: rgba(255, 255, 255, 0.70);
 }
 
 /* Border-top coloré + inner glow par pilier */
 .dark-card[data-pilier="01"] {
     border-top: 4px solid #00A8E8;
-    box-shadow: inset 0 1px 0 rgba(0, 168, 232, 0.2);
+    box-shadow: inset 0 1px 0 rgba(0, 168, 232, 0.22);
 }
 .dark-card[data-pilier="01"]:hover {
     box-shadow:
-        inset 0 1px 0 rgba(0, 168, 232, 0.3),
-        0 20px 50px -10px rgba(0, 168, 232, 0.18);
+        inset 0 1px 0 rgba(0, 168, 232, 0.35),
+        0 24px 50px -10px rgba(0, 168, 232, 0.22);
 }
 
 .dark-card[data-pilier="02"] {
     border-top: 4px solid #C41E3A;
-    box-shadow: inset 0 1px 0 rgba(196, 30, 58, 0.2);
+    box-shadow: inset 0 1px 0 rgba(196, 30, 58, 0.22);
 }
 .dark-card[data-pilier="02"]:hover {
     box-shadow:
-        inset 0 1px 0 rgba(196, 30, 58, 0.3),
-        0 20px 50px -10px rgba(196, 30, 58, 0.18);
+        inset 0 1px 0 rgba(196, 30, 58, 0.35),
+        0 24px 50px -10px rgba(196, 30, 58, 0.22);
 }
 
 .dark-card[data-pilier="03"] {
     border-top: 4px solid #D4A017;
-    box-shadow: inset 0 1px 0 rgba(212, 160, 23, 0.22);
+    box-shadow: inset 0 1px 0 rgba(212, 160, 23, 0.25);
 }
 .dark-card[data-pilier="03"]:hover {
     box-shadow:
-        inset 0 1px 0 rgba(212, 160, 23, 0.32),
-        0 20px 50px -10px rgba(212, 160, 23, 0.2);
+        inset 0 1px 0 rgba(212, 160, 23, 0.4),
+        0 24px 50px -10px rgba(212, 160, 23, 0.25);
 }
 
 .dark-card[data-pilier="04"] {
-    border-top: 4px solid #003D7A;
+    border-top: 4px solid #00A8E8;
     box-shadow: inset 0 1px 0 rgba(0, 168, 232, 0.22);
 }
 .dark-card[data-pilier="04"]:hover {
     box-shadow:
-        inset 0 1px 0 rgba(0, 168, 232, 0.32),
-        0 20px 50px -10px rgba(0, 168, 232, 0.18);
+        inset 0 1px 0 rgba(0, 168, 232, 0.35),
+        0 24px 50px -10px rgba(0, 168, 232, 0.22);
 }
 
-/* Fade edges pour transition douce avec sections claires adjacentes */
-.missions-dark-fade-top,
-.missions-dark-fade-bottom {
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 96px;
-    pointer-events: none;
-    z-index: 2;
-}
-.missions-dark-fade-top {
-    top: 0;
-    background: linear-gradient(180deg, #FAFCFF 0%, rgba(250, 252, 255, 0) 100%);
-}
-.missions-dark-fade-bottom {
-    bottom: 0;
-    background: linear-gradient(0deg, #FAFCFF 0%, rgba(250, 252, 255, 0) 100%);
-}
-
-/* Barre tricolore RDC qui marque l'entrée dans la zone "officielle" */
+/* Barre tricolore RDC au top de la section */
 .missions-dark-accent {
     position: absolute;
     top: 0;
