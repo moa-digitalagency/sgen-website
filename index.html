@@ -401,45 +401,90 @@
             </div>
         </section>
 
-        <!-- VALEURS -->
-        <section class="py-24 text-center relative overflow-hidden">
+        <!-- CHARTE DES PRINCIPES — refonte éditoriale de la section Valeurs -->
+        <section class="charter py-24 md:py-28 relative overflow-hidden">
+            <!-- Texture grain papier subtile -->
+            <div class="charter-grain"></div>
+            <!-- Fil gold horizontal traversant (derrière les articles) -->
+            <div class="charter-thread"></div>
+
             <div class="max-w-[1200px] mx-auto px-4 md:px-8 relative z-10">
-                <div class="reveal mb-20">
-                    <h2 class="text-4xl md:text-[50px] font-bold text-gouv-blue mb-6 font-serif">Vision 2026-2030 : Une RDC Numérique</h2>
-                    <p class="max-w-2xl mx-auto text-lg text-text-muted font-light">
-                        Le SGEN s'engage pour une transformation numérique inclusive, durable et souveraine qui positionne la RDC comme leader technologique en Afrique.
+
+                <!-- Header : overline + titre + intro -->
+                <div class="text-center mb-20 reveal">
+                    <div class="inline-flex items-center gap-3 mb-8">
+                        <span class="h-px w-10 bg-gouv-gold/70"></span>
+                        <span class="text-[11px] font-bold tracking-[0.35em] text-gouv-gold uppercase">Vision 2026 — 2030</span>
+                        <span class="h-px w-10 bg-gouv-gold/70"></span>
+                    </div>
+                    <h2 class="text-4xl md:text-5xl font-bold font-serif text-gouv-blue mb-6 leading-[1.1]">
+                        Une République numérique, <br class="hidden md:block"/>
+                        <span class="italic font-normal text-gouv-cyan">par ses principes.</span>
+                    </h2>
+                    <p class="max-w-2xl mx-auto text-[15px] text-text-muted font-light leading-relaxed">
+                        Quatre engagements fondateurs qui orientent chaque décision du SGEN — au service d'une RDC connectée, souveraine et inclusive.
                     </p>
                 </div>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 reveal">
-                    <div class="flex flex-col items-center group">
-                        <div class="mb-6 p-5 rounded-full glass-ultra shadow-sm text-gouv-blue group-hover:text-gouv-cyan transition-colors">
-                            <i data-lucide="accessibility" class="w-8 h-8 group-hover:scale-110 transition-transform duration-500"></i>
+                <!-- 4 articles en grille -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0 relative">
+
+                    <!-- Article I — Accessibilité -->
+                    <article class="charter-article group reveal" data-accent="cyan">
+                        <div class="charter-numeral">I</div>
+                        <div class="charter-stem"></div>
+                        <div class="charter-icon">
+                            <i data-lucide="accessibility" class="w-7 h-7"></i>
                         </div>
-                        <h4 class="text-xl font-bold text-gouv-blue mb-3 font-serif">Accessibilité</h4>
-                        <p class="text-[14px] text-text-muted font-light leading-relaxed">Services numériques inclusifs pour tous les citoyens, indépendamment de leur situation géographique.</p>
-                    </div>
-                    <div class="flex flex-col items-center group">
-                        <div class="mb-6 p-5 rounded-full glass-ultra shadow-sm text-gouv-blue group-hover:text-gouv-gold transition-colors">
-                            <i data-lucide="target" class="w-8 h-8 group-hover:scale-110 transition-transform duration-500"></i>
+                        <h3 class="charter-name">Accessibilité</h3>
+                        <div class="charter-rule"></div>
+                        <p class="charter-statement">
+                            « Le numérique accessible à tous, partout, sans distinction de situation. »
+                        </p>
+                    </article>
+
+                    <!-- Article II — Excellence -->
+                    <article class="charter-article group reveal delay-100" data-accent="gold">
+                        <div class="charter-numeral">II</div>
+                        <div class="charter-stem"></div>
+                        <div class="charter-icon">
+                            <i data-lucide="target" class="w-7 h-7"></i>
                         </div>
-                        <h4 class="text-xl font-bold text-gouv-blue mb-3 font-serif">Excellence</h4>
-                        <p class="text-[14px] text-text-muted font-light leading-relaxed">Standards de qualité internationaux appliqués à tous les projets et services développés.</p>
-                    </div>
-                    <div class="flex flex-col items-center group">
-                        <div class="mb-6 p-5 rounded-full glass-ultra shadow-sm text-gouv-blue group-hover:text-gouv-red transition-colors">
-                            <i data-lucide="shield" class="w-8 h-8 group-hover:scale-110 transition-transform duration-500"></i>
+                        <h3 class="charter-name">Excellence</h3>
+                        <div class="charter-rule"></div>
+                        <p class="charter-statement">
+                            « Des standards internationaux appliqués à chaque projet, chaque service. »
+                        </p>
+                    </article>
+
+                    <!-- Article III — Souveraineté -->
+                    <article class="charter-article group reveal delay-200" data-accent="red">
+                        <div class="charter-numeral">III</div>
+                        <div class="charter-stem"></div>
+                        <div class="charter-icon">
+                            <i data-lucide="shield" class="w-7 h-7"></i>
                         </div>
-                        <h4 class="text-xl font-bold text-gouv-blue mb-3 font-serif">Souveraineté</h4>
-                        <p class="text-[14px] text-text-muted font-light leading-relaxed">Protection des données nationales et autonomie technologique face aux enjeux géopolitiques.</p>
-                    </div>
-                    <div class="flex flex-col items-center group">
-                        <div class="mb-6 p-5 rounded-full glass-ultra shadow-sm text-gouv-blue group-hover:text-gouv-cyan transition-colors">
-                            <i data-lucide="trending-up" class="w-8 h-8 group-hover:scale-110 transition-transform duration-500"></i>
+                        <h3 class="charter-name">Souveraineté</h3>
+                        <div class="charter-rule"></div>
+                        <p class="charter-statement">
+                            « Nos données, nos infrastructures, notre autonomie technologique nationale. »
+                        </p>
+                    </article>
+
+                    <!-- Article IV — Innovation -->
+                    <article class="charter-article group reveal delay-300" data-accent="blue">
+                        <div class="charter-numeral">IV</div>
+                        <div class="charter-stem"></div>
+                        <div class="charter-icon">
+                            <i data-lucide="trending-up" class="w-7 h-7"></i>
                         </div>
-                        <h4 class="text-xl font-bold text-gouv-blue mb-3 font-serif">Innovation</h4>
-                        <p class="text-[14px] text-text-muted font-light leading-relaxed">Adoption de technologies disruptives pour catalyser la croissance économique et le progrès.</p>
-                    </div>
+                        <h3 class="charter-name">Innovation</h3>
+                        <div class="charter-rule"></div>
+                        <p class="charter-statement">
+                            « Adopter le meilleur des technologies pour catalyser croissance et progrès. »
+                        </p>
+                    </article>
+
                 </div>
             </div>
         </section>
