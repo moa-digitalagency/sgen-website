@@ -86,15 +86,6 @@
     overflow: hidden;
     background-color: #001529;
     background-image: linear-gradient(180deg, #001529 0%, #002548 50%, #001529 100%);
-    color: #F5F7FA;
-}
-
-/* Titre H2 de la section */
-.missions-dark .dark-title {
-    color: #F5F7FA;
-}
-.missions-dark .dark-subtitle {
-    color: rgba(255, 255, 255, 0.72);
 }
 
 /* Grain SVG overlay ~3% opacity pour texture dossier d'État */
@@ -119,14 +110,6 @@
     background: rgba(255, 255, 255, 0.08);
     border-color: rgba(255, 255, 255, 0.16);
     transform: translateY(-6px);
-}
-
-/* Titles et paragraphes à l'intérieur des dark-cards */
-.dark-card h3 {
-    color: #F5F7FA;
-}
-.dark-card p.dark-desc {
-    color: rgba(255, 255, 255, 0.70);
 }
 
 /* Border-top coloré + inner glow par pilier */
@@ -170,16 +153,3 @@
         0 24px 50px -10px rgba(0, 168, 232, 0.22);
 }
 
-/* Barre tricolore RDC au top de la section */
-.missions-dark-accent {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 2px;
-    z-index: 5;
-    background: linear-gradient(90deg,
-        #00A8E8 0%, #00A8E8 33.33%,
-        #D4A017 33.33%, #D4A017 66.66%,
-        #C41E3A 66.66%, #C41E3A 100%);
-}
