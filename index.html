@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGEN - Secrétariat Général Économie Numérique | RDC</title>
+    <meta name="description" content="Transformez la RDC par le numérique. Découvrez les missions, projets et services du SGEN pour l'économie numérique congolaise.">
+    <meta name="theme-color" content="#003D7A">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CDN + config (le config doit suivre le CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="statics/js/tailwind-config.js"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="statics/css/common.css">
+    <link rel="stylesheet" href="statics/css/home.css">
+
+    <!-- Icons (Lucide) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="font-sans text-text-main antialiased">
+
+    <!-- Barre Tricolore RDC -->
+    <div class="tricolor-bar"></div>
+
+    <!-- HEADER NAVIGATION -->
+    <div class="fixed w-full top-6 z-50 px-4 md:px-8 flex justify-center pointer-events-none">
+        <header class="w-full max-w-[1200px] glass-ultra rounded-2xl px-6 py-3 flex justify-between items-center pointer-events-auto transition-all duration-500" id="main-header">
+            <a href="index.html" class="flex items-center gap-4 group">
+                <div class="w-10 h-10 bg-gouv-blue rounded-xl flex items-center justify-center text-white font-serif font-bold text-xl shadow-lg group-hover:bg-gouv-cyan transition-colors duration-500">SG</div>
+                <div>
+                    <h1 class="font-serif font-bold text-lg leading-tight tracking-wide text-gouv-blue">SGEN</h1>
+                    <p class="text-[9px] text-gouv-gold uppercase tracking-[0.2em] font-semibold mt-0.5">Rép. Dém. du Congo</p>
+                </div>
+            </a>
+
+            <nav class="hidden lg:flex items-center gap-8 text-[13px] font-semibold uppercase tracking-widest text-gouv-blue/80">
+                <a href="about.html" class="hover:text-gouv-cyan transition-colors">À Propos</a>
+                <a href="directions.html" class="hover:text-gouv-cyan transition-colors">Directions</a>
+                <a href="projects.html" class="hover:text-gouv-cyan transition-colors">Projets</a>
+                <a href="services.html" class="hover:text-gouv-cyan transition-colors">Services</a>
+                <a href="contact.html" class="hover:text-gouv-cyan transition-colors">Contact</a>
+                <a href="services.html" class="ml-2 bg-gouv-red/90 hover:bg-gouv-red text-white px-5 py-2.5 rounded-full font-bold flex items-center gap-2 transition-all shadow-[0_0_15px_rgba(196,30,58,0.25)] hover:shadow-[0_0_20px_rgba(196,30,58,0.4)] transform hover:-translate-y-0.5 border border-white/20">
+                    <i data-lucide="zap" class="w-4 h-4 animate-pulse text-white"></i> Services en Ligne
+                </a>
+            </nav>
+
+            <button id="mobile-menu-btn" class="lg:hidden text-gouv-blue p-2" aria-label="Menu">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </header>
+    </div>
+
+    <div id="mobile-menu" class="hidden fixed inset-0 z-40 bg-white/80 backdrop-blur-2xl pt-24 px-6">
+        <nav class="flex flex-col gap-6 text-center text-lg font-serif font-bold text-gouv-blue">
+            <a href="about.html" class="hover:text-gouv-cyan">À Propos</a>
+            <a href="directions.html" class="hover:text-gouv-cyan">Directions</a>
+            <a href="projects.html" class="hover:text-gouv-cyan">Projets</a>
+            <a href="services.html" class="hover:text-gouv-cyan">Services</a>
+            <a href="contact.html" class="hover:text-gouv-cyan">Contact</a>
+        </nav>
+    </div>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="relative w-full min-h-[100vh] flex items-center justify-center pt-20 overflow-hidden bg-bg-light">
+            <div class="bg-mesh"><div class="blob-1"></div><div class="blob-2"></div><div class="blob-3"></div></div>
+            <div class="hero-slideshow mix-blend-multiply"><div></div><div></div><div></div></div>
+
+            <div class="relative z-10 w-full max-w-[1200px] mx-auto px-4 md:px-8 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="flex flex-col items-start text-left">
+                    <div class="reveal glass-ultra inline-flex items-center gap-3 px-5 py-2 mb-10 rounded-full">
+                        <div class="flex gap-1.5">
+                            <div class="w-2 h-2 rounded-full bg-gouv-cyan shadow-[0_0_8px_rgba(0,168,232,0.8)]"></div>
+                            <div class="w-2 h-2 rounded-full bg-gouv-gold shadow-[0_0_8px_rgba(212,160,23,0.8)]"></div>
+                            <div class="w-2 h-2 rounded-full bg-gouv-red shadow-[0_0_8px_rgba(196,30,58,0.8)]"></div>
+                        </div>
+                        <span class="text-[11px] font-bold tracking-[0.2em] text-gouv-blue uppercase">République Démocratique du Congo</span>
+                    </div>
+
+                    <h1 class="text-5xl md:text-6xl lg:text-[70px] font-bold leading-[1.05] mb-8 reveal delay-100 font-serif text-gouv-blue">
+                        Transformer la RDC par <br class="hidden xl:block"/>
+                        <span class="relative inline-block">
+                            l'Économie du Numérique
+                            <div class="absolute -bottom-2 left-0 w-full h-3 bg-gouv-cyan/20 blur-sm rounded-full"></div>
+                        </span>
+                    </h1>
+
+                    <p class="reveal delay-200 text-lg md:text-xl font-medium text-text-muted leading-relaxed w-full max-w-lg mb-12">
+                        Le Secrétariat Général à l'Économie Numérique accélère l'innovation, la numérisation et la croissance économique de la République Démocratique du Congo.
+                    </p>
+
+                    <div class="flex flex-wrap gap-4 w-full reveal delay-300">
+                        <a href="about.html" class="relative group">
+                            <div class="absolute -inset-1 bg-gouv-cyan rounded-full blur opacity-40 group-hover:opacity-70 transition duration-500"></div>
+                            <div class="relative bg-gouv-cyan text-white px-8 py-4 rounded-full font-semibold flex items-center justify-center gap-2 group-hover:bg-[#0095D1] transition-colors">
+                                Découvrez nos missions <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                            </div>
+                        </a>
+                        <a href="contact.html" class="glass-ultra text-gouv-blue hover:text-gouv-cyan px-8 py-4 rounded-full font-semibold text-center transition-colors">
+                            Contactez-nous
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Blog marquee -->
+                <div class="relative blog-marquee lg:h-[650px] w-full reveal delay-300 lg:pl-8 mt-12 lg:mt-0">
+                    <div class="blog-track">
+                        <!-- Set 1 -->
+                        <div class="w-[85vw] sm:w-[350px] lg:w-full shrink-0 glass-ultra p-4 rounded-3xl flex gap-5 items-center hover:bg-white/80 transition-all duration-300 cursor-pointer group shadow-sm hover:shadow-lg hover:-translate-y-1">
+                            <div class="w-28 h-28 rounded-2xl overflow-hidden shrink-0 shadow-inner">
+                                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Cybersécurité">
+                            </div>
+                            <div class="flex flex-col gap-1.5 pr-2">
+                                <span class="badge badge-cyan">Cybersécurité</span>
+                                <h4 class="text-[16px] font-bold text-gouv-blue font-serif leading-snug group-hover:text-gouv-cyan transition-colors line-clamp-2">Déploiement du nouveau centre national de cybersécurité en RDC</h4>
+                                <p class="text-[12px] text-text-muted flex items-center gap-1.5 mt-1"><i data-lucide="clock" class="w-3.5 h-3.5"></i> Aujourd'hui</p>
+                            </div>
+                        </div>
+
+                        <div class="w-[85vw] sm:w-[350px] lg:w-full shrink-0 glass-ultra p-4 rounded-3xl flex gap-5 items-center hover:bg-white/80 transition-all duration-300 cursor-pointer group shadow-sm hover:shadow-lg hover:-translate-y-1">
+                            <div class="w-28 h-28 rounded-2xl overflow-hidden shrink-0 shadow-inner">
+                                <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Infrastructure">
+                            </div>
+                            <div class="flex flex-col gap-1.5 pr-2">
+                                <span class="badge badge-gold">Infrastructure</span>
+                                <h4 class="text-[16px] font-bold text-gouv-blue font-serif leading-snug group-hover:text-gouv-gold transition-colors line-clamp-2">Fibre optique : 5000 km supplémentaires connectant l'Est du pays</h4>
+                                <p class="text-[12px] text-text-muted flex items-center gap-1.5 mt-1"><i data-lucide="calendar" class="w-3.5 h-3.5"></i> Hier</p>
+                            </div>
+                        </div>
+
+                        <div class="w-[85vw] sm:w-[350px] lg:w-full shrink-0 glass-ultra p-4 rounded-3xl flex gap-5 items-center hover:bg-white/80 transition-all duration-300 cursor-pointer group shadow-sm hover:shadow-lg hover:-translate-y-1">
+                            <div class="w-28 h-28 rounded-2xl overflow-hidden shrink-0 shadow-inner">
+                                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Économie">
+                            </div>
+                            <div class="flex flex-col gap-1.5 pr-2">
+                                <span class="badge badge-red">Économie</span>
+                                <h4 class="text-[16px] font-bold text-gouv-blue font-serif leading-snug group-hover:text-gouv-red transition-colors line-clamp-2">Start-ups : Un nouveau fonds de soutien pour l'innovation congolaise</h4>
+                                <p class="text-[12px] text-text-muted flex items-center gap-1.5 mt-1"><i data-lucide="calendar" class="w-3.5 h-3.5"></i> 20 Avril</p>
+                            </div>
+                        </div>
+
+                        <div class="w-[85vw] sm:w-[350px] lg:w-full shrink-0 glass-ultra p-4 rounded-3xl flex gap-5 items-center hover:bg-white/80 transition-all duration-300 cursor-pointer group shadow-sm hover:shadow-lg hover:-translate-y-1">
+                            <div class="w-28 h-28 rounded-2xl overflow-hidden shrink-0 shadow-inner">
+                                <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Formation">
+                            </div>
+                            <div class="flex flex-col gap-1.5 pr-2">
+                                <span class="badge badge-blue">Formation</span>
+                                <h4 class="text-[16px] font-bold text-gouv-blue font-serif leading-snug group-hover:text-gouv-cyan transition-colors line-clamp-2">Lancement de la grande académie du numérique de Kinshasa</h4>
+                                <p class="text-[12px] text-text-muted flex items-center gap-1.5 mt-1"><i data-lucide="calendar" class="w-3.5 h-3.5"></i> 18 Avril</p>
+                            </div>
+                        </div>
+
+                        <!-- Set 2 (duplicate for infinite loop) -->
+                        <div class="w-[85vw] sm:w-[350px] lg:w-full shrink-0 glass-ultra p-4 rounded-3xl flex gap-5 items-center hover:bg-white/80 transition-all duration-300 cursor-pointer group shadow-sm hover:shadow-lg hover:-translate-y-1">
+                            <div class="w-28 h-28 rounded-2xl overflow-hidden shrink-0 shadow-inner">
+                                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Cybersécurité">
+                            </div>
+                            <div class="flex flex-col gap-1.5 pr-2">
+                                <span class="badge badge-cyan">Cybersécurité</span>
+                                <h4 class="text-[16px] font-bold text-gouv-blue font-serif leading-snug line-clamp-2">Déploiement du nouveau centre national de cybersécurité en RDC</h4>
+                                <p class="text-[12px] text-text-muted flex items-center gap-1.5 mt-1"><i data-lucide="clock" class="w-3.5 h-3.5"></i> Aujourd'hui</p>
+                            </div>
+                        </div>
+
+                        <div class="w-[85vw] sm:w-[350px] lg:w-full shrink-0 glass-ultra p-4 rounded-3xl flex gap-5 items-center hover:bg-white/80 transition-all duration-300 cursor-pointer group shadow-sm hover:shadow-lg hover:-translate-y-1">
+                            <div class="w-28 h-28 rounded-2xl overflow-hidden shrink-0 shadow-inner">
+                                <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Infrastructure">
+                            </div>
+                            <div class="flex flex-col gap-1.5 pr-2">
+                                <span class="badge badge-gold">Infrastructure</span>
+                                <h4 class="text-[16px] font-bold text-gouv-blue font-serif leading-snug line-clamp-2">Fibre optique : 5000 km supplémentaires connectant l'Est du pays</h4>
+                                <p class="text-[12px] text-text-muted flex items-center gap-1.5 mt-1"><i data-lucide="calendar" class="w-3.5 h-3.5"></i> Hier</p>
+                            </div>
+                        </div>
+
+                        <div class="w-[85vw] sm:w-[350px] lg:w-full shrink-0 glass-ultra p-4 rounded-3xl flex gap-5 items-center hover:bg-white/80 transition-all duration-300 cursor-pointer group shadow-sm hover:shadow-lg hover:-translate-y-1">
+                            <div class="w-28 h-28 rounded-2xl overflow-hidden shrink-0 shadow-inner">
+                                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Économie">
+                            </div>
+                            <div class="flex flex-col gap-1.5 pr-2">
+                                <span class="badge badge-red">Économie</span>
+                                <h4 class="text-[16px] font-bold text-gouv-blue font-serif leading-snug line-clamp-2">Start-ups : Un nouveau fonds de soutien pour l'innovation congolaise</h4>
+                                <p class="text-[12px] text-text-muted flex items-center gap-1.5 mt-1"><i data-lucide="calendar" class="w-3.5 h-3.5"></i> 20 Avril</p>
+                            </div>
+                        </div>
+
+                        <div class="w-[85vw] sm:w-[350px] lg:w-full shrink-0 glass-ultra p-4 rounded-3xl flex gap-5 items-center hover:bg-white/80 transition-all duration-300 cursor-pointer group shadow-sm hover:shadow-lg hover:-translate-y-1">
+                            <div class="w-28 h-28 rounded-2xl overflow-hidden shrink-0 shadow-inner">
+                                <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Formation">
+                            </div>
+                            <div class="flex flex-col gap-1.5 pr-2">
+                                <span class="badge badge-blue">Formation</span>
+                                <h4 class="text-[16px] font-bold text-gouv-blue font-serif leading-snug line-clamp-2">Lancement de la grande académie du numérique de Kinshasa</h4>
+                                <p class="text-[12px] text-text-muted flex items-center gap-1.5 mt-1"><i data-lucide="calendar" class="w-3.5 h-3.5"></i> 18 Avril</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STATS -->
+        <section class="pt-36 pb-24 relative z-20">
+            <div class="max-w-[1200px] mx-auto px-4 md:px-8">
+                <div class="text-center mb-16 reveal">
+                    <h2 class="text-3xl md:text-[45px] font-bold text-gouv-blue font-serif">Chiffres Clés</h2>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="glass-ultra px-8 pb-8 pt-14 rounded-3xl hover-lift-premium reveal group">
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-gouv-blue/10 to-transparent flex items-center justify-center mb-8 border border-white">
+                            <i data-lucide="briefcase" class="w-7 h-7 text-gouv-blue group-hover:scale-110 transition-transform duration-500"></i>
+                        </div>
+                        <div class="text-5xl font-bold text-gouv-cyan mb-2 font-serif counter" data-target="9">0</div>
+                        <h4 class="text-[17px] font-bold text-gouv-blue mb-2">Directions</h4>
+                        <p class="text-[14px] text-text-muted leading-relaxed">Structurées en secteurs de support et métiers</p>
+                    </div>
+
+                    <div class="glass-ultra px-8 pb-8 pt-14 rounded-3xl hover-lift-premium reveal delay-100 group">
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-gouv-gold/10 to-transparent flex items-center justify-center mb-8 border border-white">
+                            <i data-lucide="users" class="w-7 h-7 text-gouv-gold group-hover:scale-110 transition-transform duration-500"></i>
+                        </div>
+                        <div class="flex items-baseline mb-2">
+                            <div class="text-5xl font-bold text-gouv-cyan font-serif counter" data-target="200">0</div>
+                            <span class="text-3xl font-bold text-gouv-gold ml-1">+</span>
+                        </div>
+                        <h4 class="text-[17px] font-bold text-gouv-blue mb-2">Collaborateurs</h4>
+                        <p class="text-[14px] text-text-muted leading-relaxed">Experts en numérisation et gouvernance</p>
+                    </div>
+
+                    <div class="glass-ultra px-8 pb-8 pt-14 rounded-3xl hover-lift-premium reveal delay-200 group">
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-gouv-cyan/10 to-transparent flex items-center justify-center mb-8 border border-white">
+                            <i data-lucide="zap" class="w-7 h-7 text-gouv-cyan group-hover:scale-110 transition-transform duration-500"></i>
+                        </div>
+                        <div class="text-5xl font-bold text-gouv-cyan mb-2 font-serif counter" data-target="5">0</div>
+                        <h4 class="text-[17px] font-bold text-gouv-blue mb-2">Projets Majeurs</h4>
+                        <p class="text-[14px] text-text-muted leading-relaxed">En cours de développement stratégique</p>
+                    </div>
+
+                    <div class="glass-ultra px-8 pb-8 pt-14 rounded-3xl hover-lift-premium reveal delay-300 group">
+                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-gouv-blue/10 to-transparent flex items-center justify-center mb-8 border border-white">
+                            <i data-lucide="globe" class="w-7 h-7 text-gouv-blue group-hover:scale-110 transition-transform duration-500"></i>
+                        </div>
+                        <div class="text-5xl font-bold text-gouv-cyan mb-2 font-serif counter" data-target="2026">2020</div>
+                        <h4 class="text-[17px] font-bold text-gouv-blue mb-2">Vision</h4>
+                        <p class="text-[14px] text-text-muted leading-relaxed">Administration 100% digitalisée</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MISSIONS -->
+        <section id="missions" class="py-24 relative">
+            <div class="max-w-[1200px] mx-auto px-4 md:px-8 relative z-10">
+                <div class="text-center mb-24 reveal">
+                    <h3 class="text-4xl md:text-[50px] font-bold text-gouv-blue font-serif mb-6">Notre Mission : Piliers du Numérique en RDC</h3>
+                </div>
+
+                <div class="flex flex-col gap-32">
+                    <div class="flex flex-col md:flex-row items-center gap-16 reveal">
+                        <div class="w-full md:w-1/2 relative">
+                            <div class="absolute inset-0 bg-gouv-cyan/20 blur-3xl rounded-full transform -translate-x-10 translate-y-10 z-0"></div>
+                            <div class="glass-ultra p-3 rounded-[2.5rem] relative z-10 transform -rotate-2 hover:rotate-0 transition-transform duration-700">
+                                <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80" alt="Infrastructures Numériques" class="w-full h-[350px] object-cover rounded-[2rem]">
+                            </div>
+                        </div>
+                        <div class="w-full md:w-1/2">
+                            <h3 class="text-3xl md:text-4xl font-bold text-gouv-blue mb-6 font-serif">Infrastructures Numériques</h3>
+                            <p class="text-lg text-text-muted leading-relaxed mb-8 font-light">
+                                Déployer la fibre optique et les réseaux de données à travers toute la RDC pour une couverture territoriale complète et une connectivité durable.
+                            </p>
+                            <a href="directions.html#din" class="inline-flex items-center gap-3 text-gouv-cyan font-semibold hover:text-gouv-blue transition-colors group">
+                                En savoir plus
+                                <span class="w-8 h-8 rounded-full border border-gouv-cyan flex items-center justify-center group-hover:bg-gouv-blue group-hover:border-gouv-blue group-hover:text-white transition-all">
+                                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row-reverse items-center gap-16 reveal">
+                        <div class="w-full md:w-1/2 relative">
+                            <div class="absolute inset-0 bg-gouv-blue/10 blur-3xl rounded-full transform translate-x-10 translate-y-10 z-0"></div>
+                            <div class="glass-ultra p-3 rounded-[2.5rem] relative z-10 transform rotate-2 hover:rotate-0 transition-transform duration-700">
+                                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80" alt="Cybersécurité" class="w-full h-[350px] object-cover rounded-[2rem]">
+                            </div>
+                        </div>
+                        <div class="w-full md:w-1/2">
+                            <h3 class="text-3xl md:text-4xl font-bold text-gouv-blue mb-6 font-serif">Cybersécurité & Protection</h3>
+                            <p class="text-lg text-text-muted leading-relaxed mb-8 font-light">
+                                Assurer la protection des données nationales, renforcer la résilience des systèmes et garantir la souveraineté numérique de la RDC.
+                            </p>
+                            <a href="directions.html#dssi" class="inline-flex items-center gap-3 text-gouv-cyan font-semibold hover:text-gouv-blue transition-colors group">
+                                En savoir plus
+                                <span class="w-8 h-8 rounded-full border border-gouv-cyan flex items-center justify-center group-hover:bg-gouv-blue group-hover:border-gouv-blue group-hover:text-white transition-all">
+                                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row items-center gap-16 reveal">
+                        <div class="w-full md:w-1/2 relative">
+                            <div class="absolute inset-0 bg-gouv-gold/20 blur-3xl rounded-full transform -translate-x-10 translate-y-10 z-0"></div>
+                            <div class="glass-ultra p-3 rounded-[2.5rem] relative z-10 transform -rotate-2 hover:rotate-0 transition-transform duration-700">
+                                <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80" alt="Formation" class="w-full h-[350px] object-cover rounded-[2rem]">
+                            </div>
+                        </div>
+                        <div class="w-full md:w-1/2">
+                            <h3 class="text-3xl md:text-4xl font-bold text-gouv-blue mb-6 font-serif">Formation aux Métiers du Numérique</h3>
+                            <p class="text-lg text-text-muted leading-relaxed mb-8 font-light">
+                                Développer les compétences nationales et cultiver une culture numérique inclusive pour tous les citoyens congolais.
+                            </p>
+                            <a href="services.html#formations" class="inline-flex items-center gap-3 text-gouv-cyan font-semibold hover:text-gouv-blue transition-colors group">
+                                En savoir plus
+                                <span class="w-8 h-8 rounded-full border border-gouv-cyan flex items-center justify-center group-hover:bg-gouv-blue group-hover:border-gouv-blue group-hover:text-white transition-all">
+                                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row-reverse items-center gap-16 reveal">
+                        <div class="w-full md:w-1/2 relative">
+                            <div class="absolute inset-0 bg-gouv-cyan/20 blur-3xl rounded-full transform translate-x-10 translate-y-10 z-0"></div>
+                            <div class="glass-ultra p-3 rounded-[2.5rem] relative z-10 transform rotate-2 hover:rotate-0 transition-transform duration-700">
+                                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80" alt="Transformation Économique" class="w-full h-[350px] object-cover rounded-[2rem]">
+                            </div>
+                        </div>
+                        <div class="w-full md:w-1/2">
+                            <h3 class="text-3xl md:text-4xl font-bold text-gouv-blue mb-6 font-serif">Transformation Économique</h3>
+                            <p class="text-lg text-text-muted leading-relaxed mb-8 font-light">
+                                Accompagner la transition vers l'économie numérique, valoriser les données et développer un écosystème digital dynamique et compétitif.
+                            </p>
+                            <a href="directions.html#dsin" class="inline-flex items-center gap-3 text-gouv-cyan font-semibold hover:text-gouv-blue transition-colors group">
+                                En savoir plus
+                                <span class="w-8 h-8 rounded-full border border-gouv-cyan flex items-center justify-center group-hover:bg-gouv-blue group-hover:border-gouv-blue group-hover:text-white transition-all">
+                                    <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJETS CLÉS -->
+        <section id="projets" class="py-24 relative">
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent to-gouv-blue/5"></div>
+            <div class="max-w-[1200px] mx-auto px-4 md:px-8 relative z-10">
+                <div class="text-center mb-16 reveal">
+                    <h3 class="text-4xl md:text-[50px] font-bold font-serif text-gouv-blue">Projets Transformateurs en Cours</h3>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <div class="glass-ultra p-8 rounded-3xl hover-lift-premium reveal relative flex flex-col h-full border-t-[4px] border-t-gouv-gold">
+                        <div class="absolute top-6 right-6 badge badge-gold">En cours</div>
+                        <i data-lucide="file-text" class="w-8 h-8 text-gouv-blue mb-6"></i>
+                        <h4 class="text-2xl font-bold font-serif text-gouv-blue mb-4">Numérisation du Secteur Public</h4>
+                        <p class="text-[15px] text-text-muted font-light leading-relaxed mb-8 flex-grow">
+                            Dématérialisation complète des services publics et administration sans papier dans tous les ministères.
+                        </p>
+                        <a href="projects.html#numerisation" class="text-gouv-cyan font-medium hover:text-gouv-blue transition-colors flex items-center gap-2 w-fit mt-auto group">
+                            Voir détails <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+
+                    <div class="glass-ultra p-8 rounded-3xl hover-lift-premium reveal delay-100 relative flex flex-col h-full border-t-[4px] border-t-gray-400">
+                        <div class="absolute top-6 right-6 badge badge-gray">Planifié</div>
+                        <i data-lucide="map-pin" class="w-8 h-8 text-gouv-blue mb-6"></i>
+                        <h4 class="text-2xl font-bold font-serif text-gouv-blue mb-4">Connectivité Rurale</h4>
+                        <p class="text-[15px] text-text-muted font-light leading-relaxed mb-8 flex-grow">
+                            Extension du réseau de fibre optique aux zones rurales pour réduire la fracture numérique.
+                        </p>
+                        <a href="projects.html#connectivite" class="text-gouv-cyan font-medium hover:text-gouv-blue transition-colors flex items-center gap-2 w-fit mt-auto group">
+                            Voir détails <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+
+                    <div class="glass-ultra p-8 rounded-3xl hover-lift-premium reveal delay-200 relative flex flex-col h-full border-t-[4px] border-t-gouv-red">
+                        <div class="absolute top-6 right-6 badge badge-red animate-pulse-subtle">Prioritaire</div>
+                        <i data-lucide="shield" class="w-8 h-8 text-gouv-blue mb-6"></i>
+                        <h4 class="text-2xl font-bold font-serif text-gouv-blue mb-4">Souveraineté Numérique</h4>
+                        <p class="text-[15px] text-text-muted font-light leading-relaxed mb-8 flex-grow">
+                            Renforcement des infrastructures de cybersécurité et protection de la souveraineté digitale nationale.
+                        </p>
+                        <a href="projects.html#souverainete" class="text-gouv-cyan font-medium hover:text-gouv-blue transition-colors flex items-center gap-2 w-fit mt-auto group">
+                            Voir détails <i data-lucide="arrow-right" class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VALEURS -->
+        <section class="py-24 text-center relative overflow-hidden">
+            <div class="max-w-[1200px] mx-auto px-4 md:px-8 relative z-10">
+                <div class="reveal mb-20">
+                    <h2 class="text-4xl md:text-[50px] font-bold text-gouv-blue mb-6 font-serif">Vision 2026-2030 : Une RDC Numérique</h2>
+                    <p class="max-w-2xl mx-auto text-lg text-text-muted font-light">
+                        Le SGEN s'engage pour une transformation numérique inclusive, durable et souveraine qui positionne la RDC comme leader technologique en Afrique.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 reveal">
+                    <div class="flex flex-col items-center group">
+                        <div class="mb-6 p-5 rounded-full glass-ultra shadow-sm text-gouv-blue group-hover:text-gouv-cyan transition-colors">
+                            <i data-lucide="accessibility" class="w-8 h-8 group-hover:scale-110 transition-transform duration-500"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gouv-blue mb-3 font-serif">Accessibilité</h4>
+                        <p class="text-[14px] text-text-muted font-light leading-relaxed">Services numériques inclusifs pour tous les citoyens, indépendamment de leur situation géographique.</p>
+                    </div>
+                    <div class="flex flex-col items-center group">
+                        <div class="mb-6 p-5 rounded-full glass-ultra shadow-sm text-gouv-blue group-hover:text-gouv-gold transition-colors">
+                            <i data-lucide="target" class="w-8 h-8 group-hover:scale-110 transition-transform duration-500"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gouv-blue mb-3 font-serif">Excellence</h4>
+                        <p class="text-[14px] text-text-muted font-light leading-relaxed">Standards de qualité internationaux appliqués à tous les projets et services développés.</p>
+                    </div>
+                    <div class="flex flex-col items-center group">
+                        <div class="mb-6 p-5 rounded-full glass-ultra shadow-sm text-gouv-blue group-hover:text-gouv-red transition-colors">
+                            <i data-lucide="shield" class="w-8 h-8 group-hover:scale-110 transition-transform duration-500"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gouv-blue mb-3 font-serif">Souveraineté</h4>
+                        <p class="text-[14px] text-text-muted font-light leading-relaxed">Protection des données nationales et autonomie technologique face aux enjeux géopolitiques.</p>
+                    </div>
+                    <div class="flex flex-col items-center group">
+                        <div class="mb-6 p-5 rounded-full glass-ultra shadow-sm text-gouv-blue group-hover:text-gouv-cyan transition-colors">
+                            <i data-lucide="trending-up" class="w-8 h-8 group-hover:scale-110 transition-transform duration-500"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gouv-blue mb-3 font-serif">Innovation</h4>
+                        <p class="text-[14px] text-text-muted font-light leading-relaxed">Adoption de technologies disruptives pour catalyser la croissance économique et le progrès.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ACTUALITÉS -->
+        <section class="py-24 relative overflow-hidden bg-bg-light">
+            <div class="absolute top-20 right-0 w-[600px] h-[600px] bg-gouv-cyan/5 rounded-full blur-[120px] pointer-events-none"></div>
+            <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gouv-gold/5 rounded-full blur-[100px] pointer-events-none"></div>
+
+            <div class="max-w-[1200px] mx-auto px-4 md:px-8 relative z-10">
+                <div class="flex flex-col md:flex-row justify-between items-end gap-6 mb-16 reveal">
+                    <div class="max-w-2xl">
+                        <span class="text-[11px] font-bold tracking-[0.2em] text-gouv-gold uppercase mb-4 block">S'informer</span>
+                        <h3 class="text-4xl md:text-[50px] font-bold text-gouv-blue font-serif mb-4">Actualités & Innovations</h3>
+                        <p class="text-lg text-text-muted font-light leading-relaxed">Suivez en temps réel les dernières avancées, publications et événements majeurs de la transformation numérique en RDC.</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="glass-ultra p-3 rounded-[2rem] hover-lift-premium reveal group cursor-pointer flex flex-col h-full border border-white/60">
+                        <div class="w-full h-[220px] rounded-[1.5rem] overflow-hidden mb-6 relative shadow-inner">
+                            <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&q=80" alt="Tech Hub RDC" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                            <div class="absolute top-4 left-4 z-20"><span class="badge badge-cyan">Écosystème</span></div>
+                        </div>
+                        <div class="px-4 pb-5 flex flex-col flex-grow">
+                            <div class="text-[12px] text-text-muted font-medium flex items-center gap-2 mb-3">
+                                <i data-lucide="calendar" class="w-3.5 h-3.5 text-gouv-gold"></i> 22 Avril 2026
+                            </div>
+                            <h4 class="text-xl font-bold text-gouv-blue font-serif mb-4 group-hover:text-gouv-cyan transition-colors line-clamp-2">Inauguration du premier Hub d'Innovation Technologique National à Kinshasa</h4>
+                            <p class="text-[14px] text-text-muted font-light line-clamp-3 mb-8 flex-grow leading-relaxed">
+                                Le nouveau centre incubateur accueillera plus de 200 startups congolaises avec un accès fibre optique dédié et des programmes d'accompagnement de pointe.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="glass-ultra p-3 rounded-[2rem] hover-lift-premium reveal delay-100 group cursor-pointer flex flex-col h-full border border-white/60">
+                        <div class="w-full h-[220px] rounded-[1.5rem] overflow-hidden mb-6 relative shadow-inner">
+                            <img src="https://images.unsplash.com/photo-1563986768494-4dee2763ff0f?auto=format&fit=crop&q=80" alt="Cybersécurité" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                            <div class="absolute top-4 left-4 z-20"><span class="badge badge-red">Gouvernance</span></div>
+                        </div>
+                        <div class="px-4 pb-5 flex flex-col flex-grow">
+                            <div class="text-[12px] text-text-muted font-medium flex items-center gap-2 mb-3">
+                                <i data-lucide="calendar" class="w-3.5 h-3.5 text-gouv-gold"></i> 18 Avril 2026
+                            </div>
+                            <h4 class="text-xl font-bold text-gouv-blue font-serif mb-4 group-hover:text-gouv-red transition-colors line-clamp-2">Adoption du nouveau cadre juridique sur la protection des données (RGPD-RDC)</h4>
+                            <p class="text-[14px] text-text-muted font-light line-clamp-3 mb-8 flex-grow leading-relaxed">
+                                Le parlement a voté la nouvelle loi garantissant la souveraineté des données des citoyens et imposant de nouveaux standards aux entreprises technologiques.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="glass-ultra p-3 rounded-[2rem] hover-lift-premium reveal delay-200 group cursor-pointer flex flex-col h-full border border-white/60">
+                        <div class="w-full h-[220px] rounded-[1.5rem] overflow-hidden mb-6 relative shadow-inner">
+                            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80" alt="E-services" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700">
+                            <div class="absolute top-4 left-4 z-20"><span class="badge badge-gold">E-Services</span></div>
+                        </div>
+                        <div class="px-4 pb-5 flex flex-col flex-grow">
+                            <div class="text-[12px] text-text-muted font-medium flex items-center gap-2 mb-3">
+                                <i data-lucide="calendar" class="w-3.5 h-3.5 text-gouv-gold"></i> 10 Avril 2026
+                            </div>
+                            <h4 class="text-xl font-bold text-gouv-blue font-serif mb-4 group-hover:text-gouv-gold transition-colors line-clamp-2">Lancement réussi de la plateforme unifiée de paiement des impôts en ligne</h4>
+                            <p class="text-[14px] text-text-muted font-light line-clamp-3 mb-8 flex-grow leading-relaxed">
+                                La dématérialisation des procédures fiscales franchit un cap avec le portail unifié, permettant aux PME de déclarer et payer en toute sécurité.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DOUBLE CTA -->
+        <section class="p-4 md:p-8">
+            <div class="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 rounded-[3rem] overflow-hidden">
+                <div class="relative bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80')] bg-cover bg-center">
+                    <div class="absolute inset-0 glass-color z-0"></div>
+                    <div class="relative z-10 py-24 px-10 text-center flex flex-col justify-center h-full">
+                        <h2 class="text-4xl font-bold mb-6 font-serif text-white reveal">Rejoignez la Transformation Numérique</h2>
+                        <p class="mb-10 text-[16px] text-white/80 font-light reveal delay-100 max-w-md mx-auto leading-relaxed">Explorez nos directions, découvrez comment nous transformons la RDC et trouvez les ressources pour participer à cette révolution numérique.</p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center w-full sm:w-auto reveal delay-200">
+                            <a href="directions.html" class="bg-white text-gouv-blue hover:bg-gray-50 px-8 py-3.5 rounded-full font-semibold transition-transform hover:scale-105">Nos Directions</a>
+                            <a href="services.html" class="border border-white/40 hover:border-white text-white px-8 py-3.5 rounded-full font-semibold transition-all hover:bg-white/10">Services & Ressources</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative bg-gouv-darkred overflow-hidden group">
+                    <div class="absolute inset-0 bg-gradient-to-br from-gouv-red to-transparent opacity-80 z-0"></div>
+                    <div class="absolute inset-0 glass-red z-0"></div>
+                    <i data-lucide="zap" class="absolute -right-10 -bottom-10 w-[300px] h-[300px] text-white/5 transform group-hover:scale-110 transition-transform duration-1000 z-0"></i>
+                    <div class="relative z-10 py-24 px-10 text-center flex flex-col justify-center h-full">
+                        <div class="flex items-center justify-center gap-3 mb-6 reveal">
+                            <i data-lucide="zap" class="w-8 h-8 text-white animate-pulse"></i>
+                            <h2 class="text-4xl font-bold font-serif text-white">Services Numériques Prioritaires</h2>
+                        </div>
+                        <p class="mb-10 text-[16px] text-white/80 font-light mx-auto reveal delay-100 max-w-md leading-relaxed">Accès immédiat aux services publics essentiels. Plateforme 24/7 sécurisée et fiable.</p>
+                        <div class="reveal delay-200 flex flex-col items-center">
+                            <a href="services.html" class="inline-flex items-center gap-2 bg-white text-gouv-red hover:bg-gray-50 px-8 py-4 rounded-full font-bold text-lg shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.5)] transition-all transform hover:-translate-y-1 group/btn">
+                                Accéder aux Services <i data-lucide="arrow-right" class="w-5 h-5 transform group-hover/btn:translate-x-1 transition-transform"></i>
+                            </a>
+                            <p class="text-[13px] text-white/70 font-medium mt-6 uppercase tracking-widest">Gratuit pour tous les citoyens RDC</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#001529] text-white mt-12 relative overflow-hidden">
+        <div class="h-1.5 w-full absolute top-0 left-0 z-20" style="background: linear-gradient(90deg, #00A8E8 0%, #00A8E8 33.33%, #D4A017 33.33%, #D4A017 66.66%, #C41E3A 66.66%, #C41E3A 100%);"></div>
+        <div class="absolute -bottom-40 -right-40 w-[500px] h-[500px] bg-gouv-blue rounded-full blur-[120px] opacity-40 pointer-events-none"></div>
+
+        <div class="max-w-[1200px] mx-auto px-4 md:px-8 pt-20 pb-10 relative z-10">
+            <div class="glass-color border border-white/10 rounded-3xl p-8 md:p-10 mb-16 flex flex-col md:flex-row items-center justify-between gap-8 relative overflow-hidden shadow-2xl">
+                <div class="absolute inset-0 bg-gradient-to-r from-gouv-blue/80 to-transparent z-0"></div>
+                <div class="relative z-10 max-w-xl">
+                    <h3 class="text-2xl font-serif font-bold text-white mb-2 flex items-center gap-3">
+                        <i data-lucide="bell-ring" class="w-6 h-6 text-gouv-gold"></i> Restez informé
+                    </h3>
+                    <p class="text-[15px] text-gray-300 font-light leading-relaxed">
+                        Abonnez-vous à la newsletter officielle du SGEN pour recevoir les dernières actualités sur la transformation numérique en RDC.
+                    </p>
+                </div>
+                <form class="relative z-10 flex flex-col sm:flex-row w-full md:w-auto gap-3">
+                    <input type="email" placeholder="Votre adresse email" class="bg-white/5 border border-white/20 rounded-xl px-5 py-3.5 text-[15px] text-white placeholder-gray-400 focus:outline-none focus:border-gouv-cyan focus:bg-white/10 w-full sm:w-72 transition-all shadow-inner">
+                    <button type="submit" class="bg-gouv-cyan hover:bg-[#0095D1] text-white px-8 py-3.5 rounded-xl font-bold text-[15px] transition-all transform hover:scale-105 flex items-center justify-center gap-2">
+                        S'abonner <i data-lucide="send" class="w-4 h-4"></i>
+                    </button>
+                </form>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-16">
+                <div class="lg:col-span-4 lg:pr-6">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-14 h-14 rounded-2xl flex items-center justify-center text-white border border-gouv-gold/40 font-serif font-bold text-2xl bg-gradient-to-br from-white/10 to-transparent backdrop-blur-sm">SG</div>
+                        <div>
+                            <h2 class="font-serif font-bold text-2xl tracking-wide text-white">SGEN</h2>
+                            <p class="text-[10px] text-gouv-gold uppercase tracking-[0.15em] font-bold mt-1">Rép. Dém. du Congo</p>
+                        </div>
+                    </div>
+                    <p class="text-[14px] text-gray-400 mb-8 font-light leading-relaxed">
+                        Le Secrétariat Général à l'Économie Numérique (SGEN) est l'organe central pilotant la stratégie de transformation digitale, l'innovation et la souveraineté technologique.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-11 h-11 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-[#1DA1F2] hover:border-[#1DA1F2] transition-all" aria-label="Twitter"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+                        <a href="#" class="w-11 h-11 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-[#0A66C2] hover:border-[#0A66C2] transition-all" aria-label="LinkedIn"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                        <a href="#" class="w-11 h-11 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 hover:text-white hover:bg-[#1877F2] hover:border-[#1877F2] transition-all" aria-label="Facebook"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-2">
+                    <h3 class="text-[16px] font-bold text-white mb-6 font-serif flex items-center gap-3">
+                        <span class="w-2 h-2 rounded-full bg-gouv-cyan"></span> Navigation
+                    </h3>
+                    <ul class="space-y-4 text-[14px] text-gray-400 font-light">
+                        <li><a href="about.html" class="hover:text-gouv-cyan transition-colors">À Propos</a></li>
+                        <li><a href="directions.html" class="hover:text-gouv-cyan transition-colors">Directions</a></li>
+                        <li><a href="projects.html" class="hover:text-gouv-cyan transition-colors">Projets</a></li>
+                        <li><a href="services.html" class="hover:text-gouv-cyan transition-colors">Services</a></li>
+                        <li><a href="contact.html" class="hover:text-gouv-cyan transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="lg:col-span-3">
+                    <h3 class="text-[16px] font-bold text-white mb-6 font-serif flex items-center gap-3">
+                        <span class="w-2 h-2 rounded-full bg-gouv-gold"></span> Ressources Officielles
+                    </h3>
+                    <ul class="space-y-4 text-[14px] text-gray-400 font-light">
+                        <li><a href="#" class="hover:text-gouv-gold transition-colors flex items-center gap-3"><i data-lucide="file-text" class="w-4 h-4 text-white/30"></i> Documentation</a></li>
+                        <li><a href="#" class="hover:text-gouv-gold transition-colors flex items-center gap-3"><i data-lucide="database" class="w-4 h-4 text-white/30"></i> Portail Open Data</a></li>
+                        <li><a href="#" class="hover:text-gouv-gold transition-colors flex items-center gap-3"><i data-lucide="scale" class="w-4 h-4 text-white/30"></i> Cadre Juridique</a></li>
+                        <li><a href="#" class="hover:text-gouv-gold transition-colors flex items-center gap-3"><i data-lucide="briefcase" class="w-4 h-4 text-white/30"></i> Carrières & Emplois</a></li>
+                        <li><a href="#" class="hover:text-gouv-gold transition-colors flex items-center gap-3"><i data-lucide="help-circle" class="w-4 h-4 text-white/30"></i> FAQ Citoyens</a></li>
+                    </ul>
+                </div>
+
+                <div class="lg:col-span-3">
+                    <h3 class="text-[16px] font-bold text-white mb-6 font-serif flex items-center gap-3">
+                        <span class="w-2 h-2 rounded-full bg-gouv-red"></span> Coordonnées
+                    </h3>
+                    <ul class="space-y-6 text-[14px] text-gray-300 font-light">
+                        <li class="flex items-start gap-4">
+                            <div class="mt-1 w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center shrink-0 text-gouv-cyan"><i data-lucide="map-pin" class="w-4 h-4"></i></div>
+                            <p class="leading-relaxed pt-0.5">45, Avenue Lubefu,<br><strong class="text-white font-medium">Kinshasa-Gombe, RDC</strong></p>
+                        </li>
+                        <li>
+                            <a href="mailto:contact@numerique.gouv.cd" class="flex items-center gap-4 hover:text-white group">
+                                <div class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center shrink-0 text-gouv-cyan group-hover:bg-gouv-cyan group-hover:text-white transition-all"><i data-lucide="mail" class="w-4 h-4"></i></div>
+                                <span>contact@numerique.gouv.cd</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="tel:+243810000000" class="flex items-center gap-4 hover:text-white group">
+                                <div class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center shrink-0 text-gouv-cyan group-hover:bg-gouv-cyan group-hover:text-white transition-all"><i data-lucide="phone" class="w-4 h-4"></i></div>
+                                <span>+243 81 000 0000</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-8 border-t border-white/10 flex flex-col lg:flex-row justify-between items-center gap-6 text-[13px] text-gray-500 font-light relative z-10">
+                <div class="flex items-center gap-3">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Flag_of_the_Democratic_Republic_of_the_Congo.svg" alt="Drapeau RDC" class="w-7 h-5 rounded-sm object-cover shadow-sm opacity-90">
+                    <p>&copy; 2026 <strong class="text-gray-300 font-medium">SGEN RDC</strong>. Tous droits réservés.</p>
+                </div>
+                <div class="flex flex-wrap justify-center items-center gap-x-6 gap-y-3">
+                    <a href="#" class="hover:text-gouv-cyan transition-all">Mentions légales</a>
+                    <span class="w-1 h-1 rounded-full bg-gray-700 hidden sm:block"></span>
+                    <a href="#" class="hover:text-gouv-cyan transition-all">Politique de confidentialité</a>
+                    <span class="w-1 h-1 rounded-full bg-gray-700 hidden sm:block"></span>
+                    <a href="#" class="hover:text-gouv-cyan transition-all">Accessibilité</a>
+                    <span class="w-1 h-1 rounded-full bg-gray-700 hidden sm:block"></span>
+                    <a href="#" class="hover:text-gouv-cyan transition-all">Plan du site</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="statics/js/common.js"></script>
+    <script src="statics/js/home.js"></script>
+</body>
+</html>

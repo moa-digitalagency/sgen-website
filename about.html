@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À Propos du SGEN | Secrétariat Général Économie Numérique RDC</title>
+    <meta name="description" content="Découvrez l'histoire, la vision et la structure du SGEN, institution pilote de la transformation numérique en RDC depuis 2021.">
+    <meta name="theme-color" content="#003D7A">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="statics/js/tailwind-config.js"></script>
+
+    <link rel="stylesheet" href="statics/css/common.css">
+    <link rel="stylesheet" href="statics/css/about.css">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="font-sans text-text-main antialiased">
+
+    <div class="tricolor-bar"></div>
+
+    <!-- HEADER -->
+    <div class="fixed w-full top-6 z-50 px-4 md:px-8 flex justify-center pointer-events-none">
+        <header class="w-full max-w-[1200px] glass-ultra rounded-2xl px-6 py-3 flex justify-between items-center pointer-events-auto transition-all duration-500" id="main-header">
+            <a href="index.html" class="flex items-center gap-4 group">
+                <div class="w-10 h-10 bg-gouv-blue rounded-xl flex items-center justify-center text-white font-serif font-bold text-xl shadow-lg group-hover:bg-gouv-cyan transition-colors duration-500">SG</div>
+                <div>
+                    <h1 class="font-serif font-bold text-lg leading-tight tracking-wide text-gouv-blue">SGEN</h1>
+                    <p class="text-[9px] text-gouv-gold uppercase tracking-[0.2em] font-semibold mt-0.5">Rép. Dém. du Congo</p>
+                </div>
+            </a>
+            <nav class="hidden lg:flex items-center gap-8 text-[13px] font-semibold uppercase tracking-widest text-gouv-blue/80">
+                <a href="about.html" class="text-gouv-cyan transition-colors">À Propos</a>
+                <a href="directions.html" class="hover:text-gouv-cyan transition-colors">Directions</a>
+                <a href="projects.html" class="hover:text-gouv-cyan transition-colors">Projets</a>
+                <a href="services.html" class="hover:text-gouv-cyan transition-colors">Services</a>
+                <a href="contact.html" class="hover:text-gouv-cyan transition-colors">Contact</a>
+                <a href="services.html" class="ml-2 bg-gouv-red/90 hover:bg-gouv-red text-white px-5 py-2.5 rounded-full font-bold flex items-center gap-2 transition-all shadow-[0_0_15px_rgba(196,30,58,0.25)] border border-white/20">
+                    <i data-lucide="zap" class="w-4 h-4 animate-pulse"></i> Services en Ligne
+                </a>
+            </nav>
+            <button id="mobile-menu-btn" class="lg:hidden text-gouv-blue p-2" aria-label="Menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
+        </header>
+    </div>
+    <div id="mobile-menu" class="hidden fixed inset-0 z-40 bg-white/80 backdrop-blur-2xl pt-24 px-6">
+        <nav class="flex flex-col gap-6 text-center text-lg font-serif font-bold text-gouv-blue">
+            <a href="about.html">À Propos</a>
+            <a href="directions.html">Directions</a>
+            <a href="projects.html">Projets</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+
+    <main>
+
+        <!-- HERO SECONDAIRE -->
+        <section class="page-hero">
+            <div class="page-hero-bg about-hero-bg"></div>
+            <div class="page-hero-overlay"></div>
+            <div class="page-hero-content reveal">
+                <span class="inline-block px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-[11px] uppercase tracking-[0.2em] font-bold mb-6">Institution Gouvernementale</span>
+                <h1 class="text-4xl md:text-6xl font-bold font-serif mb-4">À Propos du SGEN</h1>
+                <p class="text-lg md:text-xl text-white/85 font-light max-w-2xl mx-auto">L'institution pilote de la transformation numérique en RDC</p>
+            </div>
+        </section>
+
+        <!-- QUI SOMMES-NOUS -->
+        <section class="py-20 relative">
+            <div class="bg-mesh"><div class="blob-1"></div><div class="blob-2"></div></div>
+            <div class="max-w-3xl mx-auto px-4 md:px-8 text-center relative z-10">
+                <h2 class="text-3xl md:text-5xl font-bold text-gouv-blue font-serif mb-8 reveal">Le SGEN : l'Acteur Central de la Numérisation en RDC</h2>
+                <p class="text-lg text-text-muted leading-relaxed mb-6 font-light reveal delay-100">
+                    Le <strong class="text-gouv-cyan font-semibold">Secrétariat Général à l'Économie Numérique</strong> est le service administratif central chargé de piloter la transformation numérique de la République Démocratique du Congo. Créé en 2021, le SGEN opère sous l'autorité du Ministère de l'Économie Numérique avec un mandat clair : faire du numérique le levier de développement national.
+                </p>
+                <p class="text-base text-text-muted font-light reveal delay-200">
+                    <i data-lucide="map-pin" class="inline w-4 h-4 text-gouv-gold mr-1"></i>
+                    45, Avenue Lubefu, Quartier Royal, Kinshasa-Gombe
+                </p>
+            </div>
+        </section>
+
+        <!-- RAISON D'ÊTRE -->
+        <section class="py-20 bg-gradient-to-b from-transparent to-gouv-blue/5 relative">
+            <div class="max-w-[1200px] mx-auto px-4 md:px-8">
+                <div class="text-center mb-14 reveal">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gouv-blue font-serif mb-4">Notre Raison d'Être</h2>
+                    <p class="text-text-muted max-w-2xl mx-auto">Contribuer au développement du pays en faisant du numérique le levier de :</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
+                    <div class="glass-ultra purpose-card hover-lift-premium reveal">
+                        <div class="icon-wrap"><i data-lucide="link" class="w-7 h-7"></i></div>
+                        <h3 class="font-serif font-bold text-gouv-blue mb-2">Intégration</h3>
+                        <p class="text-sm text-text-muted font-light">Connecter les citoyens, entreprises et gouvernements à travers une infrastructure cohérente.</p>
+                    </div>
+                    <div class="glass-ultra purpose-card hover-lift-premium reveal delay-100">
+                        <div class="icon-wrap"><i data-lucide="shield" class="w-7 h-7"></i></div>
+                        <h3 class="font-serif font-bold text-gouv-blue mb-2">Gouvernance</h3>
+                        <p class="text-sm text-text-muted font-light">Renforcer la transparence et l'efficacité de l'administration par la dématérialisation.</p>
+                    </div>
+                    <div class="glass-ultra purpose-card hover-lift-premium reveal delay-200">
+                        <div class="icon-wrap"><i data-lucide="trending-up" class="w-7 h-7"></i></div>
+                        <h3 class="font-serif font-bold text-gouv-blue mb-2">Croissance</h3>
+                        <p class="text-sm text-text-muted font-light">Catalyser l'entrepreneurship numérique et l'innovation pour une croissance durable.</p>
+                    </div>
+                    <div class="glass-ultra purpose-card hover-lift-premium reveal delay-300">
+                        <div class="icon-wrap"><i data-lucide="users" class="w-7 h-7"></i></div>
+                        <h3 class="font-serif font-bold text-gouv-blue mb-2">Progrès Social</h3>
+                        <p class="text-sm text-text-muted font-light">Réduire la fracture numérique et offrir un égal accès aux opportunités digitales.</p>
+                    </div>
+                    <div class="glass-ultra purpose-card hover-lift-premium reveal delay-400">
+                        <div class="icon-wrap"><i data-lucide="globe" class="w-7 h-7"></i></div>
+                        <h3 class="font-serif font-bold text-gouv-blue mb-2">Durabilité</h3>
+                        <p class="text-sm text-text-muted font-light">Aligner la transformation numérique avec les ODD et les engagements climatiques.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TIMELINE HISTORIQUE -->
+        <section class="py-20 relative">
+            <div class="max-w-[1000px] mx-auto px-4 md:px-8">
+                <div class="text-center mb-14 reveal">
+                    <span class="badge badge-cyan mb-3 inline-block">Historique</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gouv-blue font-serif">Notre Parcours : de 2021 à Aujourd'hui</h2>
+                </div>
+
+                <div class="timeline-wrap">
+                    <div class="timeline-item left reveal" data-color="red">
+                        <div class="timeline-dot"></div>
+                        <div class="glass-ultra p-6 rounded-2xl">
+                            <span class="badge badge-red mb-3 inline-block">12 avril 2021</span>
+                            <h3 class="font-serif font-bold text-gouv-blue text-xl mb-2">Création du Ministère de l'Économie Numérique</h3>
+                            <p class="text-sm text-text-muted font-light leading-relaxed">Par ordonnance présidentielle N°21/012 du Président Félix Antoine Tshisekedi, création du Ministère pour piloter la transformation numérique nationale.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item right reveal delay-100" data-color="gold">
+                        <div class="timeline-dot"></div>
+                        <div class="glass-ultra p-6 rounded-2xl">
+                            <span class="badge badge-gold mb-3 inline-block">Octobre 2021</span>
+                            <h3 class="font-serif font-bold text-gouv-blue text-xl mb-2">Mise en place du Secrétariat Général</h3>
+                            <p class="text-sm text-text-muted font-light leading-relaxed">Création du SGEN avec M. Adolphe Muntumosi Lubilu nommé Chargé des Missions. Lancement de la structure organisationnelle.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item left reveal delay-200" data-color="blue">
+                        <div class="timeline-dot"></div>
+                        <div class="glass-ultra p-6 rounded-2xl">
+                            <span class="badge badge-blue mb-3 inline-block">Novembre 2022</span>
+                            <h3 class="font-serif font-bold text-gouv-blue text-xl mb-2">Premier Secrétaire Général nommé</h3>
+                            <p class="text-sm text-text-muted font-light leading-relaxed">Nomination de Bertin Mantobo Menetudia, premier SG du SGEN. Consolidation de l'institution et élaboration du plan stratégique.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item right reveal delay-300" data-color="cyan">
+                        <div class="timeline-dot"></div>
+                        <div class="glass-ultra p-6 rounded-2xl">
+                            <span class="badge badge-cyan mb-3 inline-block">Août 2024</span>
+                            <h3 class="font-serif font-bold text-gouv-blue text-xl mb-2">Succession de leadership</h3>
+                            <p class="text-sm text-text-muted font-light leading-relaxed">Joseph Salumu Epangapanga nommé SG ad intérim. Période de stabilisation et d'ajustements stratégiques.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item left reveal delay-400" data-color="red">
+                        <div class="timeline-dot"></div>
+                        <div class="glass-ultra p-6 rounded-2xl">
+                            <span class="badge badge-red mb-3 inline-block">28 janvier 2026</span>
+                            <h3 class="font-serif font-bold text-gouv-blue text-xl mb-2">Leadership actuel — Nouvelle vision</h3>
+                            <p class="text-sm text-text-muted font-light leading-relaxed">Blaise François Mateta Wang Wen's Majambu nommé Secrétaire Général. Poursuite de la transformation numérique avec nouvelles orientations.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LEADERSHIP -->
+        <section class="py-20 bg-gradient-to-b from-gouv-blue/5 to-transparent relative">
+            <div class="max-w-[1100px] mx-auto px-4 md:px-8">
+                <div class="text-center mb-14 reveal">
+                    <span class="badge badge-gold mb-3 inline-block">2026</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gouv-blue font-serif">Leadership Actuel</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="glass-ultra p-8 rounded-3xl text-center hover-lift-premium reveal" style="border-top: 4px solid #D4A017;">
+                        <div class="leader-photo">AK</div>
+                        <span class="badge badge-cyan mb-2 inline-block">Ministre</span>
+                        <h3 class="font-serif font-bold text-gouv-blue text-2xl mb-2">Augustin Kibassa Maliba</h3>
+                        <p class="text-sm text-gouv-gold font-semibold mb-4">Nommé le 29 mai 2025</p>
+                        <p class="text-sm text-text-muted font-light leading-relaxed">Leader visionnaire du portefeuille numérique, responsable de la politique nationale de transformation digitale et des orientations stratégiques du secteur.</p>
+                    </div>
+                    <div class="glass-ultra p-8 rounded-3xl text-center hover-lift-premium reveal delay-100" style="border-top: 4px solid #D4A017;">
+                        <div class="leader-photo">BM</div>
+                        <span class="badge badge-cyan mb-2 inline-block">Secrétaire Général</span>
+                        <h3 class="font-serif font-bold text-gouv-blue text-2xl mb-2">Blaise François Mateta</h3>
+                        <p class="text-sm text-gouv-gold font-semibold mb-4">Nommé le 28 janvier 2026</p>
+                        <p class="text-sm text-text-muted font-light leading-relaxed">Pilote exécutif de tous les programmes du SGEN, responsable de la mise en œuvre des missions institutionnelles et de la coordination des 9 directions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VISION 2026-2030 -->
+        <section class="py-20 relative overflow-hidden">
+            <div class="max-w-[1200px] mx-auto px-4 md:px-8 relative z-10">
+                <div class="text-center mb-14 reveal">
+                    <span class="badge badge-cyan mb-3 inline-block">Vision</span>
+                    <h2 class="text-3xl md:text-5xl font-bold text-gouv-blue font-serif mb-6">Notre Vision Transformatrice</h2>
+                    <p class="max-w-2xl mx-auto text-text-muted font-light">Le SGEN s'inscrit dans une vision ambitieuse de modernisation institutionnelle et de développement durable pour positionner la RDC comme leader technologique en Afrique.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="glass-ultra vision-pillar hover-lift-premium reveal" data-accent="gold">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-gouv-blue to-gouv-cyan text-white flex items-center justify-center shadow-lg"><i data-lucide="file-check" class="w-7 h-7"></i></div>
+                            <h3 class="font-serif font-bold text-gouv-blue text-xl">Administration 100 % Digitalisée</h3>
+                        </div>
+                        <p class="text-text-muted font-light leading-relaxed">Services publics sans papier et dématérialisation complète. Objectif : zéro papier, efficacité maximale, accès 24/7 pour les citoyens.</p>
+                    </div>
+
+                    <div class="glass-ultra vision-pillar hover-lift-premium reveal delay-100" data-accent="cyan">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-gouv-blue to-gouv-cyan text-white flex items-center justify-center shadow-lg"><i data-lucide="trending-up" class="w-7 h-7"></i></div>
+                            <h3 class="font-serif font-bold text-gouv-blue text-xl">Économie Numérique Inclusive</h3>
+                        </div>
+                        <p class="text-text-muted font-light leading-relaxed">Entrepreneurship numérique, inclusion des PME et réduction de la fracture digitale. Créer 500 000+ emplois digitaux d'ici 2030.</p>
+                    </div>
+
+                    <div class="glass-ultra vision-pillar hover-lift-premium reveal delay-200" data-accent="red">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-14 h-14 rounded-xl bg-gouv-red text-white flex items-center justify-center shadow-lg"><i data-lucide="shield" class="w-7 h-7"></i></div>
+                            <h3 class="font-serif font-bold text-gouv-blue text-xl">Résilience Numérique</h3>
+                        </div>
+                        <p class="text-text-muted font-light leading-relaxed">Cybersécurité renforcée, souveraineté digitale et protection des données nationales. Infrastructure critique sécurisée et résiliente.</p>
+                    </div>
+
+                    <div class="glass-ultra vision-pillar hover-lift-premium reveal delay-300" data-accent="gold">
+                        <div class="flex items-center gap-4 mb-4">
+                            <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-gouv-gold to-gouv-blue text-white flex items-center justify-center shadow-lg"><i data-lucide="globe-2" class="w-7 h-7"></i></div>
+                            <h3 class="font-serif font-bold text-gouv-blue text-xl">Rayonnement International</h3>
+                        </div>
+                        <p class="text-text-muted font-light leading-relaxed">Partenariats technologiques stratégiques, coopération régionale (CEDEAO) et dialogue multilatéral. RDC comme hub numérique régional.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STRUCTURE ORGANISATIONNELLE -->
+        <section class="py-20 bg-gradient-to-b from-transparent to-gouv-blue/5 relative">
+            <div class="max-w-[1100px] mx-auto px-4 md:px-8">
+                <div class="text-center mb-14 reveal">
+                    <span class="badge badge-gold mb-3 inline-block">Organisation</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gouv-blue font-serif mb-4">Architecture Institutionnelle</h2>
+                </div>
+
+                <div class="glass-ultra rounded-3xl p-8 md:p-12 reveal">
+                    <div class="flex flex-col items-center gap-6">
+                        <div class="bg-gouv-blue text-white px-8 py-4 rounded-xl font-serif font-bold text-lg shadow-lg flex items-center gap-3"><i data-lucide="crown" class="w-5 h-5"></i> Ministre de l'Économie Numérique</div>
+                        <div class="w-px h-8 bg-gouv-cyan"></div>
+                        <div class="bg-gradient-to-br from-gouv-cyan to-gouv-blue text-white px-8 py-4 rounded-xl font-serif font-bold shadow-lg flex items-center gap-3"><i data-lucide="user-check" class="w-5 h-5"></i> Secrétaire Général du SGEN</div>
+                        <div class="w-px h-8 bg-gouv-cyan"></div>
+                        <div class="bg-gouv-gold text-white px-6 py-3 rounded-xl font-semibold shadow-lg">9 Directions</div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full mt-4">
+                            <div class="bg-gouv-blue/10 p-5 rounded-xl border border-gouv-blue/20">
+                                <h4 class="font-bold text-gouv-blue mb-3 flex items-center gap-2"><i data-lucide="settings" class="w-5 h-5"></i> 4 Directions Standards</h4>
+                                <ul class="text-sm text-text-muted space-y-1 font-light">
+                                    <li>• DRH — Ressources Humaines</li>
+                                    <li>• DAF — Administrative & Financière</li>
+                                    <li>• DEP — Études & Planification</li>
+                                    <li>• DANTIC — Archives & NTIC</li>
+                                </ul>
+                            </div>
+                            <div class="bg-gouv-gold/10 p-5 rounded-xl border border-gouv-gold/30">
+                                <h4 class="font-bold text-gouv-blue mb-3 flex items-center gap-2"><i data-lucide="zap" class="w-5 h-5"></i> 5 Directions Métiers</h4>
+                                <ul class="text-sm text-text-muted space-y-1 font-light">
+                                    <li>• DIN — Infrastructures Numériques</li>
+                                    <li>• DSIN — Services & Innovation</li>
+                                    <li>• DTEDL — Entrepreneurship Digital</li>
+                                    <li>• DPSP — Politique Sectorielle</li>
+                                    <li>• DSSI — Sécurité & Conformité</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 pt-8 border-t border-gouv-blue/10 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                        <div><div class="text-3xl font-bold font-serif text-gouv-cyan">9</div><p class="text-sm text-text-muted">Directions</p></div>
+                        <div><div class="text-3xl font-bold font-serif text-gouv-cyan">15-20</div><p class="text-sm text-text-muted">Divisions</p></div>
+                        <div><div class="text-3xl font-bold font-serif text-gouv-cyan">40-50</div><p class="text-sm text-text-muted">Bureaux</p></div>
+                        <div><div class="text-3xl font-bold font-serif text-gouv-cyan">200+</div><p class="text-sm text-text-muted">Agents</p></div>
+                    </div>
+
+                    <div class="text-center mt-8">
+                        <a href="directions.html" class="inline-flex items-center gap-3 bg-gouv-blue text-white px-6 py-3 rounded-full font-semibold hover:bg-gouv-cyan transition-colors">
+                            Explorer les Directions <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MISSIONS ACCORDION -->
+        <section class="py-20 relative">
+            <div class="max-w-[900px] mx-auto px-4 md:px-8">
+                <div class="text-center mb-12 reveal">
+                    <span class="badge badge-cyan mb-3 inline-block">Missions</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gouv-blue font-serif">8 Piliers de Missions</h2>
+                </div>
+
+                <div data-accordion-group class="space-y-3">
+                    <div class="accordion-item open" data-accordion>
+                        <button class="accordion-header">
+                            <span class="flex items-center gap-3"><i data-lucide="lightbulb" class="w-5 h-5 text-gouv-cyan"></i> Conception Stratégique</span>
+                            <i data-lucide="chevron-down" class="accordion-chevron w-5 h-5"></i>
+                        </button>
+                        <div class="accordion-body">Concevoir et élaborer les projets de politique du numérique, stratégies sectorielles et orientations nationales cohérentes avec la vision gouvernementale.</div>
+                    </div>
+                    <div class="accordion-item" data-accordion>
+                        <button class="accordion-header">
+                            <span class="flex items-center gap-3"><i data-lucide="file-text" class="w-5 h-5 text-gouv-cyan"></i> Cadre Législatif & Réglementaire</span>
+                            <i data-lucide="chevron-down" class="accordion-chevron w-5 h-5"></i>
+                        </button>
+                        <div class="accordion-body">Concevoir les avant-projets législatifs, textes réglementaires et normes du secteur numérique pour créer un cadre juridique moderne et adapté.</div>
+                    </div>
+                    <div class="accordion-item" data-accordion>
+                        <button class="accordion-header">
+                            <span class="flex items-center gap-3"><i data-lucide="graduation-cap" class="w-5 h-5 text-gouv-cyan"></i> Promotion & Formation</span>
+                            <i data-lucide="chevron-down" class="accordion-chevron w-5 h-5"></i>
+                        </button>
+                        <div class="accordion-body">Promouvoir la formation aux métiers du numérique, développer le contenu local et cultiver une culture digitale inclusive pour tous.</div>
+                    </div>
+                    <div class="accordion-item" data-accordion>
+                        <button class="accordion-header">
+                            <span class="flex items-center gap-3"><i data-lucide="bar-chart-3" class="w-5 h-5 text-gouv-cyan"></i> Transformation Économique</span>
+                            <i data-lucide="chevron-down" class="accordion-chevron w-5 h-5"></i>
+                        </button>
+                        <div class="accordion-body">Assurer la transition vers l'économie numérique, valoriser les données et développer un écosystème digital dynamique.</div>
+                    </div>
+                    <div class="accordion-item" data-accordion>
+                        <button class="accordion-header">
+                            <span class="flex items-center gap-3"><i data-lucide="wifi" class="w-5 h-5 text-gouv-cyan"></i> Infrastructures Numériques</span>
+                            <i data-lucide="chevron-down" class="accordion-chevron w-5 h-5"></i>
+                        </button>
+                        <div class="accordion-body">Assurer l'implémentation intégrée des infrastructures, déployer les services à l'échelle nationale et garantir la couverture territoriale.</div>
+                    </div>
+                    <div class="accordion-item" data-accordion>
+                        <button class="accordion-header">
+                            <span class="flex items-center gap-3"><i data-lucide="code-2" class="w-5 h-5 text-gouv-cyan"></i> Développement Applicatif</span>
+                            <i data-lucide="chevron-down" class="accordion-chevron w-5 h-5"></i>
+                        </button>
+                        <div class="accordion-body">Assurer le développement évolutif des applications publiques, déployer les solutions numériques et adapter les outils aux besoins citoyens.</div>
+                    </div>
+                    <div class="accordion-item" data-accordion>
+                        <button class="accordion-header">
+                            <span class="flex items-center gap-3"><i data-lucide="lock" class="w-5 h-5 text-gouv-red"></i> Cybersécurité & Protection</span>
+                            <i data-lucide="chevron-down" class="accordion-chevron w-5 h-5"></i>
+                        </button>
+                        <div class="accordion-body">Assurer l'organisation de la cybersécurité nationale, protéger les données et gérer la résilience des systèmes critiques.</div>
+                    </div>
+                    <div class="accordion-item" data-accordion>
+                        <button class="accordion-header">
+                            <span class="flex items-center gap-3"><i data-lucide="globe" class="w-5 h-5 text-gouv-cyan"></i> Coopération Internationale</span>
+                            <i data-lucide="chevron-down" class="accordion-chevron w-5 h-5"></i>
+                        </button>
+                        <div class="accordion-body">Participer à la conclusion de conventions internationales, mettre en œuvre les accords régionaux et coordonner la coopération numérique multilatérale.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="p-4 md:p-8">
+            <div class="max-w-[1200px] mx-auto rounded-[3rem] overflow-hidden relative bg-gradient-to-br from-gouv-blue to-gouv-cyan py-20 px-10 text-center">
+                <div class="absolute inset-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80')] bg-cover bg-center"></div>
+                <div class="relative z-10">
+                    <h2 class="text-3xl md:text-5xl font-bold font-serif text-white mb-6 reveal">Engagé pour une RDC Numérique</h2>
+                    <p class="text-lg text-white/85 font-light max-w-xl mx-auto mb-10 reveal delay-100">Découvrez comment le SGEN transforme chaque aspect de la vie publique et économique à travers l'innovation digitale.</p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center flex-wrap reveal delay-200">
+                        <a href="directions.html" class="bg-white text-gouv-blue hover:bg-gray-50 px-8 py-3.5 rounded-full font-semibold transition-transform hover:scale-105">Découvrir les Directions</a>
+                        <a href="projects.html" class="border border-white/40 hover:border-white text-white px-8 py-3.5 rounded-full font-semibold hover:bg-white/10 transition-all">Consulter les Projets</a>
+                        <a href="contact.html" class="bg-gouv-gold text-white hover:bg-[#C49014] px-8 py-3.5 rounded-full font-semibold transition-colors">Nous Contacter</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#001529] text-white mt-12 relative overflow-hidden">
+        <div class="h-1.5 w-full absolute top-0 left-0 z-20" style="background: linear-gradient(90deg, #00A8E8 0%, #00A8E8 33.33%, #D4A017 33.33%, #D4A017 66.66%, #C41E3A 66.66%, #C41E3A 100%);"></div>
+        <div class="max-w-[1200px] mx-auto px-4 md:px-8 pt-20 pb-10 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <div>
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-14 h-14 rounded-2xl flex items-center justify-center text-white border border-gouv-gold/40 font-serif font-bold text-2xl bg-white/5">SG</div>
+                        <div><h2 class="font-serif font-bold text-2xl text-white">SGEN</h2><p class="text-[10px] text-gouv-gold uppercase font-bold mt-1">Rép. Dém. du Congo</p></div>
+                    </div>
+                    <p class="text-sm text-gray-400 font-light leading-relaxed">Secrétariat Général à l'Économie Numérique — Organe pilote de la transformation digitale de la RDC.</p>
+                </div>
+                <div>
+                    <h3 class="text-sm font-bold text-white mb-4 font-serif">Navigation</h3>
+                    <ul class="space-y-3 text-sm text-gray-400 font-light">
+                        <li><a href="about.html" class="hover:text-gouv-cyan">À Propos</a></li>
+                        <li><a href="directions.html" class="hover:text-gouv-cyan">Directions</a></li>
+                        <li><a href="projects.html" class="hover:text-gouv-cyan">Projets</a></li>
+                        <li><a href="services.html" class="hover:text-gouv-cyan">Services</a></li>
+                        <li><a href="contact.html" class="hover:text-gouv-cyan">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-bold text-white mb-4 font-serif">Ressources</h3>
+                    <ul class="space-y-3 text-sm text-gray-400 font-light">
+                        <li><a href="#" class="hover:text-gouv-gold">Documentation</a></li>
+                        <li><a href="#" class="hover:text-gouv-gold">Open Data</a></li>
+                        <li><a href="#" class="hover:text-gouv-gold">Cadre Juridique</a></li>
+                        <li><a href="#" class="hover:text-gouv-gold">Carrières</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-bold text-white mb-4 font-serif">Contact</h3>
+                    <ul class="space-y-3 text-sm text-gray-300 font-light">
+                        <li class="flex items-start gap-3"><i data-lucide="map-pin" class="w-4 h-4 text-gouv-cyan mt-0.5"></i> 45, Avenue Lubefu, Kinshasa-Gombe</li>
+                        <li class="flex items-center gap-3"><i data-lucide="mail" class="w-4 h-4 text-gouv-cyan"></i> contact@numerique.gouv.cd</li>
+                        <li class="flex items-center gap-3"><i data-lucide="phone" class="w-4 h-4 text-gouv-cyan"></i> +243 81 000 0000</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-white/10 text-center text-xs text-gray-500">
+                &copy; 2026 SGEN RDC. Tous droits réservés.
+            </div>
+        </div>
+    </footer>
+
+    <script src="statics/js/common.js"></script>
+    <script src="statics/js/about.js"></script>
+</body>
+</html>

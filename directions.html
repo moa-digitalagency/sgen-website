@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les 9 Directions du SGEN | Organisation et Missions</title>
+    <meta name="description" content="Découvrez les 9 directions du SGEN : DRH, DAF, DEP, DANTIC et 5 directions métiers. Missions, responsables et zones d'intervention.">
+    <meta name="theme-color" content="#003D7A">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="statics/js/tailwind-config.js"></script>
+
+    <link rel="stylesheet" href="statics/css/common.css">
+    <link rel="stylesheet" href="statics/css/directions.css">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="font-sans text-text-main antialiased">
+
+    <div class="tricolor-bar"></div>
+
+    <div class="fixed w-full top-6 z-50 px-4 md:px-8 flex justify-center pointer-events-none">
+        <header class="w-full max-w-[1200px] glass-ultra rounded-2xl px-6 py-3 flex justify-between items-center pointer-events-auto transition-all duration-500" id="main-header">
+            <a href="index.html" class="flex items-center gap-4 group">
+                <div class="w-10 h-10 bg-gouv-blue rounded-xl flex items-center justify-center text-white font-serif font-bold text-xl shadow-lg group-hover:bg-gouv-cyan transition-colors">SG</div>
+                <div>
+                    <h1 class="font-serif font-bold text-lg leading-tight tracking-wide text-gouv-blue">SGEN</h1>
+                    <p class="text-[9px] text-gouv-gold uppercase tracking-[0.2em] font-semibold mt-0.5">Rép. Dém. du Congo</p>
+                </div>
+            </a>
+            <nav class="hidden lg:flex items-center gap-8 text-[13px] font-semibold uppercase tracking-widest text-gouv-blue/80">
+                <a href="about.html" class="hover:text-gouv-cyan transition-colors">À Propos</a>
+                <a href="directions.html" class="text-gouv-cyan transition-colors">Directions</a>
+                <a href="projects.html" class="hover:text-gouv-cyan transition-colors">Projets</a>
+                <a href="services.html" class="hover:text-gouv-cyan transition-colors">Services</a>
+                <a href="contact.html" class="hover:text-gouv-cyan transition-colors">Contact</a>
+                <a href="services.html" class="ml-2 bg-gouv-red/90 hover:bg-gouv-red text-white px-5 py-2.5 rounded-full font-bold flex items-center gap-2 transition-all border border-white/20"><i data-lucide="zap" class="w-4 h-4 animate-pulse"></i> Services en Ligne</a>
+            </nav>
+            <button id="mobile-menu-btn" class="lg:hidden text-gouv-blue p-2" aria-label="Menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
+        </header>
+    </div>
+    <div id="mobile-menu" class="hidden fixed inset-0 z-40 bg-white/80 backdrop-blur-2xl pt-24 px-6">
+        <nav class="flex flex-col gap-6 text-center text-lg font-serif font-bold text-gouv-blue">
+            <a href="about.html">À Propos</a>
+            <a href="directions.html">Directions</a>
+            <a href="projects.html">Projets</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="page-hero">
+            <div class="page-hero-bg directions-hero-bg"></div>
+            <div class="page-hero-overlay"></div>
+            <div class="page-hero-content reveal">
+                <span class="inline-block px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-[11px] uppercase tracking-[0.2em] font-bold mb-6">9 Directions</span>
+                <h1 class="text-4xl md:text-6xl font-bold font-serif mb-4">Les 9 Directions du SGEN</h1>
+                <p class="text-lg md:text-xl text-white/85 font-light max-w-2xl mx-auto">Les piliers opérationnels et stratégiques de la transformation numérique</p>
+            </div>
+        </section>
+
+        <!-- INTRO 2 CATÉGORIES -->
+        <section class="py-20 relative">
+            <div class="bg-mesh"><div class="blob-1"></div><div class="blob-2"></div></div>
+            <div class="max-w-[1100px] mx-auto px-4 md:px-8 relative z-10">
+                <div class="text-center mb-12 reveal">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gouv-blue font-serif mb-4">Architecture en Deux Secteurs</h2>
+                    <p class="text-text-muted max-w-2xl mx-auto font-light">Le SGEN est organisé en 4 Directions Standards (fonctions de support) et 5 Directions Métiers (fonctions opérationnelles).</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+                    <div class="glass-ultra p-8 rounded-3xl hover-lift-premium reveal text-center" style="border-top: 4px solid #00A8E8;">
+                        <div class="w-16 h-16 rounded-2xl mx-auto mb-4 bg-gouv-cyan/10 flex items-center justify-center text-gouv-cyan"><i data-lucide="settings" class="w-8 h-8"></i></div>
+                        <div class="text-5xl font-serif font-bold text-gouv-cyan mb-2">4</div>
+                        <h3 class="font-serif font-bold text-gouv-blue text-xl mb-2">Directions Standards</h3>
+                        <p class="text-text-muted text-sm font-light">Gestion des ressources, finances, planning et infrastructure IT</p>
+                    </div>
+                    <div class="glass-ultra p-8 rounded-3xl hover-lift-premium reveal delay-100 text-center" style="border-top: 4px solid #D4A017;">
+                        <div class="w-16 h-16 rounded-2xl mx-auto mb-4 bg-gouv-gold/10 flex items-center justify-center text-gouv-gold"><i data-lucide="zap" class="w-8 h-8"></i></div>
+                        <div class="text-5xl font-serif font-bold text-gouv-gold mb-2">5</div>
+                        <h3 class="font-serif font-bold text-gouv-blue text-xl mb-2">Directions Métiers</h3>
+                        <p class="text-text-muted text-sm font-light">Mise en œuvre opérationnelle des projets et services numériques</p>
+                    </div>
+                </div>
+
+                <!-- Filter tabs -->
+                <div class="flex flex-wrap justify-center gap-3 reveal delay-200">
+                    <button data-dir-filter="all" class="active px-5 py-2 rounded-full bg-gouv-blue text-white text-sm font-semibold transition-all">Toutes</button>
+                    <button data-dir-filter="standard" class="px-5 py-2 rounded-full bg-white border border-gouv-blue/20 text-gouv-blue text-sm font-semibold hover:bg-gouv-blue hover:text-white transition-all">Standards</button>
+                    <button data-dir-filter="metier" class="px-5 py-2 rounded-full bg-white border border-gouv-blue/20 text-gouv-blue text-sm font-semibold hover:bg-gouv-blue hover:text-white transition-all">Métiers</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- DIRECTIONS STANDARDS -->
+        <section class="py-20 bg-gradient-to-b from-transparent to-gouv-blue/5">
+            <div class="max-w-[1200px] mx-auto px-4 md:px-8">
+                <div class="mb-10 reveal">
+                    <span class="badge badge-cyan mb-3 inline-block">Support</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gouv-blue font-serif">Directions Standards — Fonctions de Support</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- DRH -->
+                    <div id="drh" class="direction-card reveal" data-dir-type="standard" data-accent="cyan">
+                        <div class="flex items-start gap-4 mb-4">
+                            <div class="direction-icon-wrap shrink-0"><i data-lucide="users" class="w-7 h-7"></i></div>
+                            <div>
+                                <span class="badge badge-cyan mb-1 inline-block">Secteur I</span>
+                                <h3 class="font-serif font-bold text-gouv-blue text-2xl">DRH</h3>
+                                <p class="text-sm text-text-muted">Ressources Humaines</p>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gouv-gold font-semibold mb-3"><i data-lucide="user-check" class="inline w-4 h-4 mr-1"></i>Dir. Serge Lubaki Mankenda</p>
+                        <h4 class="text-xs uppercase tracking-widest text-gouv-blue font-bold mb-2">Missions principales</h4>
+                        <ul class="missions-list mb-4">
+                            <li>Gérer les ressources humaines du Secrétariat</li>
+                            <li>Assurer le développement des compétences</li>
+                            <li>Contribuer à la gestion prévisionnelle des emplois</li>
+                            <li>Veiller à l'application de la législation RH</li>
+                        </ul>
+                        <div class="flex justify-between text-xs border-t border-gouv-blue/10 pt-3">
+                            <span class="text-text-muted">Effectif : <strong class="text-gouv-blue">~25 agents</strong></span>
+                            <span class="text-gouv-cyan font-semibold">#drh</span>
+                        </div>
+                    </div>
+
+                    <!-- DAF -->
+                    <div id="daf" class="direction-card reveal delay-100" data-dir-type="standard" data-accent="blue">
+                        <div class="flex items-start gap-4 mb-4">
+                            <div class="direction-icon-wrap shrink-0"><i data-lucide="credit-card" class="w-7 h-7"></i></div>
+                            <div>
+                                <span class="badge badge-blue mb-1 inline-block">Secteur II</span>
+                                <h3 class="font-serif font-bold text-gouv-blue text-2xl">DAF</h3>
+                                <p class="text-sm text-text-muted">Administrative & Financière</p>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gouv-gold font-semibold mb-3"><i data-lucide="user-check" class="inline w-4 h-4 mr-1"></i>Dir. Sandra Kinfumu Sunda</p>
+                        <h4 class="text-xs uppercase tracking-widest text-gouv-blue font-bold mb-2">Missions principales</h4>
+                        <ul class="missions-list mb-4">
+                            <li>Gérer les ressources financières et matérielles</li>
+                            <li>Élaborer les prévisions budgétaires</li>
+                            <li>Assurer l'engagement et l'ordonnancement des dépenses</li>
+                            <li>Participer à la passation des marchés publics</li>
+                        </ul>
+                        <div class="flex justify-between text-xs border-t border-gouv-blue/10 pt-3">
+                            <span class="text-text-muted">Effectif : <strong class="text-gouv-blue">~20 agents</strong></span>
+                            <span class="text-gouv-cyan font-semibold">#daf</span>
+                        </div>
+                    </div>
+
+                    <!-- DEP -->
+                    <div id="dep" class="direction-card reveal delay-200" data-dir-type="standard" data-accent="gold">
+                        <div class="flex items-start gap-4 mb-4">
+                            <div class="direction-icon-wrap shrink-0"><i data-lucide="trending-up" class="w-7 h-7"></i></div>
+                            <div>
+                                <span class="badge badge-gold mb-1 inline-block">Secteur III</span>
+                                <h3 class="font-serif font-bold text-gouv-blue text-2xl">DEP</h3>
+                                <p class="text-sm text-text-muted">Études & Planification</p>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gouv-gold font-semibold mb-3"><i data-lucide="user-check" class="inline w-4 h-4 mr-1"></i>Dir. Alain Akonkwa Rushunda</p>
+                        <h4 class="text-xs uppercase tracking-widest text-gouv-blue font-bold mb-2">Missions principales</h4>
+                        <ul class="missions-list mb-4">
+                            <li>Élaborer les diagnostics du secteur numérique</li>
+                            <li>Définir les politiques sectorielles</li>
+                            <li>Élaborer le programme d'investissement public</li>
+                            <li>Constituer une banque de données des projets</li>
+                        </ul>
+                        <div class="flex justify-between text-xs border-t border-gouv-blue/10 pt-3">
+                            <span class="text-text-muted">Effectif : <strong class="text-gouv-blue">~18 agents</strong></span>
+                            <span class="text-gouv-cyan font-semibold">#dep</span>
+                        </div>
+                    </div>
+
+                    <!-- DANTIC -->
+                    <div id="dantic" class="direction-card reveal delay-300" data-dir-type="standard" data-accent="cyan">
+                        <div class="flex items-start gap-4 mb-4">
+                            <div class="direction-icon-wrap shrink-0"><i data-lucide="server" class="w-7 h-7"></i></div>
+                            <div>
+                                <span class="badge badge-cyan mb-1 inline-block">Secteur IV</span>
+                                <h3 class="font-serif font-bold text-gouv-blue text-2xl">DANTIC</h3>
+                                <p class="text-sm text-text-muted">Archives & NTIC</p>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gouv-gold font-semibold mb-3"><i data-lucide="user-check" class="inline w-4 h-4 mr-1"></i>Dir. Jean Bedel</p>
+                        <h4 class="text-xs uppercase tracking-widest text-gouv-blue font-bold mb-2">Missions principales</h4>
+                        <ul class="missions-list mb-4">
+                            <li>Gérer la collecte et centralisation des dossiers</li>
+                            <li>Gérer la bibliothèque et la photothèque</li>
+                            <li>Réaliser des études et développer des logiciels</li>
+                            <li>Informatiser les services</li>
+                        </ul>
+                        <div class="flex justify-between text-xs border-t border-gouv-blue/10 pt-3">
+                            <span class="text-text-muted">Effectif : <strong class="text-gouv-blue">~22 agents</strong></span>
+                            <span class="text-gouv-cyan font-semibold">#dantic</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DIRECTIONS MÉTIERS -->
+        <section class="py-20">
+            <div class="max-w-[1200px] mx-auto px-4 md:px-8">
+                <div class="mb-10 reveal">
+                    <span class="badge badge-gold mb-3 inline-block">Opérationnels</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gouv-blue font-serif">Directions Métiers — Fonctions Opérationnelles</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- DIN -->
+                    <div id="din" class="direction-card reveal" data-dir-type="metier" data-accent="cyan">
+                        <div class="direction-icon-wrap mb-4"><i data-lucide="wifi" class="w-7 h-7"></i></div>
+                        <span class="badge badge-cyan mb-2 inline-block">Métier I</span>
+                        <h3 class="font-serif font-bold text-gouv-blue text-2xl mb-1">DIN</h3>
+                        <p class="text-sm text-text-muted mb-3">Infrastructures Numériques</p>
+                        <p class="text-sm text-gouv-gold font-semibold mb-3"><i data-lucide="user-check" class="inline w-4 h-4 mr-1"></i>Dir. Bob Bosembe Bokanga</p>
+                        <ul class="missions-list mb-4">
+                            <li>Concevoir les politiques d'infrastructures</li>
+                            <li>Déployer fibre optique et connectivité</li>
+                            <li>Gérer les data centers nationaux</li>
+                        </ul>
+                        <div class="border-t border-gouv-blue/10 pt-3 text-xs text-text-muted">Effectif : <strong class="text-gouv-blue">~30 agents</strong></div>
+                    </div>
+
+                    <!-- DSIN -->
+                    <div id="dsin" class="direction-card reveal delay-100" data-dir-type="metier" data-accent="gold">
+                        <div class="direction-icon-wrap mb-4"><i data-lucide="zap" class="w-7 h-7"></i></div>
+                        <span class="badge badge-gold mb-2 inline-block">Métier II</span>
+                        <h3 class="font-serif font-bold text-gouv-blue text-2xl mb-1">DSIN</h3>
+                        <p class="text-sm text-text-muted mb-3">Services & Innovation Numérique</p>
+                        <p class="text-sm text-gouv-gold font-semibold mb-3"><i data-lucide="user-check" class="inline w-4 h-4 mr-1"></i>À confirmer</p>
+                        <ul class="missions-list mb-4">
+                            <li>Concevoir les services numériques publics</li>
+                            <li>Piloter la plateforme e-Gov unique</li>
+                            <li>Innovation gouvernementale (IA, blockchain)</li>
+                        </ul>
+                        <div class="border-t border-gouv-blue/10 pt-3 text-xs text-text-muted">Effectif : <strong class="text-gouv-blue">~28 agents</strong></div>
+                    </div>
+
+                    <!-- DTEDL -->
+                    <div id="dtedl" class="direction-card reveal delay-200" data-dir-type="metier" data-accent="cyan">
+                        <div class="direction-icon-wrap mb-4"><i data-lucide="rocket" class="w-7 h-7"></i></div>
+                        <span class="badge badge-cyan mb-2 inline-block">Métier III</span>
+                        <h3 class="font-serif font-bold text-gouv-blue text-2xl mb-1">DTEDL</h3>
+                        <p class="text-sm text-text-muted mb-3">Transformation & Entrepreneurship</p>
+                        <p class="text-sm text-gouv-gold font-semibold mb-3"><i data-lucide="user-check" class="inline w-4 h-4 mr-1"></i>À confirmer</p>
+                        <ul class="missions-list mb-4">
+                            <li>Accompagner la transformation sectorielle</li>
+                            <li>Incuber startups et PME tech</li>
+                            <li>Gérer les Tech Hubs (Kinshasa)</li>
+                        </ul>
+                        <div class="border-t border-gouv-blue/10 pt-3 text-xs text-text-muted">Effectif : <strong class="text-gouv-blue">~25 agents</strong></div>
+                    </div>
+
+                    <!-- DPSP -->
+                    <div id="dpsp" class="direction-card reveal delay-100" data-dir-type="metier" data-accent="gold">
+                        <div class="direction-icon-wrap mb-4"><i data-lucide="briefcase" class="w-7 h-7"></i></div>
+                        <span class="badge badge-gold mb-2 inline-block">Métier IV</span>
+                        <h3 class="font-serif font-bold text-gouv-blue text-2xl mb-1">DPSP</h3>
+                        <p class="text-sm text-text-muted mb-3">Politique Sectorielle & Promotion</p>
+                        <p class="text-sm text-gouv-gold font-semibold mb-3"><i data-lucide="user-check" class="inline w-4 h-4 mr-1"></i>À confirmer</p>
+                        <ul class="missions-list mb-4">
+                            <li>Élaborer les politiques sectorielles</li>
+                            <li>Coordonner avec les ministères</li>
+                            <li>Gérer les partenariats stratégiques</li>
+                        </ul>
+                        <div class="border-t border-gouv-blue/10 pt-3 text-xs text-text-muted">Effectif : <strong class="text-gouv-blue">~26 agents</strong></div>
+                    </div>
+
+                    <!-- DSSI -->
+                    <div id="dssi" class="direction-card reveal delay-200" data-dir-type="metier" data-accent="red">
+                        <div class="direction-icon-wrap mb-4"><i data-lucide="shield" class="w-7 h-7"></i></div>
+                        <span class="badge badge-red mb-2 inline-block">Métier V · Critique</span>
+                        <h3 class="font-serif font-bold text-gouv-blue text-2xl mb-1">DSSI</h3>
+                        <p class="text-sm text-text-muted mb-3">Sécurité & Conformité</p>
+                        <p class="text-sm text-gouv-gold font-semibold mb-3"><i data-lucide="user-check" class="inline w-4 h-4 mr-1"></i>À confirmer</p>
+                        <ul class="missions-list mb-4">
+                            <li>Cybersécurité nationale (SOC 24/7)</li>
+                            <li>Protection données RGPD-like</li>
+                            <li>Gérer incident response & audit</li>
+                        </ul>
+                        <div class="border-t border-gouv-blue/10 pt-3 text-xs text-text-muted">Effectif : <strong class="text-gouv-blue">~32 agents</strong></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TABLEAU EFFECTIFS -->
+        <section class="py-20 bg-gradient-to-b from-gouv-blue/5 to-transparent">
+            <div class="max-w-[1100px] mx-auto px-4 md:px-8">
+                <div class="text-center mb-10 reveal">
+                    <span class="badge badge-blue mb-3 inline-block">Récapitulatif</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gouv-blue font-serif">Effectifs & Responsables</h2>
+                </div>
+
+                <div class="overflow-x-auto reveal">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Direction</th>
+                                <th>Responsable</th>
+                                <th>Secteur</th>
+                                <th>Effectif</th>
+                                <th>Missions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>DRH</strong></td><td>Serge Lubaki Mankenda</td><td><span class="badge badge-cyan">I</span></td><td>~25</td><td>RH & Talents</td></tr>
+                            <tr><td><strong>DAF</strong></td><td>Sandra Kinfumu Sunda</td><td><span class="badge badge-cyan">II</span></td><td>~20</td><td>Finance & Admin</td></tr>
+                            <tr><td><strong>DEP</strong></td><td>Alain Akonkwa Rushunda</td><td><span class="badge badge-cyan">III</span></td><td>~18</td><td>Études & Planning</td></tr>
+                            <tr><td><strong>DANTIC</strong></td><td>Jean Bedel</td><td><span class="badge badge-cyan">IV</span></td><td>~22</td><td>IT & Archives</td></tr>
+                            <tr><td><strong>DIN</strong></td><td>Bob Bosembe Bokanga</td><td><span class="badge badge-gold">Métier I</span></td><td>~30</td><td>Infrastructures</td></tr>
+                            <tr><td><strong>DSIN</strong></td><td>À confirmer</td><td><span class="badge badge-gold">Métier II</span></td><td>~28</td><td>Services & Innovation</td></tr>
+                            <tr><td><strong>DTEDL</strong></td><td>À confirmer</td><td><span class="badge badge-gold">Métier III</span></td><td>~25</td><td>Entrepreneurship</td></tr>
+                            <tr><td><strong>DPSP</strong></td><td>À confirmer</td><td><span class="badge badge-gold">Métier IV</span></td><td>~26</td><td>Politique Sectorielle</td></tr>
+                            <tr><td><strong>DSSI</strong></td><td>À confirmer</td><td><span class="badge badge-red">Métier V</span></td><td>~32</td><td>Sécurité & Conformité</td></tr>
+                            <tr style="background: rgba(0, 61, 122, 0.08);"><td><strong>SGEN</strong></td><td><strong>Blaise François Mateta</strong></td><td>Central</td><td><strong>~226</strong></td><td>—</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="p-4 md:p-8">
+            <div class="max-w-[1200px] mx-auto rounded-[3rem] overflow-hidden relative bg-gradient-to-br from-gouv-blue to-gouv-cyan py-20 px-10 text-center">
+                <div class="relative z-10">
+                    <h2 class="text-3xl md:text-5xl font-bold font-serif text-white mb-6 reveal">Explorez les Projets & Services</h2>
+                    <p class="text-lg text-white/85 font-light max-w-xl mx-auto mb-10 reveal delay-100">Découvrez comment chaque direction contribue à la transformation numérique de la RDC.</p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center flex-wrap reveal delay-200">
+                        <a href="projects.html" class="bg-white text-gouv-blue hover:bg-gray-50 px-8 py-3.5 rounded-full font-semibold transition-transform hover:scale-105">Voir les Projets</a>
+                        <a href="services.html" class="border border-white/40 hover:border-white text-white px-8 py-3.5 rounded-full font-semibold hover:bg-white/10 transition-all">Services Numériques</a>
+                        <a href="contact.html" class="bg-gouv-gold text-white hover:bg-[#C49014] px-8 py-3.5 rounded-full font-semibold transition-colors">Nous Contacter</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#001529] text-white mt-12 relative overflow-hidden">
+        <div class="h-1.5 w-full absolute top-0 left-0 z-20" style="background: linear-gradient(90deg, #00A8E8 0%, #00A8E8 33.33%, #D4A017 33.33%, #D4A017 66.66%, #C41E3A 66.66%, #C41E3A 100%);"></div>
+        <div class="max-w-[1200px] mx-auto px-4 md:px-8 pt-20 pb-10 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <div>
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-14 h-14 rounded-2xl flex items-center justify-center text-white border border-gouv-gold/40 font-serif font-bold text-2xl bg-white/5">SG</div>
+                        <div><h2 class="font-serif font-bold text-2xl text-white">SGEN</h2><p class="text-[10px] text-gouv-gold uppercase font-bold mt-1">Rép. Dém. du Congo</p></div>
+                    </div>
+                    <p class="text-sm text-gray-400 font-light leading-relaxed">Secrétariat Général à l'Économie Numérique — Organe pilote de la transformation digitale de la RDC.</p>
+                </div>
+                <div>
+                    <h3 class="text-sm font-bold text-white mb-4 font-serif">Navigation</h3>
+                    <ul class="space-y-3 text-sm text-gray-400 font-light">
+                        <li><a href="about.html" class="hover:text-gouv-cyan">À Propos</a></li>
+                        <li><a href="directions.html" class="hover:text-gouv-cyan">Directions</a></li>
+                        <li><a href="projects.html" class="hover:text-gouv-cyan">Projets</a></li>
+                        <li><a href="services.html" class="hover:text-gouv-cyan">Services</a></li>
+                        <li><a href="contact.html" class="hover:text-gouv-cyan">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-bold text-white mb-4 font-serif">Ressources</h3>
+                    <ul class="space-y-3 text-sm text-gray-400 font-light">
+                        <li><a href="#" class="hover:text-gouv-gold">Documentation</a></li>
+                        <li><a href="#" class="hover:text-gouv-gold">Open Data</a></li>
+                        <li><a href="#" class="hover:text-gouv-gold">Cadre Juridique</a></li>
+                        <li><a href="#" class="hover:text-gouv-gold">Carrières</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-bold text-white mb-4 font-serif">Contact</h3>
+                    <ul class="space-y-3 text-sm text-gray-300 font-light">
+                        <li class="flex items-start gap-3"><i data-lucide="map-pin" class="w-4 h-4 text-gouv-cyan mt-0.5"></i> 45, Avenue Lubefu, Kinshasa-Gombe</li>
+                        <li class="flex items-center gap-3"><i data-lucide="mail" class="w-4 h-4 text-gouv-cyan"></i> contact@numerique.gouv.cd</li>
+                        <li class="flex items-center gap-3"><i data-lucide="phone" class="w-4 h-4 text-gouv-cyan"></i> +243 81 000 0000</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-white/10 text-center text-xs text-gray-500">&copy; 2026 SGEN RDC. Tous droits réservés.</div>
+        </div>
+    </footer>
+
+    <style>
+        [data-dir-filter].active {
+            background: #003D7A !important;
+            color: white !important;
+            border-color: #003D7A !important;
+        }
+    </style>
+
+    <script src="statics/js/common.js"></script>
+    <script src="statics/js/directions.js"></script>
+</body>
+</html>

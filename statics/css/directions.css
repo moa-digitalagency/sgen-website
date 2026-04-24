@@ -1,0 +1,65 @@
+/* ============================================
+   DIRECTIONS PAGE — Specific styles
+   ============================================ */
+
+.directions-hero-bg {
+    background-image: url('https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80');
+}
+
+/* Direction card */
+.direction-card {
+    padding: 2rem;
+    border-radius: 1.25rem;
+    border-left: 5px solid #00A8E8;
+    transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+.direction-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0, 61, 122, 0.1);
+    background: rgba(255, 255, 255, 0.85);
+}
+
+.direction-card[data-accent="blue"] { border-left-color: #003D7A; }
+.direction-card[data-accent="gold"] { border-left-color: #D4A017; }
+.direction-card[data-accent="red"]  { border-left-color: #C41E3A; }
+
+.direction-icon-wrap {
+    width: 60px;
+    height: 60px;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(0, 168, 232, 0.1), rgba(0, 168, 232, 0.02));
+    color: #00A8E8;
+}
+.direction-card[data-accent="blue"] .direction-icon-wrap { background: linear-gradient(135deg, rgba(0, 61, 122, 0.12), rgba(0, 61, 122, 0.02)); color: #003D7A; }
+.direction-card[data-accent="gold"] .direction-icon-wrap { background: linear-gradient(135deg, rgba(212, 160, 23, 0.15), rgba(212, 160, 23, 0.03)); color: #D4A017; }
+.direction-card[data-accent="red"]  .direction-icon-wrap { background: linear-gradient(135deg, rgba(196, 30, 58, 0.12), rgba(196, 30, 58, 0.02)); color: #C41E3A; }
+
+.missions-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.missions-list li {
+    padding: 0.35rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    font-size: 0.92rem;
+    color: #64748B;
+    line-height: 1.55;
+}
+.missions-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.75rem;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #00A8E8;
+}

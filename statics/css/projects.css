@@ -1,0 +1,84 @@
+/* ============================================
+   PROJECTS PAGE — Specific styles
+   ============================================ */
+
+.projects-hero-bg {
+    background-image: url('https://images.unsplash.com/photo-1504805572947-34fad45aed93?auto=format&fit=crop&q=80');
+}
+
+.project-block {
+    padding: 2.5rem;
+    border-radius: 1.5rem;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-left: 6px solid #00A8E8;
+    box-shadow: 0 10px 30px rgba(0, 61, 122, 0.05);
+    transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.project-block[data-accent="gold"] { border-left-color: #D4A017; }
+.project-block[data-accent="red"]  { border-left-color: #C41E3A; }
+.project-block[data-accent="blue"] { border-left-color: #003D7A; }
+
+.project-block:hover {
+    box-shadow: 0 20px 50px rgba(0, 61, 122, 0.12);
+    transform: translateY(-4px);
+}
+
+.project-badge-statut {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.phase-timeline {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+@media (max-width: 768px) {
+    .phase-timeline { grid-template-columns: 1fr; }
+}
+.phase-card {
+    padding: 0.75rem 1rem;
+    background: rgba(0, 168, 232, 0.05);
+    border-left: 3px solid #00A8E8;
+    border-radius: 0.5rem;
+    font-size: 0.85rem;
+}
+.phase-card strong {
+    color: #003D7A;
+    display: block;
+    margin-bottom: 0.25rem;
+}
+.phase-card span {
+    color: #64748B;
+}
+
+.budget-box {
+    padding: 1rem 1.25rem;
+    background: linear-gradient(135deg, rgba(212, 160, 23, 0.08), rgba(212, 160, 23, 0.02));
+    border: 1px solid rgba(212, 160, 23, 0.3);
+    border-radius: 0.75rem;
+    text-align: center;
+}
+.budget-box .amount {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #D4A017;
+    line-height: 1;
+}
+.budget-box small {
+    color: #64748B;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}

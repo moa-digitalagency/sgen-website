@@ -1,0 +1,78 @@
+/* ============================================
+   SGEN — HOME PAGE STYLES
+   Hero slideshow + Blog marquee animé
+   ============================================ */
+
+/* Hero slideshow en faible opacité */
+.hero-slideshow {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    opacity: 0.10;
+    pointer-events: none;
+}
+.hero-slideshow div {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0;
+    animation: heroFade 18s infinite ease-in-out;
+}
+.hero-slideshow div:nth-child(1) { animation-delay: 0s;  background-image: url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80'); }
+.hero-slideshow div:nth-child(2) { animation-delay: 6s;  background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80'); }
+.hero-slideshow div:nth-child(3) { animation-delay: 12s; background-image: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80'); }
+
+@keyframes heroFade {
+    0%   { opacity: 0; }
+    15%  { opacity: 1; }
+    33%  { opacity: 1; }
+    48%  { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+/* Blog marquee défilement */
+@media (min-width: 1024px) {
+    .blog-marquee {
+        overflow: hidden;
+        position: relative;
+        mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+        -webkit-mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+    }
+    .blog-track {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        animation: scrollBlogs 25s linear infinite;
+    }
+    .blog-marquee:hover .blog-track { animation-play-state: paused; }
+}
+@media (max-width: 1023px) {
+    .blog-marquee {
+        overflow: hidden;
+        position: relative;
+        padding-bottom: 1.5rem;
+        mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    }
+    .blog-track {
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+        width: max-content;
+        padding: 0 0.5rem;
+        animation: scrollBlogsHorizontal 25s linear infinite;
+    }
+    .blog-marquee:hover .blog-track,
+    .blog-marquee:active .blog-track { animation-play-state: paused; }
+}
+
+@keyframes scrollBlogs {
+    0%   { transform: translateY(0); }
+    100% { transform: translateY(calc(-50% - 0.75rem)); }
+}
+@keyframes scrollBlogsHorizontal {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(calc(-50% - 0.75rem)); }
+}

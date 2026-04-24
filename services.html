@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services Numériques du SGEN | Transformation RDC</title>
+    <meta name="description" content="Services publics en ligne, formations, accompagnement entrepreneurial. 50+ services gouvernementaux numériques accessibles 24/7 en RDC.">
+    <meta name="theme-color" content="#003D7A">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="statics/js/tailwind-config.js"></script>
+
+    <link rel="stylesheet" href="statics/css/common.css">
+    <link rel="stylesheet" href="statics/css/services.css">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="font-sans text-text-main antialiased">
+
+    <div class="tricolor-bar"></div>
+
+    <div class="fixed w-full top-6 z-50 px-4 md:px-8 flex justify-center pointer-events-none">
+        <header class="w-full max-w-[1200px] glass-ultra rounded-2xl px-6 py-3 flex justify-between items-center pointer-events-auto transition-all duration-500" id="main-header">
+            <a href="index.html" class="flex items-center gap-4 group">
+                <div class="w-10 h-10 bg-gouv-blue rounded-xl flex items-center justify-center text-white font-serif font-bold text-xl shadow-lg group-hover:bg-gouv-cyan transition-colors">SG</div>
+                <div>
+                    <h1 class="font-serif font-bold text-lg leading-tight tracking-wide text-gouv-blue">SGEN</h1>
+                    <p class="text-[9px] text-gouv-gold uppercase tracking-[0.2em] font-semibold mt-0.5">Rép. Dém. du Congo</p>
+                </div>
+            </a>
+            <nav class="hidden lg:flex items-center gap-8 text-[13px] font-semibold uppercase tracking-widest text-gouv-blue/80">
+                <a href="about.html" class="hover:text-gouv-cyan transition-colors">À Propos</a>
+                <a href="directions.html" class="hover:text-gouv-cyan transition-colors">Directions</a>
+                <a href="projects.html" class="hover:text-gouv-cyan transition-colors">Projets</a>
+                <a href="services.html" class="text-gouv-cyan transition-colors">Services</a>
+                <a href="contact.html" class="hover:text-gouv-cyan transition-colors">Contact</a>
+                <a href="#services-gouvernementaux" class="ml-2 bg-gouv-red/90 hover:bg-gouv-red text-white px-5 py-2.5 rounded-full font-bold flex items-center gap-2 border border-white/20"><i data-lucide="zap" class="w-4 h-4 animate-pulse"></i> Services en Ligne</a>
+            </nav>
+            <button id="mobile-menu-btn" class="lg:hidden text-gouv-blue p-2" aria-label="Menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
+        </header>
+    </div>
+    <div id="mobile-menu" class="hidden fixed inset-0 z-40 bg-white/80 backdrop-blur-2xl pt-24 px-6">
+        <nav class="flex flex-col gap-6 text-center text-lg font-serif font-bold text-gouv-blue">
+            <a href="about.html">À Propos</a>
+            <a href="directions.html">Directions</a>
+            <a href="projects.html">Projets</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="page-hero">
+            <div class="page-hero-bg services-hero-bg"></div>
+            <div class="page-hero-overlay"></div>
+            <div class="page-hero-content reveal">
+                <span class="inline-block px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-[11px] uppercase tracking-[0.2em] font-bold mb-6">50+ Services en Ligne</span>
+                <h1 class="text-4xl md:text-6xl font-bold font-serif mb-4">Services Numériques SGEN</h1>
+                <p class="text-lg md:text-xl text-white/85 font-light max-w-2xl mx-auto">Ressources, outils et services pour la transformation numérique en RDC</p>
+            </div>
+        </section>
+
+        <!-- INTRO CATÉGORIES -->
+        <section class="py-20 relative">
+            <div class="bg-mesh"><div class="blob-1"></div><div class="blob-2"></div></div>
+            <div class="max-w-[1200px] mx-auto px-4 md:px-8 relative z-10">
+                <div class="text-center mb-12 reveal">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gouv-blue font-serif mb-4">Services & Ressources Disponibles</h2>
+                    <p class="text-text-muted max-w-2xl mx-auto font-light">Le SGEN met à disposition trois catégories principales de services pour soutenir la transformation numérique des acteurs publics et privés.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <a href="#services-gouvernementaux" class="category-card hover-lift-premium reveal" data-cat="cyan">
+                        <div class="cat-icon"><i data-lucide="building-2" class="w-10 h-10"></i></div>
+                        <h3 class="font-serif font-bold text-gouv-blue text-xl mb-2">Services Gouvernementaux</h3>
+                        <p class="text-sm text-text-muted font-light">Services publics numériques pour citoyens et entreprises</p>
+                    </a>
+                    <a href="#ressources-pro" class="category-card hover-lift-premium reveal delay-100" data-cat="gold">
+                        <div class="cat-icon"><i data-lucide="briefcase" class="w-10 h-10"></i></div>
+                        <h3 class="font-serif font-bold text-gouv-blue text-xl mb-2">Ressources Professionnelles</h3>
+                        <p class="text-sm text-text-muted font-light">Outils, formation et documentation pour les secteurs</p>
+                    </a>
+                    <a href="#programmes" class="category-card hover-lift-premium reveal delay-200" data-cat="blue">
+                        <div class="cat-icon"><i data-lucide="users" class="w-10 h-10"></i></div>
+                        <h3 class="font-serif font-bold text-gouv-blue text-xl mb-2">Programmes d'Accompagnement</h3>
+                        <p class="text-sm text-text-muted font-light">Mentorat, incubation et développement de compétences</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES GOUVERNEMENTAUX -->
+        <section id="services-gouvernementaux" class="py-20 bg-gradient-to-b from-transparent to-gouv-blue/5 scroll-mt-24">
+            <div class="max-w-[1200px] mx-auto px-4 md:px-8">
+                <div class="mb-10 reveal">
+                    <span class="badge badge-cyan mb-3 inline-block">Catégorie 1</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gouv-blue font-serif mb-3">Services Publics Numériques</h2>
+                    <p class="text-text-muted font-light">Accès simplifié aux services d'État via plateforme digitale</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="service-card reveal">
+                        <div class="flex justify-between items-start mb-3">
+                            <div class="svc-icon"><i data-lucide="globe" class="w-6 h-6"></i></div>
+                            <span class="badge badge-green">En dev.</span>
+                        </div>
+                        <h3 class="font-serif font-bold text-gouv-blue text-lg mb-2">Portail E-Services</h3>
+                        <p class="text-sm text-text-muted font-light leading-relaxed mb-4 flex-grow">Plateforme centralisée d'accès à 50+ services publics en ligne, accessibles 24/7.</p>
+                        <div class="text-xs text-gouv-cyan font-semibold border-t border-gouv-blue/10 pt-3">services.numerique.gouv.cd</div>
+                    </div>
+
+                    <div class="service-card reveal delay-100">
+                        <div class="flex justify-between items-start mb-3">
+                            <div class="svc-icon"><i data-lucide="file-text" class="w-6 h-6"></i></div>
+                            <span class="badge badge-orange">Planifié 2025</span>
+                        </div>
+                        <h3 class="font-serif font-bold text-gouv-blue text-lg mb-2">Registre Civil Numérique</h3>
+                        <p class="text-sm text-text-muted font-light leading-relaxed mb-4 flex-grow">Base de données centralisée et sécurisée — identité numérique unique, certificats et historique citoyen.</p>
+                        <div class="text-xs text-gouv-cyan font-semibold border-t border-gouv-blue/10 pt-3">Blockchain + biométrie</div>
+                    </div>
+
+                    <div class="service-card reveal delay-200">
+                        <div class="flex justify-between items-start mb-3">
+                            <div class="svc-icon"><i data-lucide="id-card" class="w-6 h-6"></i></div>
+                            <span class="badge badge-red animate-pulse-subtle">Critique</span>
+                        </div>
+                        <h3 class="font-serif font-bold text-gouv-blue text-lg mb-2">Identité Numérique Intégrée</h3>
+                        <p class="text-sm text-text-muted font-light leading-relaxed mb-4 flex-grow">Carte ID numérique NFC + application mobile. Authentification biométrique et SSO pour tous les systèmes.</p>
+                        <div class="text-xs text-gouv-cyan font-semibold border-t border-gouv-blue/10 pt-3">Compatible CEDEAO</div>
+                    </div>
+
+                    <div class="service-card reveal">
+                        <div class="flex justify-between items-start mb-3">
+                            <div class="svc-icon"><i data-lucide="shopping-cart" class="w-6 h-6"></i></div>
+                            <span class="badge badge-green">En cours</span>
+                        </div>
+                        <h3 class="font-serif font-bold text-gouv-blue text-lg mb-2">E-Commerce & Marché Public</h3>
+                        <p class="text-sm text-text-muted font-light leading-relaxed mb-4 flex-grow">Plateforme d'achats gouvernementaux transparents, appels d'offres digitaux, gestion de contrats.</p>
+                        <div class="text-xs text-gouv-cyan font-semibold border-t border-gouv-blue/10 pt-3">$500M+ de marchés/an</div>
+                    </div>
+
+                    <div class="service-card reveal delay-100">
+                        <div class="flex justify-between items-start mb-3">
+                            <div class="svc-icon"><i data-lucide="stethoscope" class="w-6 h-6"></i></div>
+                            <span class="badge badge-blue">Pilote</span>
+                        </div>
+                        <h3 class="font-serif font-bold text-gouv-blue text-lg mb-2">Télémédecine & Santé Numérique</h3>
+                        <p class="text-sm text-text-muted font-light leading-relaxed mb-4 flex-grow">Consultation à distance, prescription numérique, dossier médical électronique (EMR).</p>
+                        <div class="text-xs text-gouv-cyan font-semibold border-t border-gouv-blue/10 pt-3">5 hôpitaux pilotes</div>
+                    </div>
+
+                    <div class="service-card reveal delay-200" id="formations">
+                        <div class="flex justify-between items-start mb-3">
+                            <div class="svc-icon"><i data-lucide="book-open" class="w-6 h-6"></i></div>
+                            <span class="badge badge-green">En cours</span>
+                        </div>
+                        <h3 class="font-serif font-bold text-gouv-blue text-lg mb-2">Plateforme Éducation Numérique</h3>
+                        <p class="text-sm text-text-muted font-light leading-relaxed mb-4 flex-grow">500+ cours certifiés (primaire à université), quiz adaptatifs, certifications gouvernementales.</p>
+                        <div class="text-xs text-gouv-cyan font-semibold border-t border-gouv-blue/10 pt-3">500 écoles partenaires</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- RESSOURCES PROFESSIONNELLES -->
+        <section id="ressources-pro" class="py-20 scroll-mt-24">
+            <div class="max-w-[1200px] mx-auto px-4 md:px-8">
+                <div class="mb-10 reveal">
+                    <span class="badge badge-gold mb-3 inline-block">Catégorie 2</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gouv-blue font-serif mb-3">Ressources Professionnelles</h2>
+                    <p class="text-text-muted font-light">Ressources pour la transformation sectorielle</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="service-card reveal">
+                        <div class="svc-icon" style="background:linear-gradient(135deg,rgba(212,160,23,0.15),rgba(212,160,23,0.03));color:#D4A017;"><i data-lucide="book" class="w-6 h-6"></i></div>
+                        <h3 class="font-serif font-bold text-gouv-blue text-lg mb-2">Documentation Technique</h3>
+                        <p class="text-sm text-text-muted font-light leading-relaxed mb-4 flex-grow">Guides, spécifications et standards pour intégration des systèmes gouvernementaux. 50+ documents PDF.</p>
+                        <div class="text-xs text-gouv-gold font-semibold border-t border-gouv-blue/10 pt-3">downloads.numerique.gouv.cd</div>
+                    </div>
+
+                    <div class="service-card reveal delay-100">
+                        <div class="svc-icon" style="background:linear-gradient(135deg,rgba(212,160,23,0.15),rgba(212,160,23,0.03));color:#D4A017;"><i data-lucide="code-2" class="w-6 h-6"></i></div>
+                        <h3 class="font-serif font-bold text-gouv-blue text-lg mb-2">APIs Gouvernementales</h3>
+                        <p class="text-sm text-text-muted font-light leading-relaxed mb-4 flex-grow">Interfaces de programmation pour intégrer les services publics dans vos applications. 20+ APIs disponibles.</p>
+                        <div class="text-xs text-gouv-gold font-semibold border-t border-gouv-blue/10 pt-3">1000 req/jour (free tier)</div>
+                    </div>
+
+                    <div class="service-card reveal delay-200">
+                        <div class="svc-icon" style="background:linear-gradient(135deg,rgba(212,160,23,0.15),rgba(212,160,23,0.03));color:#D4A017;"><i data-lucide="graduation-cap" class="w-6 h-6"></i></div>
+                        <h3 class="font-serif font-bold text-gouv-blue text-lg mb-2">Formations Professionnelles</h3>
+                        <p class="text-sm text-text-muted font-light leading-relaxed mb-4 flex-grow">Programmes de certification pour les métiers du numérique : data, cloud, cybersécurité, dev.</p>
+                        <div class="text-xs text-gouv-gold font-semibold border-t border-gouv-blue/10 pt-3">10 certifications · Gratuit</div>
+                    </div>
+
+                    <div class="service-card reveal">
+                        <div class="svc-icon" style="background:linear-gradient(135deg,rgba(212,160,23,0.15),rgba(212,160,23,0.03));color:#D4A017;"><i data-lucide="rocket" class="w-6 h-6"></i></div>
+                        <h3 class="font-serif font-bold text-gouv-blue text-lg mb-2">Incubateurs Régionaux</h3>
+                        <p class="text-sm text-text-muted font-light leading-relaxed mb-4 flex-grow">Espaces de travail partagés, mentorat et accès au financement pour les entrepreneurs dans 10 villes RDC.</p>
+                        <div class="text-xs text-gouv-gold font-semibold border-t border-gouv-blue/10 pt-3">500+ startups capacity</div>
+                    </div>
+
+                    <div class="service-card reveal delay-100">
+                        <div class="svc-icon" style="background:linear-gradient(135deg,rgba(212,160,23,0.15),rgba(212,160,23,0.03));color:#D4A017;"><i data-lucide="server" class="w-6 h-6"></i></div>
+                        <h3 class="font-serif font-bold text-gouv-blue text-lg mb-2">Cloud Souverain</h3>
+                        <p class="text-sm text-text-muted font-light leading-relaxed mb-4 flex-grow">Infrastructure cloud nationale pour hébergement — IaaS/PaaS/SaaS. 2 datacenters (Kinshasa + Katanga).</p>
+                        <div class="text-xs text-gouv-gold font-semibold border-t border-gouv-blue/10 pt-3">99.95% SLA</div>
+                    </div>
+
+                    <div class="service-card reveal delay-200">
+                        <div class="svc-icon" style="background:linear-gradient(135deg,rgba(212,160,23,0.15),rgba(212,160,23,0.03));color:#D4A017;"><i data-lucide="briefcase" class="w-6 h-6"></i></div>
+                        <h3 class="font-serif font-bold text-gouv-blue text-lg mb-2">Marketplace Expertise</h3>
+                        <p class="text-sm text-text-muted font-light leading-relaxed mb-4 flex-grow">Annuaire d'experts et consultants certifiés pour accompagner votre transformation digitale.</p>
+                        <div class="text-xs text-gouv-gold font-semibold border-t border-gouv-blue/10 pt-3">500+ experts vérifiés</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROGRAMMES D'ACCOMPAGNEMENT -->
+        <section id="programmes" class="py-20 bg-gradient-to-b from-transparent to-gouv-blue/5 scroll-mt-24">
+            <div class="max-w-[1000px] mx-auto px-4 md:px-8">
+                <div class="mb-10 reveal">
+                    <span class="badge badge-blue mb-3 inline-block">Catégorie 3</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gouv-blue font-serif mb-3">Programmes d'Accompagnement</h2>
+                    <p class="text-text-muted font-light">Mentorat et accélération pour entrepreneurs et professionnels</p>
+                </div>
+
+                <div data-accordion-group class="space-y-3">
+                    <div class="accordion-item open" data-accordion>
+                        <button class="accordion-header">
+                            <span class="flex items-center gap-3"><i data-lucide="users" class="w-5 h-5 text-gouv-cyan"></i> Mentorat Entrepreneurship</span>
+                            <i data-lucide="chevron-down" class="accordion-chevron w-5 h-5"></i>
+                        </button>
+                        <div class="accordion-body">
+                            <p class="mb-3">Programme de matching entre entrepreneurs et mentors expérimentés pour une croissance accélérée des startups.</p>
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 my-3">
+                                <div class="bg-gouv-cyan/5 p-3 rounded-lg"><strong class="block text-gouv-blue">6-12 mois</strong><span class="text-xs">Durée</span></div>
+                                <div class="bg-gouv-cyan/5 p-3 rounded-lg"><strong class="block text-gouv-blue">100+</strong><span class="text-xs">Mentors</span></div>
+                                <div class="bg-gouv-cyan/5 p-3 rounded-lg"><strong class="block text-gouv-blue">20-30</strong><span class="text-xs">Startups/cohort</span></div>
+                                <div class="bg-gouv-cyan/5 p-3 rounded-lg"><strong class="block text-gouv-blue">Gratuit</strong><span class="text-xs">Coût</span></div>
+                            </div>
+                            <p class="text-xs">Prochaines cohortes : Fintech (Janvier), Agritech (Février), Healthtech (Mars 2026)</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item" data-accordion>
+                        <button class="accordion-header">
+                            <span class="flex items-center gap-3"><i data-lucide="zap" class="w-5 h-5 text-gouv-gold"></i> Accélérateurs Sectoriels</span>
+                            <i data-lucide="chevron-down" class="accordion-chevron w-5 h-5"></i>
+                        </button>
+                        <div class="accordion-body">
+                            <p class="mb-3">Accélérateurs intensifs de 3 mois par secteur (fintech, agritech, healthtech, edutech) avec curriculum, mentoring et accès financement.</p>
+                            <p><strong>Financement disponible :</strong> Pre-seed $10-50K · Seed $50-500K · Follow-on $500K-2M</p>
+                            <p class="mt-2"><strong>Success rate :</strong> 90% complètent · 70% lèvent un follow-on</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item" data-accordion>
+                        <button class="accordion-header">
+                            <span class="flex items-center gap-3"><i data-lucide="graduation-cap" class="w-5 h-5 text-gouv-cyan"></i> Formation Compétences Numériques</span>
+                            <i data-lucide="chevron-down" class="accordion-chevron w-5 h-5"></i>
+                        </button>
+                        <div class="accordion-body">
+                            <p class="mb-3">Bootcamps et formations courtes (2-8 semaines) pour développer les compétences critiques du marché du travail.</p>
+                            <ul class="list-disc pl-6 space-y-1 text-sm">
+                                <li>Web Development Bootcamp (8 sem.) — 85 % de placement</li>
+                                <li>Data Analytics (6 sem.) — Python, SQL, Tableau</li>
+                                <li>Cybersecurity Foundations (8 sem.) — CompTIA Security+</li>
+                                <li>Cloud Architecture (6 sem.) — AWS/Azure/GCP</li>
+                                <li>Digital Marketing (4 sem.) — SEO, SEM, Social</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item" data-accordion>
+                        <button class="accordion-header">
+                            <span class="flex items-center gap-3"><i data-lucide="award" class="w-5 h-5 text-gouv-gold"></i> Certification & Credentialing</span>
+                            <i data-lucide="chevron-down" class="accordion-chevron w-5 h-5"></i>
+                        </button>
+                        <div class="accordion-body">
+                            <p class="mb-3">Programme de certification professionnelle reconnue par le gouvernement pour augmenter l'employabilité et les salaires.</p>
+                            <p><strong>Impact salarial :</strong> non-certifié $300 → certifié $500 (+65%) → avancé $900 (+200%)</p>
+                            <p class="text-xs mt-2">Reconnaissance gouvernement + employeurs + université + international (CEDEAO)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CANAUX D'ACCÈS -->
+        <section class="py-20">
+            <div class="max-w-[1200px] mx-auto px-4 md:px-8">
+                <div class="text-center mb-12 reveal">
+                    <span class="badge badge-cyan mb-3 inline-block">Accès</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gouv-blue font-serif">Comment Accéder aux Services ?</h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+                    <div class="channel-card reveal">
+                        <div class="ch-icon"><i data-lucide="globe" class="w-6 h-6"></i></div>
+                        <h3 class="font-serif font-bold text-gouv-blue text-lg mb-1">Portail Web</h3>
+                        <p class="text-xs text-text-muted font-light mb-2">services.numerique.gouv.cd</p>
+                        <span class="badge badge-green">24/7</span>
+                    </div>
+                    <div class="channel-card reveal delay-100">
+                        <div class="ch-icon"><i data-lucide="smartphone" class="w-6 h-6"></i></div>
+                        <h3 class="font-serif font-bold text-gouv-blue text-lg mb-1">Application Mobile</h3>
+                        <p class="text-xs text-text-muted font-light mb-2">iOS + Android · Gratuit</p>
+                        <span class="badge badge-cyan">Push notifs</span>
+                    </div>
+                    <div class="channel-card reveal delay-200">
+                        <div class="ch-icon"><i data-lucide="phone" class="w-6 h-6"></i></div>
+                        <h3 class="font-serif font-bold text-gouv-blue text-lg mb-1">Hotline</h3>
+                        <p class="text-xs text-text-muted font-light mb-2">FR / Lingala / Swahili</p>
+                        <span class="badge badge-gold">Lun-Sam</span>
+                    </div>
+                    <div class="channel-card reveal delay-300">
+                        <div class="ch-icon"><i data-lucide="map-pin" class="w-6 h-6"></i></div>
+                        <h3 class="font-serif font-bold text-gouv-blue text-lg mb-1">Bureaux Locaux</h3>
+                        <p class="text-xs text-text-muted font-light mb-2">50 villes RDC</p>
+                        <span class="badge badge-cyan">Gratuit</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STATS -->
+        <section class="py-16 bg-gradient-to-b from-gouv-blue/5 to-transparent">
+            <div class="max-w-[1100px] mx-auto px-4 md:px-8">
+                <div class="grid grid-cols-2 md:grid-cols-5 gap-4 text-center">
+                    <div class="glass-ultra rounded-2xl p-5 reveal">
+                        <i data-lucide="file-check-2" class="w-7 h-7 text-gouv-blue mx-auto mb-2"></i>
+                        <div class="text-3xl font-serif font-bold text-gouv-cyan counter" data-target="50">0</div>
+                        <p class="text-xs text-text-muted mt-1">Services en ligne</p>
+                    </div>
+                    <div class="glass-ultra rounded-2xl p-5 reveal delay-100">
+                        <i data-lucide="users" class="w-7 h-7 text-gouv-blue mx-auto mb-2"></i>
+                        <div class="text-3xl font-serif font-bold text-gouv-cyan">5M+</div>
+                        <p class="text-xs text-text-muted mt-1">Utilisateurs actifs</p>
+                    </div>
+                    <div class="glass-ultra rounded-2xl p-5 reveal delay-200">
+                        <i data-lucide="trending-up" class="w-7 h-7 text-gouv-blue mx-auto mb-2"></i>
+                        <div class="text-3xl font-serif font-bold text-gouv-cyan">500M+</div>
+                        <p class="text-xs text-text-muted mt-1">Transactions/an</p>
+                    </div>
+                    <div class="glass-ultra rounded-2xl p-5 reveal delay-300">
+                        <i data-lucide="zap" class="w-7 h-7 text-gouv-blue mx-auto mb-2"></i>
+                        <div class="text-3xl font-serif font-bold text-gouv-cyan">99.5%</div>
+                        <p class="text-xs text-text-muted mt-1">Uptime</p>
+                    </div>
+                    <div class="glass-ultra rounded-2xl p-5 reveal delay-400">
+                        <i data-lucide="star" class="w-7 h-7 text-gouv-blue mx-auto mb-2"></i>
+                        <div class="text-3xl font-serif font-bold text-gouv-cyan">4.8/5</div>
+                        <p class="text-xs text-text-muted mt-1">Satisfaction</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="py-20">
+            <div class="max-w-[800px] mx-auto px-4 md:px-8">
+                <div class="text-center mb-10 reveal">
+                    <span class="badge badge-cyan mb-3 inline-block">FAQ</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gouv-blue font-serif">Questions Fréquemment Posées</h2>
+                </div>
+
+                <div data-accordion-group class="space-y-3">
+                    <div class="accordion-item open" data-accordion>
+                        <button class="accordion-header"><span>Comment créer un compte services ?</span><i data-lucide="chevron-down" class="accordion-chevron w-5 h-5"></i></button>
+                        <div class="accordion-body">Visitez services.numerique.gouv.cd, cliquez « Créer compte », authentifiez avec ID numérique ou email. Vérification biométrique pour sécurité.</div>
+                    </div>
+                    <div class="accordion-item" data-accordion>
+                        <button class="accordion-header"><span>Les services sont-ils vraiment gratuits ?</span><i data-lucide="chevron-down" class="accordion-chevron w-5 h-5"></i></button>
+                        <div class="accordion-body">Oui, tous les services publics sont gratuits pour les citoyens. Frais applicables seulement pour documents supplémentaires (copies).</div>
+                    </div>
+                    <div class="accordion-item" data-accordion>
+                        <button class="accordion-header"><span>Mes données sont-elles sécurisées ?</span><i data-lucide="chevron-down" class="accordion-chevron w-5 h-5"></i></button>
+                        <div class="accordion-body">Oui, données chiffrées end-to-end, stockées seulement en RDC, protégées par cybersécurité gouvernementale (DSSI).</div>
+                    </div>
+                    <div class="accordion-item" data-accordion>
+                        <button class="accordion-header"><span>Puis-je accéder depuis smartphone ?</span><i data-lucide="chevron-down" class="accordion-chevron w-5 h-5"></i></button>
+                        <div class="accordion-body">Oui, plateforme responsive + application mobile disponible iOS/Android.</div>
+                    </div>
+                    <div class="accordion-item" data-accordion>
+                        <button class="accordion-header"><span>Combien de temps pour recevoir les documents ?</span><i data-lucide="chevron-down" class="accordion-chevron w-5 h-5"></i></button>
+                        <div class="accordion-body">Instantané (version digitale) ou 3-10 jours (version physique livrée à domicile).</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="p-4 md:p-8">
+            <div class="max-w-[1200px] mx-auto rounded-[3rem] overflow-hidden relative bg-gradient-to-br from-gouv-blue to-gouv-cyan py-20 px-10 text-center">
+                <div class="relative z-10">
+                    <h2 class="text-3xl md:text-5xl font-bold font-serif text-white mb-6 reveal">Commencez Votre Transformation</h2>
+                    <p class="text-lg text-white/85 font-light max-w-xl mx-auto mb-10 reveal delay-100">Services, formation, accompagnement — tout ce dont vous avez besoin pour réussir.</p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center flex-wrap reveal delay-200">
+                        <a href="#services-gouvernementaux" class="bg-white text-gouv-blue hover:bg-gray-50 px-8 py-3.5 rounded-full font-semibold transition-transform hover:scale-105">Accéder aux Services</a>
+                        <a href="#programmes" class="border border-white/40 hover:border-white text-white px-8 py-3.5 rounded-full font-semibold hover:bg-white/10 transition-all">Découvrir les Formations</a>
+                        <a href="contact.html" class="bg-gouv-gold text-white hover:bg-[#C49014] px-8 py-3.5 rounded-full font-semibold transition-colors">Demander Accompagnement</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#001529] text-white mt-12 relative overflow-hidden">
+        <div class="h-1.5 w-full absolute top-0 left-0 z-20" style="background: linear-gradient(90deg, #00A8E8 0%, #00A8E8 33.33%, #D4A017 33.33%, #D4A017 66.66%, #C41E3A 66.66%, #C41E3A 100%);"></div>
+        <div class="max-w-[1200px] mx-auto px-4 md:px-8 pt-20 pb-10 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <div>
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-14 h-14 rounded-2xl flex items-center justify-center text-white border border-gouv-gold/40 font-serif font-bold text-2xl bg-white/5">SG</div>
+                        <div><h2 class="font-serif font-bold text-2xl text-white">SGEN</h2><p class="text-[10px] text-gouv-gold uppercase font-bold mt-1">Rép. Dém. du Congo</p></div>
+                    </div>
+                    <p class="text-sm text-gray-400 font-light leading-relaxed">Secrétariat Général à l'Économie Numérique — Organe pilote de la transformation digitale de la RDC.</p>
+                </div>
+                <div>
+                    <h3 class="text-sm font-bold text-white mb-4 font-serif">Navigation</h3>
+                    <ul class="space-y-3 text-sm text-gray-400 font-light">
+                        <li><a href="about.html" class="hover:text-gouv-cyan">À Propos</a></li>
+                        <li><a href="directions.html" class="hover:text-gouv-cyan">Directions</a></li>
+                        <li><a href="projects.html" class="hover:text-gouv-cyan">Projets</a></li>
+                        <li><a href="services.html" class="hover:text-gouv-cyan">Services</a></li>
+                        <li><a href="contact.html" class="hover:text-gouv-cyan">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-bold text-white mb-4 font-serif">Ressources</h3>
+                    <ul class="space-y-3 text-sm text-gray-400 font-light">
+                        <li><a href="#" class="hover:text-gouv-gold">Documentation</a></li>
+                        <li><a href="#" class="hover:text-gouv-gold">Open Data</a></li>
+                        <li><a href="#" class="hover:text-gouv-gold">Cadre Juridique</a></li>
+                        <li><a href="#" class="hover:text-gouv-gold">Carrières</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-bold text-white mb-4 font-serif">Contact</h3>
+                    <ul class="space-y-3 text-sm text-gray-300 font-light">
+                        <li class="flex items-start gap-3"><i data-lucide="map-pin" class="w-4 h-4 text-gouv-cyan mt-0.5"></i> 45, Avenue Lubefu, Kinshasa-Gombe</li>
+                        <li class="flex items-center gap-3"><i data-lucide="mail" class="w-4 h-4 text-gouv-cyan"></i> contact@numerique.gouv.cd</li>
+                        <li class="flex items-center gap-3"><i data-lucide="phone" class="w-4 h-4 text-gouv-cyan"></i> +243 81 000 0000</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-white/10 text-center text-xs text-gray-500">&copy; 2026 SGEN RDC. Tous droits réservés.</div>
+        </div>
+    </footer>
+
+    <script src="statics/js/common.js"></script>
+    <script src="statics/js/services.js"></script>
+</body>
+</html>

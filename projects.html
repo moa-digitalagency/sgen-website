@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 Projets Majeurs du SGEN | Transformation RDC</title>
+    <meta name="description" content="Découvrez les 5 projets transformateurs du SGEN : numérisation publique, connectivité rurale, souveraineté cyber, tech hub et gouvernance données. Budget $665M.">
+    <meta name="theme-color" content="#003D7A">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="statics/js/tailwind-config.js"></script>
+
+    <link rel="stylesheet" href="statics/css/common.css">
+    <link rel="stylesheet" href="statics/css/projects.css">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="font-sans text-text-main antialiased">
+
+    <div class="tricolor-bar"></div>
+
+    <div class="fixed w-full top-6 z-50 px-4 md:px-8 flex justify-center pointer-events-none">
+        <header class="w-full max-w-[1200px] glass-ultra rounded-2xl px-6 py-3 flex justify-between items-center pointer-events-auto transition-all duration-500" id="main-header">
+            <a href="index.html" class="flex items-center gap-4 group">
+                <div class="w-10 h-10 bg-gouv-blue rounded-xl flex items-center justify-center text-white font-serif font-bold text-xl shadow-lg group-hover:bg-gouv-cyan transition-colors">SG</div>
+                <div>
+                    <h1 class="font-serif font-bold text-lg leading-tight tracking-wide text-gouv-blue">SGEN</h1>
+                    <p class="text-[9px] text-gouv-gold uppercase tracking-[0.2em] font-semibold mt-0.5">Rép. Dém. du Congo</p>
+                </div>
+            </a>
+            <nav class="hidden lg:flex items-center gap-8 text-[13px] font-semibold uppercase tracking-widest text-gouv-blue/80">
+                <a href="about.html" class="hover:text-gouv-cyan transition-colors">À Propos</a>
+                <a href="directions.html" class="hover:text-gouv-cyan transition-colors">Directions</a>
+                <a href="projects.html" class="text-gouv-cyan transition-colors">Projets</a>
+                <a href="services.html" class="hover:text-gouv-cyan transition-colors">Services</a>
+                <a href="contact.html" class="hover:text-gouv-cyan transition-colors">Contact</a>
+                <a href="services.html" class="ml-2 bg-gouv-red/90 hover:bg-gouv-red text-white px-5 py-2.5 rounded-full font-bold flex items-center gap-2 border border-white/20"><i data-lucide="zap" class="w-4 h-4 animate-pulse"></i> Services en Ligne</a>
+            </nav>
+            <button id="mobile-menu-btn" class="lg:hidden text-gouv-blue p-2" aria-label="Menu"><i data-lucide="menu" class="w-6 h-6"></i></button>
+        </header>
+    </div>
+    <div id="mobile-menu" class="hidden fixed inset-0 z-40 bg-white/80 backdrop-blur-2xl pt-24 px-6">
+        <nav class="flex flex-col gap-6 text-center text-lg font-serif font-bold text-gouv-blue">
+            <a href="about.html">À Propos</a>
+            <a href="directions.html">Directions</a>
+            <a href="projects.html">Projets</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="page-hero">
+            <div class="page-hero-bg projects-hero-bg"></div>
+            <div class="page-hero-overlay"></div>
+            <div class="page-hero-content reveal">
+                <span class="inline-block px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-[11px] uppercase tracking-[0.2em] font-bold mb-6">5 Projets Majeurs</span>
+                <h1 class="text-4xl md:text-6xl font-bold font-serif mb-4">Projets Majeurs du SGEN</h1>
+                <p class="text-lg md:text-xl text-white/85 font-light max-w-2xl mx-auto">Les initiatives transformatrices qui façonnent l'avenir numérique de la RDC</p>
+            </div>
+        </section>
+
+        <!-- INTRO -->
+        <section class="py-20 relative">
+            <div class="bg-mesh"><div class="blob-1"></div><div class="blob-2"></div></div>
+            <div class="max-w-[900px] mx-auto px-4 md:px-8 text-center relative z-10">
+                <h2 class="text-3xl md:text-5xl font-bold text-gouv-blue font-serif mb-8 reveal">5 Projets Transformateurs</h2>
+                <p class="text-lg text-text-muted leading-relaxed font-light reveal delay-100">
+                    Le SGEN met en œuvre 5 projets majeurs constituant les piliers de la transformation numérique en RDC : <strong class="text-gouv-cyan">infrastructures, services, sécurité et entrepreneurship</strong> avec un budget combiné de plus de <strong class="text-gouv-gold">665 millions USD</strong> sur la période 2024-2030.
+                </p>
+            </div>
+        </section>
+
+        <!-- STATS -->
+        <section class="py-12">
+            <div class="max-w-[1200px] mx-auto px-4 md:px-8">
+                <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+                    <div class="glass-ultra rounded-2xl p-5 text-center hover-lift-premium reveal">
+                        <i data-lucide="briefcase" class="w-7 h-7 text-gouv-blue mx-auto mb-2"></i>
+                        <div class="text-3xl font-serif font-bold text-gouv-cyan counter" data-target="5">0</div>
+                        <p class="text-xs text-text-muted mt-1">Projets en cours</p>
+                    </div>
+                    <div class="glass-ultra rounded-2xl p-5 text-center hover-lift-premium reveal delay-100">
+                        <i data-lucide="dollar-sign" class="w-7 h-7 text-gouv-gold mx-auto mb-2"></i>
+                        <div class="text-3xl font-serif font-bold text-gouv-cyan">$665M</div>
+                        <p class="text-xs text-text-muted mt-1">Budget total</p>
+                    </div>
+                    <div class="glass-ultra rounded-2xl p-5 text-center hover-lift-premium reveal delay-200">
+                        <i data-lucide="calendar" class="w-7 h-7 text-gouv-blue mx-auto mb-2"></i>
+                        <div class="text-3xl font-serif font-bold text-gouv-cyan">2024-30</div>
+                        <p class="text-xs text-text-muted mt-1">Timeline</p>
+                    </div>
+                    <div class="glass-ultra rounded-2xl p-5 text-center hover-lift-premium reveal delay-300">
+                        <i data-lucide="users" class="w-7 h-7 text-gouv-blue mx-auto mb-2"></i>
+                        <div class="text-3xl font-serif font-bold text-gouv-cyan">500K+</div>
+                        <p class="text-xs text-text-muted mt-1">Emplois créés</p>
+                    </div>
+                    <div class="glass-ultra rounded-2xl p-5 text-center hover-lift-premium reveal delay-400">
+                        <i data-lucide="globe" class="w-7 h-7 text-gouv-blue mx-auto mb-2"></i>
+                        <div class="text-3xl font-serif font-bold text-gouv-cyan">100%</div>
+                        <p class="text-xs text-text-muted mt-1">Couverture RDC</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NAVIGATION PROJETS -->
+        <section class="py-8 sticky top-20 z-30 bg-white/80 backdrop-blur-xl border-y border-gouv-blue/10">
+            <div class="max-w-[1200px] mx-auto px-4 md:px-8 flex flex-wrap gap-3 justify-center">
+                <a href="#numerisation" data-project-anchor class="px-4 py-2 rounded-full bg-white border border-gouv-blue/15 text-gouv-blue text-xs font-semibold hover:bg-gouv-blue hover:text-white transition-all">1. Numérisation</a>
+                <a href="#connectivite" data-project-anchor class="px-4 py-2 rounded-full bg-white border border-gouv-blue/15 text-gouv-blue text-xs font-semibold hover:bg-gouv-blue hover:text-white transition-all">2. Connectivité</a>
+                <a href="#souverainete" data-project-anchor class="px-4 py-2 rounded-full bg-white border border-gouv-red/30 text-gouv-red text-xs font-semibold hover:bg-gouv-red hover:text-white transition-all">3. Souveraineté</a>
+                <a href="#tech-hub" data-project-anchor class="px-4 py-2 rounded-full bg-white border border-gouv-blue/15 text-gouv-blue text-xs font-semibold hover:bg-gouv-blue hover:text-white transition-all">4. Tech Hub</a>
+                <a href="#gouvernance-donnees" data-project-anchor class="px-4 py-2 rounded-full bg-white border border-gouv-blue/15 text-gouv-blue text-xs font-semibold hover:bg-gouv-blue hover:text-white transition-all">5. Gouvernance Données</a>
+            </div>
+        </section>
+
+        <!-- PROJET 1 -->
+        <section id="numerisation" class="py-16 scroll-mt-32">
+            <div class="max-w-[1100px] mx-auto px-4 md:px-8">
+                <div class="project-block reveal" data-accent="cyan">
+                    <div class="flex flex-wrap items-start justify-between gap-4 mb-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-16 h-16 rounded-2xl bg-gouv-cyan/10 flex items-center justify-center text-gouv-cyan shrink-0"><i data-lucide="file-text" class="w-8 h-8"></i></div>
+                            <div>
+                                <span class="badge badge-cyan mb-2 inline-block">Projet 1</span>
+                                <h2 class="text-2xl md:text-3xl font-bold font-serif text-gouv-blue">Numérisation Complète du Secteur Public</h2>
+                            </div>
+                        </div>
+                        <div class="project-badge-statut badge-green"><i data-lucide="loader-2" class="w-4 h-4"></i> En cours</div>
+                    </div>
+                    <p class="text-text-muted font-light leading-relaxed mb-6">Dématérialisation complète des services administratifs et migration vers une administration 100% numérique, sans papier, accessible 24/7. Réduire les délais de traitement de 80%, améliorer la transparence.</p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                        <div class="budget-box"><div class="amount">$200M</div><small>Budget total</small></div>
+                        <div class="budget-box"><div class="amount">50+</div><small>Services numérisés</small></div>
+                        <div class="budget-box"><div class="amount">10M</div><small>Utilisateurs cibles</small></div>
+                    </div>
+
+                    <h3 class="font-serif font-bold text-gouv-blue text-lg mb-3">Composantes</h3>
+                    <ul class="missions-list mb-6">
+                        <li>Plateforme E-Services gouvernementale (50+ services ministériels intégrés)</li>
+                        <li>Dématérialisation administrative (signature et archivage numériques)</li>
+                        <li>Données administratives unifiées (registre civil, ID unique)</li>
+                    </ul>
+
+                    <div class="phase-timeline">
+                        <div class="phase-card"><strong>Phase 1</strong><span>2024-25 · Études + prototype</span></div>
+                        <div class="phase-card"><strong>Phase 2</strong><span>2025-26 · 10 services clés</span></div>
+                        <div class="phase-card"><strong>Phase 3</strong><span>2026-28 · Déploiement complet</span></div>
+                        <div class="phase-card"><strong>Phase 4</strong><span>2028-30 · Optimisation</span></div>
+                    </div>
+
+                    <div class="mt-6 flex flex-wrap gap-4 items-center pt-4 border-t border-gouv-blue/10">
+                        <span class="text-sm text-text-muted"><i data-lucide="user-check" class="inline w-4 h-4 mr-1 text-gouv-gold"></i>Pilote : <strong class="text-gouv-blue">DSIN</strong></span>
+                        <span class="text-sm text-text-muted"><i data-lucide="handshake" class="inline w-4 h-4 mr-1 text-gouv-gold"></i>Banque mondiale, expertises internationales</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJET 2 -->
+        <section id="connectivite" class="py-16 scroll-mt-32 bg-gradient-to-b from-transparent to-gouv-blue/5">
+            <div class="max-w-[1100px] mx-auto px-4 md:px-8">
+                <div class="project-block reveal" data-accent="gold">
+                    <div class="flex flex-wrap items-start justify-between gap-4 mb-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-16 h-16 rounded-2xl bg-gouv-gold/10 flex items-center justify-center text-gouv-gold shrink-0"><i data-lucide="map-pin" class="w-8 h-8"></i></div>
+                            <div>
+                                <span class="badge badge-gold mb-2 inline-block">Projet 2</span>
+                                <h2 class="text-2xl md:text-3xl font-bold font-serif text-gouv-blue">Extension Connectivité Rurale</h2>
+                            </div>
+                        </div>
+                        <div class="project-badge-statut badge-gray"><i data-lucide="clock" class="w-4 h-4"></i> Planifié</div>
+                    </div>
+                    <p class="text-text-muted font-light leading-relaxed mb-6">Déploiement de fibre optique et réseaux mobiles 4G/5G aux zones rurales et reculées de la RDC pour réduire la fracture numérique à 0% d'ici 2030. Coverage 99.5% population.</p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                        <div class="budget-box"><div class="amount">$250M</div><small>Budget total</small></div>
+                        <div class="budget-box"><div class="amount">15 000 km</div><small>Fibre déployée</small></div>
+                        <div class="budget-box"><div class="amount">6 000+</div><small>Stations de base</small></div>
+                    </div>
+
+                    <h3 class="font-serif font-bold text-gouv-blue text-lg mb-3">Composantes</h3>
+                    <ul class="missions-list mb-6">
+                        <li>Backbone national 5000+ km de fibre + boucles provinciales</li>
+                        <li>5000+ stations 4G/LTE et 1000+ stations 5G stratégiques</li>
+                        <li>500+ centres connectivité communautaires (WiFi public)</li>
+                        <li>Transmission satellite pour zones extrêmes (100% coverage)</li>
+                    </ul>
+
+                    <div class="phase-timeline">
+                        <div class="phase-card"><strong>Phase 1</strong><span>2024-25 · Planning + acquisition</span></div>
+                        <div class="phase-card"><strong>Phase 2</strong><span>2025-27 · Axe Kinshasa-Katanga</span></div>
+                        <div class="phase-card"><strong>Phase 3</strong><span>2027-29 · Zones secondaires</span></div>
+                        <div class="phase-card"><strong>Phase 4</strong><span>2029-30 · Optimisation</span></div>
+                    </div>
+
+                    <div class="mt-6 flex flex-wrap gap-4 items-center pt-4 border-t border-gouv-blue/10">
+                        <span class="text-sm text-text-muted"><i data-lucide="user-check" class="inline w-4 h-4 mr-1 text-gouv-gold"></i>Pilote : <strong class="text-gouv-blue">DIN</strong></span>
+                        <span class="text-sm text-text-muted"><i data-lucide="handshake" class="inline w-4 h-4 mr-1 text-gouv-gold"></i>Opérateurs télécom, AfDB, Banque Mondiale</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJET 3 - CRITIQUE (Rouge) -->
+        <section id="souverainete" class="py-16 scroll-mt-32">
+            <div class="max-w-[1100px] mx-auto px-4 md:px-8">
+                <div class="project-block reveal" data-accent="red">
+                    <div class="flex flex-wrap items-start justify-between gap-4 mb-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-16 h-16 rounded-2xl bg-gouv-red/10 flex items-center justify-center text-gouv-red shrink-0"><i data-lucide="shield" class="w-8 h-8"></i></div>
+                            <div>
+                                <span class="badge badge-red mb-2 inline-block">Projet 3 · Prioritaire</span>
+                                <h2 class="text-2xl md:text-3xl font-bold font-serif text-gouv-blue">Renforcement Souveraineté Numérique</h2>
+                            </div>
+                        </div>
+                        <div class="project-badge-statut badge-red animate-pulse-subtle"><i data-lucide="alert-triangle" class="w-4 h-4"></i> Critique</div>
+                    </div>
+                    <p class="text-text-muted font-light leading-relaxed mb-6">Mise en place de capacités nationales de cybersécurité, protection des données, autonomie technologique et résilience face aux menaces numériques globales.</p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                        <div class="budget-box"><div class="amount">$100M</div><small>Budget total</small></div>
+                        <div class="budget-box"><div class="amount">99.5%</div><small>Détection menaces</small></div>
+                        <div class="budget-box"><div class="amount">1 000+</div><small>Pros cyber formés/an</small></div>
+                    </div>
+
+                    <h3 class="font-serif font-bold text-gouv-blue text-lg mb-3">Composantes</h3>
+                    <ul class="missions-list mb-6">
+                        <li>Centre National de Cybersécurité (SOC 24/7/365) — Kinshasa + Katanga</li>
+                        <li>Data Center Souverain (500 PB, normes ISO 27001)</li>
+                        <li>Cadre réglementaire & légal (loi type RGPD)</li>
+                        <li>Formation cybersécurité nationale et certifications</li>
+                    </ul>
+
+                    <div class="phase-timeline">
+                        <div class="phase-card"><strong>Phase 1</strong><span>2024 · Design SOC + loi</span></div>
+                        <div class="phase-card"><strong>Phase 2</strong><span>2024-25 · Construction</span></div>
+                        <div class="phase-card"><strong>Phase 3</strong><span>2025-26 · Opérations</span></div>
+                        <div class="phase-card"><strong>Phase 4</strong><span>2026-30 · Expansion</span></div>
+                    </div>
+
+                    <div class="mt-6 flex flex-wrap gap-4 items-center pt-4 border-t border-gouv-blue/10">
+                        <span class="text-sm text-text-muted"><i data-lucide="user-check" class="inline w-4 h-4 mr-1 text-gouv-gold"></i>Pilote : <strong class="text-gouv-blue">DSSI</strong></span>
+                        <span class="text-sm text-text-muted"><i data-lucide="award" class="inline w-4 h-4 mr-1 text-gouv-gold"></i>ISO 27001, NIST, CIS Controls</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJET 4 -->
+        <section id="tech-hub" class="py-16 scroll-mt-32 bg-gradient-to-b from-transparent to-gouv-blue/5">
+            <div class="max-w-[1100px] mx-auto px-4 md:px-8">
+                <div class="project-block reveal" data-accent="gold">
+                    <div class="flex flex-wrap items-start justify-between gap-4 mb-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-16 h-16 rounded-2xl bg-gouv-gold/10 flex items-center justify-center text-gouv-gold shrink-0"><i data-lucide="rocket" class="w-8 h-8"></i></div>
+                            <div>
+                                <span class="badge badge-gold mb-2 inline-block">Projet 4</span>
+                                <h2 class="text-2xl md:text-3xl font-bold font-serif text-gouv-blue">Tech Hub Kinshasa & Écosystème Startup</h2>
+                            </div>
+                        </div>
+                        <div class="project-badge-statut badge-gray"><i data-lucide="clock" class="w-4 h-4"></i> Planifié</div>
+                    </div>
+                    <p class="text-text-muted font-light leading-relaxed mb-6">Création d'écosystème entrepreneurial numérique dynamique avec incubateurs, accélérateurs, financement et mentorat pour générer 50 000+ startups technologiques d'ici 2030.</p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                        <div class="budget-box"><div class="amount">$75M</div><small>Budget total</small></div>
+                        <div class="budget-box"><div class="amount">50 000+</div><small>Startups (2030)</small></div>
+                        <div class="budget-box"><div class="amount">100K+</div><small>Emplois directs</small></div>
+                    </div>
+
+                    <h3 class="font-serif font-bold text-gouv-blue text-lg mb-3">Composantes</h3>
+                    <ul class="missions-list mb-6">
+                        <li>Tech Hub Kinshasa flagship (50 000 m², 500+ startups capacity)</li>
+                        <li>10 incubateurs régionaux + 5 accélérateurs sectoriels</li>
+                        <li>Fonds d'investissement innovation — $150M</li>
+                        <li>Académie startup (500 étudiants/an)</li>
+                    </ul>
+
+                    <div class="phase-timeline">
+                        <div class="phase-card"><strong>Phase 1</strong><span>2024-25 · Construction</span></div>
+                        <div class="phase-card"><strong>Phase 2</strong><span>2025-26 · Lancement</span></div>
+                        <div class="phase-card"><strong>Phase 3</strong><span>2026-28 · Plein régime</span></div>
+                        <div class="phase-card"><strong>Phase 4</strong><span>2028-30 · Expansion</span></div>
+                    </div>
+
+                    <div class="mt-6 flex flex-wrap gap-4 items-center pt-4 border-t border-gouv-blue/10">
+                        <span class="text-sm text-text-muted"><i data-lucide="user-check" class="inline w-4 h-4 mr-1 text-gouv-gold"></i>Pilote : <strong class="text-gouv-blue">DTEDL</strong></span>
+                        <span class="text-sm text-text-muted"><i data-lucide="handshake" class="inline w-4 h-4 mr-1 text-gouv-gold"></i>VCs, Google, Microsoft, Amazon</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJET 5 -->
+        <section id="gouvernance-donnees" class="py-16 scroll-mt-32">
+            <div class="max-w-[1100px] mx-auto px-4 md:px-8">
+                <div class="project-block reveal" data-accent="cyan">
+                    <div class="flex flex-wrap items-start justify-between gap-4 mb-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-16 h-16 rounded-2xl bg-gouv-cyan/10 flex items-center justify-center text-gouv-cyan shrink-0"><i data-lucide="database" class="w-8 h-8"></i></div>
+                            <div>
+                                <span class="badge badge-cyan mb-2 inline-block">Projet 5</span>
+                                <h2 class="text-2xl md:text-3xl font-bold font-serif text-gouv-blue">Stratégie Gouvernance Données Nationales</h2>
+                            </div>
+                        </div>
+                        <div class="project-badge-statut badge-gray"><i data-lucide="clock" class="w-4 h-4"></i> Planifié</div>
+                    </div>
+                    <p class="text-text-muted font-light leading-relaxed mb-6">Création d'un cadre national de gestion, valorisation et protection des données publiques et privées pour développer une économie de données prospère et souveraine.</p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+                        <div class="budget-box"><div class="amount">$40M</div><small>Budget total</small></div>
+                        <div class="budget-box"><div class="amount">100+</div><small>Ministères connectés</small></div>
+                        <div class="budget-box"><div class="amount">$100M</div><small>Revenu data/an</small></div>
+                    </div>
+
+                    <h3 class="font-serif font-bold text-gouv-blue text-lg mb-3">Composantes</h3>
+                    <ul class="missions-list mb-6">
+                        <li>Autorité Nationale Données (AND) — régulation indépendante</li>
+                        <li>Data Warehouse gouvernemental + Open Data portal</li>
+                        <li>Législation & standards données (RGPD-like RDC)</li>
+                        <li>Économie des données & valorisation (marketplace B2B)</li>
+                    </ul>
+
+                    <div class="phase-timeline">
+                        <div class="phase-card"><strong>Phase 1</strong><span>2024 · Étude + législation</span></div>
+                        <div class="phase-card"><strong>Phase 2</strong><span>2024-25 · AND + warehouse</span></div>
+                        <div class="phase-card"><strong>Phase 3</strong><span>2025-27 · Opérations</span></div>
+                        <div class="phase-card"><strong>Phase 4</strong><span>2027-30 · Monétisation</span></div>
+                    </div>
+
+                    <div class="mt-6 flex flex-wrap gap-4 items-center pt-4 border-t border-gouv-blue/10">
+                        <span class="text-sm text-text-muted"><i data-lucide="user-check" class="inline w-4 h-4 mr-1 text-gouv-gold"></i>Pilotes : <strong class="text-gouv-blue">DEP + DSSI</strong></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TABLEAU COMPARATIF -->
+        <section class="py-20 bg-gradient-to-b from-gouv-blue/5 to-transparent">
+            <div class="max-w-[1100px] mx-auto px-4 md:px-8">
+                <div class="text-center mb-10 reveal">
+                    <span class="badge badge-blue mb-3 inline-block">Récapitulatif</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gouv-blue font-serif">Comparaison des 5 Projets</h2>
+                </div>
+
+                <div class="overflow-x-auto reveal">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Projet</th>
+                                <th>Budget</th>
+                                <th>Timeline</th>
+                                <th>Statut</th>
+                                <th>Impact</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>Numérisation Public</strong></td><td>$200M</td><td>2024-30</td><td><span class="badge badge-green">En cours</span></td><td>50+ services</td></tr>
+                            <tr><td><strong>Connectivité Rurale</strong></td><td>$250M</td><td>2024-30</td><td><span class="badge badge-gray">Planifié</span></td><td>100M citoyens</td></tr>
+                            <tr><td><strong>Souveraineté Cyber</strong></td><td>$100M</td><td>2024-30</td><td><span class="badge badge-red">Critique</span></td><td>Protection totale</td></tr>
+                            <tr><td><strong>Tech Hub</strong></td><td>$75M</td><td>2024-30</td><td><span class="badge badge-gray">Planifié</span></td><td>50K startups</td></tr>
+                            <tr><td><strong>Gouvernance Données</strong></td><td>$40M</td><td>2024-30</td><td><span class="badge badge-gray">Planifié</span></td><td>Économie données</td></tr>
+                            <tr style="background: rgba(0, 61, 122, 0.08);"><td><strong>TOTAL</strong></td><td><strong>$665M</strong></td><td><strong>7 ans</strong></td><td>Mixte</td><td><strong>Transformation complète</strong></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="p-4 md:p-8">
+            <div class="max-w-[1200px] mx-auto rounded-[3rem] overflow-hidden relative bg-gradient-to-br from-gouv-blue to-gouv-cyan py-20 px-10 text-center">
+                <div class="relative z-10">
+                    <h2 class="text-3xl md:text-5xl font-bold font-serif text-white mb-6 reveal">Impactez la Transformation</h2>
+                    <p class="text-lg text-white/85 font-light max-w-xl mx-auto mb-10 reveal delay-100">Ces projets façonnent l'avenir de la RDC. Découvrez comment participer, investir ou collaborer.</p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center flex-wrap reveal delay-200">
+                        <a href="services.html" class="bg-white text-gouv-blue hover:bg-gray-50 px-8 py-3.5 rounded-full font-semibold transition-transform hover:scale-105">Investir dans l'Innovation</a>
+                        <a href="contact.html" class="border border-white/40 hover:border-white text-white px-8 py-3.5 rounded-full font-semibold hover:bg-white/10 transition-all">Rejoindre l'Équipe</a>
+                        <a href="contact.html" class="bg-gouv-gold text-white hover:bg-[#C49014] px-8 py-3.5 rounded-full font-semibold transition-colors">Partenariat B2B</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#001529] text-white mt-12 relative overflow-hidden">
+        <div class="h-1.5 w-full absolute top-0 left-0 z-20" style="background: linear-gradient(90deg, #00A8E8 0%, #00A8E8 33.33%, #D4A017 33.33%, #D4A017 66.66%, #C41E3A 66.66%, #C41E3A 100%);"></div>
+        <div class="max-w-[1200px] mx-auto px-4 md:px-8 pt-20 pb-10 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <div>
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-14 h-14 rounded-2xl flex items-center justify-center text-white border border-gouv-gold/40 font-serif font-bold text-2xl bg-white/5">SG</div>
+                        <div><h2 class="font-serif font-bold text-2xl text-white">SGEN</h2><p class="text-[10px] text-gouv-gold uppercase font-bold mt-1">Rép. Dém. du Congo</p></div>
+                    </div>
+                    <p class="text-sm text-gray-400 font-light leading-relaxed">Secrétariat Général à l'Économie Numérique — Organe pilote de la transformation digitale de la RDC.</p>
+                </div>
+                <div>
+                    <h3 class="text-sm font-bold text-white mb-4 font-serif">Navigation</h3>
+                    <ul class="space-y-3 text-sm text-gray-400 font-light">
+                        <li><a href="about.html" class="hover:text-gouv-cyan">À Propos</a></li>
+                        <li><a href="directions.html" class="hover:text-gouv-cyan">Directions</a></li>
+                        <li><a href="projects.html" class="hover:text-gouv-cyan">Projets</a></li>
+                        <li><a href="services.html" class="hover:text-gouv-cyan">Services</a></li>
+                        <li><a href="contact.html" class="hover:text-gouv-cyan">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-bold text-white mb-4 font-serif">Ressources</h3>
+                    <ul class="space-y-3 text-sm text-gray-400 font-light">
+                        <li><a href="#" class="hover:text-gouv-gold">Documentation</a></li>
+                        <li><a href="#" class="hover:text-gouv-gold">Open Data</a></li>
+                        <li><a href="#" class="hover:text-gouv-gold">Cadre Juridique</a></li>
+                        <li><a href="#" class="hover:text-gouv-gold">Carrières</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-bold text-white mb-4 font-serif">Contact</h3>
+                    <ul class="space-y-3 text-sm text-gray-300 font-light">
+                        <li class="flex items-start gap-3"><i data-lucide="map-pin" class="w-4 h-4 text-gouv-cyan mt-0.5"></i> 45, Avenue Lubefu, Kinshasa-Gombe</li>
+                        <li class="flex items-center gap-3"><i data-lucide="mail" class="w-4 h-4 text-gouv-cyan"></i> contact@numerique.gouv.cd</li>
+                        <li class="flex items-center gap-3"><i data-lucide="phone" class="w-4 h-4 text-gouv-cyan"></i> +243 81 000 0000</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-white/10 text-center text-xs text-gray-500">&copy; 2026 SGEN RDC. Tous droits réservés.</div>
+        </div>
+    </footer>
+
+    <script src="statics/js/common.js"></script>
+    <script src="statics/js/projects.js"></script>
+</body>
+</html>

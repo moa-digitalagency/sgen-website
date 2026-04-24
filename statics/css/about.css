@@ -1,0 +1,60 @@
+/* ============================================
+   ABOUT PAGE — Specific styles
+   ============================================ */
+
+.about-hero-bg {
+    background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80');
+}
+
+/* Carte raison-d'être */
+.purpose-card {
+    padding: 1.75rem;
+    border-top: 3px solid #00A8E8;
+    border-radius: 1rem;
+    text-align: center;
+}
+.purpose-card .icon-wrap {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 1rem;
+    border-radius: 1rem;
+    background: linear-gradient(135deg, rgba(0, 61, 122, 0.1), rgba(0, 168, 232, 0.05));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #003D7A;
+}
+
+/* Event timeline coloration */
+.timeline-item[data-color="red"]  .timeline-dot { background: #C41E3A; box-shadow: 0 0 0 3px rgba(196, 30, 58, 0.2); }
+.timeline-item[data-color="gold"] .timeline-dot { background: #D4A017; box-shadow: 0 0 0 3px rgba(212, 160, 23, 0.2); }
+.timeline-item[data-color="blue"] .timeline-dot { background: #003D7A; box-shadow: 0 0 0 3px rgba(0, 61, 122, 0.2); }
+.timeline-item[data-color="cyan"] .timeline-dot { background: #00A8E8; box-shadow: 0 0 0 3px rgba(0, 168, 232, 0.2); }
+
+/* Leadership card */
+.leader-photo {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #003D7A, #00A8E8);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0 auto 1.5rem;
+    box-shadow: 0 10px 30px rgba(0, 61, 122, 0.2);
+}
+
+/* Vision pillar */
+.vision-pillar {
+    padding: 2rem;
+    border-top: 4px solid #D4A017;
+    border-radius: 1rem;
+    text-align: left;
+}
+.vision-pillar[data-accent="red"]  { border-top-color: #C41E3A; }
+.vision-pillar[data-accent="cyan"] { border-top-color: #00A8E8; }
+.vision-pillar[data-accent="gold"] { border-top-color: #D4A017; }

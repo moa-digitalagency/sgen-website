@@ -1,0 +1,363 @@
+/* ============================================
+   SGEN — COMMON STYLES
+   Glassmorphism premium + Palette RDC
+   ============================================ */
+
+/* Barre Tricolore Fixe Top */
+.tricolor-bar {
+    background: linear-gradient(90deg, #00A8E8 0%, #00A8E8 33.33%, #D4A017 33.33%, #D4A017 66.66%, #C41E3A 66.66%, #C41E3A 100%);
+    height: 4px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+/* ================ Glassmorphism ================ */
+.glass-ultra {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 8px 32px 0 rgba(0, 61, 122, 0.04), inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+.glass-color {
+    background: rgba(0, 61, 122, 0.4);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+}
+
+.glass-red {
+    background: rgba(196, 30, 58, 0.4);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(196, 30, 58, 0.2);
+}
+
+.glass-gold {
+    background: rgba(212, 160, 23, 0.15);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(212, 160, 23, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(212, 160, 23, 0.1);
+}
+
+/* ================ Hover Premium ================ */
+.hover-lift-premium {
+    transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.hover-lift-premium:hover {
+    transform: translateY(-8px) scale(1.01);
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 20px 40px -5px rgba(0, 61, 122, 0.1), 0 10px 20px -5px rgba(0, 61, 122, 0.05);
+    border-color: rgba(212, 160, 23, 0.4);
+}
+
+/* ================ Scroll Reveal ================ */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px) scale(0.98);
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+.delay-500 { transition-delay: 500ms; }
+
+/* ================ Typography Gradients ================ */
+.text-gradient-gold {
+    background: linear-gradient(135deg, #D4A017 0%, #F3E5AB 50%, #D4A017 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-cyan {
+    background: linear-gradient(135deg, #003D7A 0%, #00A8E8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* ================ Mesh Background Blobs ================ */
+.bg-mesh {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    z-index: 0;
+    pointer-events: none;
+}
+.blob-1 { position: absolute; top: -10%; left: -10%; width: 50vw; height: 50vw; background: rgba(0, 168, 232, 0.15); border-radius: 50%; filter: blur(100px); animation: blob 12s infinite alternate; }
+.blob-2 { position: absolute; top: 40%; right: -20%; width: 60vw; height: 60vw; background: rgba(212, 160, 23, 0.1); border-radius: 50%; filter: blur(120px); animation: blob 15s infinite alternate-reverse; }
+.blob-3 { position: absolute; bottom: -20%; left: 20%; width: 50vw; height: 50vw; background: rgba(0, 61, 122, 0.1); border-radius: 50%; filter: blur(100px); animation: blob 10s infinite alternate; }
+
+@keyframes blob {
+    0%   { transform: translate(0px, 0px) scale(1); }
+    33%  { transform: translate(30px, -50px) scale(1.1); }
+    66%  { transform: translate(-20px, 20px) scale(0.9); }
+    100% { transform: translate(0px, 0px) scale(1); }
+}
+
+@keyframes pulse-subtle {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50%      { opacity: .8; transform: scale(1.05); }
+}
+.animate-pulse-subtle { animation: pulse-subtle 3s infinite; }
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-10px); }
+}
+.animate-float { animation: float 6s ease-in-out infinite; }
+
+/* ================ Hero secondaire générique ================ */
+.page-hero {
+    position: relative;
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 1rem 3rem;
+    overflow: hidden;
+    background-color: #FAFCFF;
+}
+.page-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(0, 61, 122, 0.85) 0%, rgba(0, 168, 232, 0.5) 100%);
+    z-index: 1;
+}
+.page-hero-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+    opacity: 0.45;
+}
+.page-hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: white;
+    max-width: 800px;
+}
+
+/* ================ Formulaire générique ================ */
+.form-input {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    border: 1px solid rgba(212, 160, 23, 0.4);
+    border-radius: 0.75rem;
+    background: rgba(255, 255, 255, 0.6);
+    font-size: 0.95rem;
+    transition: all 0.3s;
+    color: #1A2b3C;
+}
+.form-input:focus {
+    outline: none;
+    border-color: #00A8E8;
+    background: white;
+    box-shadow: 0 0 0 4px rgba(0, 168, 232, 0.1);
+}
+.form-label {
+    font-weight: 600;
+    color: #003D7A;
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+.form-required {
+    color: #C41E3A;
+    font-weight: bold;
+}
+
+/* ================ Accordéon générique ================ */
+.accordion-item {
+    border-left: 4px solid #D4A017;
+    margin-bottom: 0.75rem;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: all 0.3s;
+}
+.accordion-item.open {
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 16px rgba(0, 61, 122, 0.08);
+}
+.accordion-header {
+    width: 100%;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    background: none;
+    border: none;
+    text-align: left;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: #003D7A;
+}
+.accordion-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), padding 0.3s;
+    padding: 0 1.5rem;
+    color: #64748B;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+.accordion-item.open .accordion-body {
+    max-height: 600px;
+    padding: 0 1.5rem 1.5rem;
+}
+.accordion-chevron {
+    transition: transform 0.3s;
+    color: #00A8E8;
+}
+.accordion-item.open .accordion-chevron {
+    transform: rotate(180deg);
+}
+
+/* ================ Tableaux ================ */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 61, 122, 0.05);
+}
+.data-table thead {
+    background: #003D7A;
+    color: white;
+}
+.data-table th {
+    padding: 1rem 1.25rem;
+    text-align: left;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+.data-table td {
+    padding: 1rem 1.25rem;
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(0, 61, 122, 0.08);
+}
+.data-table tbody tr:nth-child(even) {
+    background: rgba(245, 247, 250, 0.5);
+}
+.data-table tbody tr:hover {
+    background: rgba(232, 244, 248, 0.6);
+}
+
+/* ================ Badges ================ */
+.badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+.badge-blue    { background: rgba(0, 61, 122, 0.1);   color: #003D7A; }
+.badge-cyan    { background: rgba(0, 168, 232, 0.15); color: #0077A8; }
+.badge-gold    { background: #D4A017;                 color: white; }
+.badge-red     { background: #C41E3A;                 color: white; }
+.badge-green   { background: rgba(39, 174, 96, 0.15); color: #1E8449; }
+.badge-gray    { background: rgba(139, 149, 165, 0.15); color: #64748B; }
+.badge-orange  { background: rgba(230, 126, 34, 0.15); color: #B46015; }
+
+/* ================ Body ================ */
+body { background-color: #FAFCFF; }
+
+/* ================ Timeline ================ */
+.timeline-wrap {
+    position: relative;
+    padding: 2rem 0;
+}
+.timeline-wrap::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, transparent, #00A8E8 10%, #00A8E8 90%, transparent);
+    transform: translateX(-50%);
+}
+@media (max-width: 768px) {
+    .timeline-wrap::before {
+        left: 20px;
+    }
+}
+.timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 1.5rem 2.5rem;
+}
+.timeline-item.left  { margin-left: 0; }
+.timeline-item.right { margin-left: 50%; }
+.timeline-item .timeline-dot {
+    position: absolute;
+    top: 2rem;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #00A8E8;
+    border: 4px solid white;
+    box-shadow: 0 0 0 3px rgba(0, 168, 232, 0.2);
+    z-index: 2;
+}
+.timeline-item.left  .timeline-dot { right: -10px; }
+.timeline-item.right .timeline-dot { left: -10px; }
+@media (max-width: 768px) {
+    .timeline-item,
+    .timeline-item.left,
+    .timeline-item.right {
+        width: 100%;
+        margin-left: 0;
+        padding-left: 50px;
+        padding-right: 0;
+    }
+    .timeline-item.left .timeline-dot,
+    .timeline-item.right .timeline-dot {
+        left: 10px;
+        right: auto;
+    }
+}
+
+/* ================ Utility ================ */
+.line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Smooth scroll */
+html { scroll-behavior: smooth; }
+
+/* Selection */
+::selection { background: #00A8E8; color: white; }
